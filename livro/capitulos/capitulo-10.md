@@ -1,50 +1,69 @@
-# Capítulo 10 — A PONTE PARA O MUNDO REAL – DIVISORES DE TENSÃO
+# Capítulo 10 — Divisores de tensão: aproveitando uma parte da tensão
 
+Olá, tudo bem com você?
 
-Uma das aplicações mais úteis da associação em série é
-o divisor de tensão.
+No capítulo anterior, vimos que resistores em série compartilham a mesma corrente. Agora vamos descobrir uma aplicação muito interessante dessa propriedade.
 
-[INSERIR FIGURA 9.1 AQUI]
+Imagine que você tem uma bateria de 9 V e precisa obter uma tensão menor para usar como **sinal de referência**, sem alimentar uma carga de potência.
 
-      Figura 8.1: A Mágica da Divisão de
-       Tensão. Transformando 9V em 3V com dois
-       resistores.
+É aí que entra o **divisor de tensão**.
 
-A Fórmula do Divisor
+## 10.1 — Dois resistores, uma tensão intermediária
 
-V_saída = V_total × (R₂ / (R₁ + R₂))
+Um divisor simples utiliza dois resistores em série. Chamamos o resistor superior de \(R_1\) e o inferior de \(R_2\).
 
-Aplicações Práticas
+Aplicamos a tensão de entrada nas extremidades da associação e medimos a saída no ponto entre os resistores, tomando como referência o terminal negativo.
 
-   1. Sensores analógicos (LDR, termistor)
+A expressão é:
 
-   2. Polarização de transistores
+\[
+V_{saída}=V_{entrada}\times\frac{R_2}{R_1+R_2}
+\]
 
-   3. Referência de tensão simples
+**[INSERIR FIGURA 10.1 — Divisor de tensão com R1, R2, entrada e saída identificadas]**
 
-[INSERIR FIGURA 9.2 AQUI]
+*Legenda:* A tensão de saída é medida entre o ponto central e a referência negativa.
 
-      Figura 8.2: Circuito Básico do Divisor. Diagrama
-       claro.
+## 10.2 — Vamos fazer uma conta?
 
-Limitação Importante
+Considere uma bateria de 9 V, um resistor de 2 kΩ na posição \(R_1\) e outro de 1 kΩ na posição \(R_2\).
 
-Divisor de tensão não é regulador! Conectar uma carga
-altera a tensão de saída.
+Substituindo na fórmula:
 
+\[
+V_{saída}=9\times\frac{1000}{2000+1000}=3\ V
+\]
 
-[INSERIR FIGURA 9.3 AQUI]
+Ou seja: **sem carga conectada à saída**, esperamos aproximadamente 3 V no ponto central.
 
-      Figura 8.3: O Efeito da Carga. Comparação com e
-       sem carga.
+Você pode montar o circuito na protoboard e conferir o resultado com o multímetro em tensão contínua.
+
+## 10.3 — Onde usamos divisores?
+
+Divisores de tensão aparecem em várias situações: leitura de sensores resistivos, circuitos de polarização e criação de referências simples.
+
+Por exemplo, se substituirmos um dos resistores por um LDR, a tensão do ponto central muda conforme a iluminação. Essa variação pode ser interpretada por um circuito de medição.
+
+Mas existe um detalhe importante.
+
+## 10.4 — Divisor de tensão não é fonte regulada
+
+A fórmula que acabamos de utilizar descreve o divisor **sem carga significativa** na saída.
+
+Quando conectamos um dispositivo que consome corrente, ele altera a resistência equivalente do ramo inferior. Como consequência, a tensão de saída pode diminuir.
+
+Por isso, **não use um divisor resistivo simples como substituto de uma fonte regulada para alimentar motores, módulos ou outros dispositivos que consumam corrente significativa**.
+
+**[INSERIR FIGURA 10.2 — Comparação do divisor sem carga e com uma carga conectada à saída]**
+
+*Legenda:* A conexão de uma carga modifica o comportamento do divisor.
+
+## Para encerrar
+
+Com apenas dois resistores, conseguimos criar uma tensão intermediária útil para medições e sinais. O segredo está em conhecer também as limitações dessa solução.
+
+No próximo capítulo, vamos conhecer duas leis que ajudam a analisar circuitos com vários caminhos: as **Leis de Kirchhoff**.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
-
-PARTE 2: COMPONENTES ATIVOS
-
----
-
-*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
