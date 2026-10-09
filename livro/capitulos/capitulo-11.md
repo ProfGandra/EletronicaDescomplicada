@@ -1,14 +1,11 @@
-# Capítulo 11 — A VÁLVULA UNIDIRECIONAL –
+# Capítulo 11 — A VÁLVULA UNIDIRECIONAL – ENTENDENDO OS DIODOS
 
-> **Nota editorial:** capítulo 10 do manuscrito original, deslocado para a posição 11 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-ENTENDENDO OS DIODOS
 
 E aí, tudo bem? Antes de mergulharmos nos LEDs,
 precisamos entender o componente que deu origem a eles:
 o diodo semicondutor!
 
-[INSERIR FIGURA 9.1 AQUI]
+[INSERIR FIGURA 11.1 AQUI]
 
      Figura 9.1: O Símbolo Universal do
       Diodo. Ilustração do símbolo do diodo e sua analogia
@@ -26,7 +23,7 @@ funciona um diodo!
      Sentido inverso (polarização reversa): Bloqueia a
       corrente
 
-[INSERIR FIGURA 9.2 AQUI]
+[INSERIR FIGURA 11.2 AQUI]
 
 
       Figura 9.2: Analogia da Válvula
@@ -47,7 +44,7 @@ Polarização Reversa (Bloqueando):
 
       Quase nenhuma corrente flui
 
-[INSERIR FIGURA 9.3 AQUI]
+[INSERIR FIGURA 11.3 AQUI]
 
       Figura 9.3: Polarização do Diodo. Dois diagramas
        lado a lado mostrando condução e bloqueio.
@@ -68,7 +65,7 @@ Aplicações Práticas Incríveis
      3. Circuitos Clipper e Clamper: Moldam sinais
          elétricos
 
-[INSERIR FIGURA 9.4 AQUI]
+[INSERIR FIGURA 11.4 AQUI]
 
         Figura 9.4: Ponte Retificadora. Diagrama da ponte
          de diodos transformando AC em DC pulsante.
@@ -99,7 +96,7 @@ Zener            BZX85     Regula tensão
 Schottky                                     Alta frequência
                  9         (~0,3V)
 
-[INSERIR FIGURA 9.5 AQUI]
+[INSERIR FIGURA 11.5 AQUI]
 
 
       Figura 9.5: Família de Diodos. Coleção dos diodos
@@ -111,7 +108,7 @@ Testando um Diodo com Multímetro
 
       Polarização reversa: Mostra "OL" (circuito aberto)
 
-[INSERIR FIGURA 9.6 AQUI]
+[INSERIR FIGURA 11.6 AQUI]
 
       Figura 9.6: Teste com Multímetro. Sequência
        mostrando medição direta e reversa.
@@ -122,4 +119,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
