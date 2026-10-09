@@ -1,80 +1,74 @@
-# Capítulo 5 — O perigo da fumaça: potência elétrica
+# Capítulo 5 — A lei que reina absoluta: dominando a Lei de Ohm
 
-*Correspondente ao capítulo 7 do manuscrito original.*
+*Correspondente ao capítulo 5 do manuscrito original.*
 
-Já viu aquele resistor esquentando demais, mudando de cor ou até soltando cheiro de queimado? Isso tem tudo a ver com **potência elétrica**. Ignorar a potência é como construir uma casa sem conferir se a fiação aguenta o chuveiro.
+E aí, curtiu o papo sobre pressão, fluxo e resistência? Se você aprender apenas uma relação matemática neste começo de jornada, que seja esta: a famosa, poderosa e indispensável **Lei de Ohm**.
 
-Mas calma: não precisamos de fumaça para aprender!
+## A fórmula que você vai usar na bancada
 
-**[INSERIR FIGURA 5.1 — Resistor em operação normal, superaquecido e danificado]**
+Para um **condutor ôhmico**, mantidas aproximadamente constantes suas condições físicas, a tensão aplicada é proporcional à corrente:
 
-*Legenda:* Quando a potência dissipada ultrapassa as condições admissíveis do componente. *Referência original: “Do Útil ao Desastre”.*
+**V = R × I**
 
-## A fórmula da potência
+- **V:** tensão, em volts (V).
+- **I:** corrente, em ampères (A).
+- **R:** resistência, em ohms (Ω).
 
-A potência elétrica representa a **taxa de transferência ou transformação de energia**. Sua unidade é o **watt (W)**.
+A Lei de Ohm não significa que qualquer componente eletrônico tenha resistência constante. LEDs, diodos e transistores, por exemplo, têm comportamento não linear. Por enquanto, vamos aplicá-la principalmente aos resistores.
 
-Em corrente contínua, para as grandezas consideradas no componente:
+**[INSERIR FIGURA 4.1 — Georg Simon Ohm e a relação V = R × I]**
 
-**P = V × I**
+*Legenda:* Georg Simon Ohm e a relação entre tensão, corrente e resistência. *Referência original: figura “Georg Ohm e sua Descoberta”.*
 
-Onde P é a potência em watts, V é a tensão em volts e I é a corrente em ampères.
+## O triângulo mágico
 
-Se um dispositivo recebe 5 V e consome 0,1 A, sua potência elétrica de entrada é:
+Quer descobrir a tensão? Multiplique resistência por corrente. Quer descobrir a corrente? Divida tensão por resistência. Quer descobrir a resistência? Divida tensão por corrente.
 
-**P = 5 × 0,1 = 0,5 W**
+**V = R × I**
 
-Isso não significa que toda essa energia será necessariamente transformada em calor: motores, LEDs e outros dispositivos também a convertem em movimento, luz e outras formas de energia.
+**I = V / R**
 
-## Efeito Joule: por que o resistor esquenta?
+**R = V / I**
 
-Nos resistores, a energia elétrica é transformada principalmente em calor. É o chamado **efeito Joule**.
+**[INSERIR FIGURA 4.2 — Triângulo da Lei de Ohm]**
 
-**[INSERIR FIGURA 5.2 — Dissipação térmica no resistor]**
+*Legenda:* Relações entre tensão, corrente e resistência. *Referência original: “O Triângulo Mágico da Lei de Ohm”.*
 
-*Legenda:* Conversão de energia elétrica em calor no resistor. *Referência original: “O Efeito Joule em Ação”.*
+## Exemplo prático: calculando o resistor para um LED
 
-## As fórmulas que salvam componentes
+Imagine uma bateria de **9 V** e um LED vermelho cuja queda de tensão direta seja aproximadamente **2,2 V** na corrente de interesse. Vamos adotar, **apenas para este exemplo**, uma corrente de projeto de **20 mA**, desde que permitida pelo fabricante do LED.
 
-Combinando potência e Lei de Ohm, chegamos a três expressões úteis para resistores ôhmicos:
+O resistor em série precisa absorver a diferença de tensão:
 
-**P = V × I**
+**V_R = 9 − 2,2 = 6,8 V**
 
-**P = I² × R**
+Converta a corrente para ampères:
 
-**P = V² / R**
+**20 mA = 0,020 A**
 
-A escolha depende dos valores que você conhece.
+Agora aplique a Lei de Ohm:
 
-## Escolhendo o resistor certo
+**R = 6,8 / 0,020 = 340 Ω**
 
-Resistores comuns podem ter potências nominais de **1/8 W (0,125 W)**, **1/4 W (0,25 W)**, **1/2 W (0,5 W)**, **1 W**, **2 W** e outras.
+Você dificilmente encontrará um resistor comum de exatamente 340 Ω na sua caixa. Um valor comercial de **360 Ω** fornece, nas condições assumidas:
 
-A potência nominal não é um convite para trabalhar permanentemente no limite. A temperatura ambiente, a ventilação, a montagem e as orientações do fabricante também importam.
+**I ≈ 6,8 / 360 ≈ 0,0189 A = 18,9 mA**
 
-### Exemplo: LED e resistor
+E se você escolher **330 Ω**? A corrente calculada seria aproximadamente **20,6 mA**, um pouco acima da corrente de projeto. Não significa que todo LED vá queimar imediatamente, mas não é uma escolha que devemos recomendar sem conferir sua folha de dados.
 
-Retomemos o circuito anterior, com resistor de **360 Ω** e corrente estimada de **18,9 mA**.
+Lembre-se: a tensão da bateria, a queda de tensão do LED e a tolerância do resistor podem variar. O cálculo é um **dimensionamento inicial**, não uma promessa de corrente exata.
 
-**P = I² × R ≈ (0,0189)² × 360 ≈ 0,129 W**
+**[INSERIR FIGURA 4.3 — LED com resistor em série e cálculo passo a passo]**
 
-Um resistor de **1/4 W (0,25 W)** oferece uma margem em relação à potência calculada, nas condições assumidas. Ainda assim, confirme as condições de operação e as especificações do componente.
-
-No exemplo anterior do manuscrito, com **330 Ω e 20 mA**, a potência seria **0,132 W**; a conta estava correta, mas agora usamos o resistor de 360 Ω escolhido no capítulo 4 para manter os exemplos consistentes.
-
-**[INSERIR FIGURA 5.3 — Resistores de diferentes potências nominais]**
-
-*Legenda:* Comparação entre resistores com diferentes capacidades de dissipação. *Referência original: “Tamanho é Documento!”.*
+*Legenda:* Exemplo de dimensionamento do resistor para um LED alimentado por 9 V. *Referência original: “Cálculo do Resistor para o LED”.*
 
 ## Pare e pense!
 
-Um resistor de 100 Ω recebe 5 V em seus terminais. Qual a potência dissipada?
+Uma fonte de 12 V ligada a um resistor de 1 kΩ produziria qual corrente?
 
-**P = V² / R = 25 / 100 = 0,25 W**.
+**Resposta:** I = 12 / 1.000 = 0,012 A = **12 mA**.
 
-Percebeu o problema? Um resistor nominal de 1/4 W estaria exatamente no valor calculado, sem margem. Para um projeto confiável, avalie um resistor de potência superior e as condições térmicas.
-
-E lembre-se: a fumaça pode até render uma história divertida na bancada. Mas, em um circuito bem dimensionado, ela não faz parte do projeto.
+Viu? Você já está calculando como alguém que entende o circuito, não apenas decorando uma fórmula.
 
 Um abraço do seu professor,
 
@@ -84,7 +78,7 @@ Um abraço do seu professor,
 
 ### Registro editorial
 
-Corrigida a ligação entre potência elétrica e dissipação térmica; alinhado o exemplo do LED ao capítulo anterior; acrescentada margem de potência e referência às condições térmicas. Preservados três pontos de inserção de figuras.
+Revisadas a aplicabilidade da Lei de Ohm, as unidades e a escolha do resistor comercial. Mantidos os três pontos de inserção de imagens, com numeração ajustada à nova ordem.
 
 
 ---
