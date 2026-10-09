@@ -1,13 +1,10 @@
-# Capítulo 16 — A FONTE ESTÁVEL – REGULADORES DE
+# Capítulo 16 — A FONTE ESTÁVEL – REGULADORES DE TENSÃO
 
-> **Nota editorial:** capítulo 15 do manuscrito original, deslocado para a posição 16 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-TENSÃO
 
 Como transformamos os 110V/220V da tomada nos
 estáveis 5V ou 3,3V que nossos circuitos precisam?
 
-[INSERIR FIGURA 14.1 AQUI]
+[INSERIR FIGURA 16.1 AQUI]
 
      Figura 14.1: A Jornada da Energia. Diagrama da
       transformação AC → DC estável.
@@ -21,7 +18,7 @@ Os Três Estágios de uma Fonte
 
   3. Regulação: Estabiliza a tensão
 
-[INSERIR FIGURA 14.2 AQUI]
+[INSERIR FIGURA 16.2 AQUI]
 
      Figura 14.2: Os Três Estágios. Formas de onda em
       cada estágio.
@@ -35,13 +32,13 @@ O Herói: Regulador 78XX
      7824 → 24V
 
 
-[INSERIR FIGURA 14.3 AQUI]
+[INSERIR FIGURA 16.3 AQUI]
 
       Figura 14.3: O Regulador 7805. Pinagem e símbolo.
 
 Circuito Completo do 7805
 
-[INSERIR FIGURA 14.4 AQUI]
+[INSERIR FIGURA 16.4 AQUI]
 
       Figura 14.4: Circuito Completo do 7805. Esquema
        com capacitores de estabilização.
@@ -52,7 +49,7 @@ P_dissipada = (V_in - V_out) × I_carga
 
 Exemplo: 12V → 5V, 1A = 7 Watts de calor!
 
-[INSERIR FIGURA 14.5 AQUI]
+[INSERIR FIGURA 16.5 AQUI]
 
       Figura 14.5: Dissipação de Calor. Sem dissipador vs
        com dissipador.
@@ -63,4 +60,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
