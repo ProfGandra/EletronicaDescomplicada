@@ -1,8 +1,5 @@
-# Capítulo 6 — SEUS OLHOS E OUVIDOS NO MUNDO
+# Capítulo 6 — SEUS OLHOS E OUVIDOS NO MUNDO ELÉTRICO – DOMINANDO O MULTÍMETRO
 
-> **Nota editorial:** capítulo 2 do manuscrito original, deslocado para a posição 6 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-ELÉTRICO – DOMINANDO O MULTÍMETRO
 
 E aí, tudo bem? De nada adianta entender a teoria se você
 não consegue enxergar o que está acontecendo nos seus
@@ -12,7 +9,7 @@ olhos e ouvidos no mundo invisível da eletricidade.
 É o instrumento mais importante da sua bancada, e dominá-
 lo é tão crucial quanto dominar a Lei de Ohm.
 
-[INSERIR FIGURA 2.1 AQUI]
+[INSERIR FIGURA 6.1 AQUI]
 
       Figura 2.1: O Multímetro - Seu Companheiro
        Indispensável. Multímetro digital moderno com
@@ -36,7 +33,7 @@ Tensão (Volts): EM PARALELO com o componente
 Corrente (Ampères): EM SÉRIE - quebre o circuito!
 Resistência (Ohms): Componente DESLIGADO do circuito
 
-[INSERIR FIGURA 2.3 AQUI]
+[INSERIR FIGURA 6.2 AQUI]
 
      Figura 2.3: Como Conectar para Cada Medida. Três
       diagramas mostrando as conexões corretas.
@@ -52,7 +49,7 @@ Erros Comuns (e Como Evitá-los)
 
       Escala errada → Leituras imprecisas
 
-[INSERIR FIGURA 2.4 AQUI]
+[INSERIR FIGURA 6.3 AQUI]
 
       Figura 2.4: Os Erros que Custam Caro. Ilustração
        estilo "Não Faça Isso".
@@ -65,7 +62,7 @@ Dica de Ouro: A Regra das 3 Verificações
 
    3. Escala apropriada para o valor esperado?
 
-[INSERIR FIGURA 2.5 AQUI]
+[INSERIR FIGURA 6.4 AQUI]
 
       Figura 2.5: Checklist de Segurança. Infográfico com
        os 3 passos.
@@ -76,4 +73,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
