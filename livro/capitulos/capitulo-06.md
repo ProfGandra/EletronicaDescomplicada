@@ -1,75 +1,91 @@
-# Capítulo 6 — SEUS OLHOS E OUVIDOS NO MUNDO ELÉTRICO – DOMINANDO O MULTÍMETRO
+# Capítulo 6 — O perigo da fumaça: potência elétrica
 
+*Correspondente ao capítulo 7 do manuscrito original.*
 
-E aí, tudo bem? De nada adianta entender a teoria se você
-não consegue enxergar o que está acontecendo nos seus
-circuitos, certo? O multímetro é exatamente isso: os seus
-olhos e ouvidos no mundo invisível da eletricidade.
+Já viu aquele resistor esquentando demais, mudando de cor ou até soltando cheiro de queimado? Isso tem tudo a ver com **potência elétrica**. Ignorar a potência é como construir uma casa sem conferir se a fiação aguenta o chuveiro.
 
-É o instrumento mais importante da sua bancada, e dominá-
-lo é tão crucial quanto dominar a Lei de Ohm.
+Mas calma: não precisamos de fumaça para aprender!
 
-[INSERIR FIGURA 6.1 AQUI]
+**[INSERIR FIGURA 5.1 — Resistor em operação normal, superaquecido e danificado]**
 
-      Figura 2.1: O Multímetro - Seu Companheiro
-       Indispensável. Multímetro digital moderno com
-       pontas de prova.
+*Legenda:* Quando a potência dissipada ultrapassa as condições admissíveis do componente. *Referência original: “Do Útil ao Desastre”.*
 
-As Funções Básicas: O que cada símbolo significa
+## A fórmula da potência
 
-Tensão DC (V⎓): Mede a "pressão" em corrente contínua
-Tensão AC (V~): Mede a "pressão" em corrente alternada
-Corrente DC (A⎓): Mede o "fluxo" em corrente contínua
-Resistência (Ω): Mede a "dificuldade" à passagem da
-corrente
-Continuidade (   🔊): Emite um bipe quando há conexão
+A potência elétrica representa a **taxa de transferência ou transformação de energia**. Sua unidade é o **watt (W)**.
 
+Em corrente contínua, para as grandezas consideradas no componente:
 
-      Figura 2.2: Painel do Multímetro Decodificado.
+**P = V × I**
 
-Como Medir Corretamente
+Onde P é a potência em watts, V é a tensão em volts e I é a corrente em ampères.
 
-Tensão (Volts): EM PARALELO com o componente
-Corrente (Ampères): EM SÉRIE - quebre o circuito!
-Resistência (Ohms): Componente DESLIGADO do circuito
+Se um dispositivo recebe 5 V e consome 0,1 A, sua potência elétrica de entrada é:
 
-[INSERIR FIGURA 6.2 AQUI]
+**P = 5 × 0,1 = 0,5 W**
 
-     Figura 2.3: Como Conectar para Cada Medida. Três
-      diagramas mostrando as conexões corretas.
+Isso não significa que toda essa energia será necessariamente transformada em calor: motores, LEDs e outros dispositivos também a convertem em movimento, luz e outras formas de energia.
 
-Erros Comuns (e Como Evitá-los)
+## Efeito Joule: por que o resistor esquenta?
 
-     Medir corrente em paralelo →   ⚡ PERIGO! Queima o
-      multímetro!
+Nos resistores, a energia elétrica é transformada principalmente em calor. É o chamado **efeito Joule**.
 
-     Medir resistência com circuito ligado → Leitura
-      errada!
+**[INSERIR FIGURA 5.2 — Dissipação térmica no resistor]**
 
+*Legenda:* Conversão de energia elétrica em calor no resistor. *Referência original: “O Efeito Joule em Ação”.*
 
-      Escala errada → Leituras imprecisas
+## As fórmulas que salvam componentes
 
-[INSERIR FIGURA 6.3 AQUI]
+Combinando potência e Lei de Ohm, chegamos a três expressões úteis para resistores ôhmicos:
 
-      Figura 2.4: Os Erros que Custam Caro. Ilustração
-       estilo "Não Faça Isso".
+**P = V × I**
 
-Dica de Ouro: A Regra das 3 Verificações
+**P = I² × R**
 
-   1. Pontas nas entradas corretas?
+**P = V² / R**
 
-   2. Função selecionada é a adequada?
+A escolha depende dos valores que você conhece.
 
-   3. Escala apropriada para o valor esperado?
+## Escolhendo o resistor certo
 
-[INSERIR FIGURA 6.4 AQUI]
+Resistores comuns podem ter potências nominais de **1/8 W (0,125 W)**, **1/4 W (0,25 W)**, **1/2 W (0,5 W)**, **1 W**, **2 W** e outras.
 
-      Figura 2.5: Checklist de Segurança. Infográfico com
-       os 3 passos.
+A potência nominal não é um convite para trabalhar permanentemente no limite. A temperatura ambiente, a ventilação, a montagem e as orientações do fabricante também importam.
+
+### Exemplo: LED e resistor
+
+Retomemos o circuito anterior, com resistor de **360 Ω** e corrente estimada de **18,9 mA**.
+
+**P = I² × R ≈ (0,0189)² × 360 ≈ 0,129 W**
+
+Um resistor de **1/4 W (0,25 W)** oferece uma margem em relação à potência calculada, nas condições assumidas. Ainda assim, confirme as condições de operação e as especificações do componente.
+
+No exemplo anterior do manuscrito, com **330 Ω e 20 mA**, a potência seria **0,132 W**; a conta estava correta, mas agora usamos o resistor de 360 Ω escolhido no capítulo 4 para manter os exemplos consistentes.
+
+**[INSERIR FIGURA 5.3 — Resistores de diferentes potências nominais]**
+
+*Legenda:* Comparação entre resistores com diferentes capacidades de dissipação. *Referência original: “Tamanho é Documento!”.*
+
+## Pare e pense!
+
+Um resistor de 100 Ω recebe 5 V em seus terminais. Qual a potência dissipada?
+
+**P = V² / R = 25 / 100 = 0,25 W**.
+
+Percebeu o problema? Um resistor nominal de 1/4 W estaria exatamente no valor calculado, sem margem. Para um projeto confiável, avalie um resistor de potência superior e as condições térmicas.
+
+E lembre-se: a fumaça pode até render uma história divertida na bancada. Mas, em um circuito bem dimensionado, ela não faz parte do projeto.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
+**DIEGO GUIMARÃES GANDRA**
+
+---
+
+### Registro editorial
+
+Corrigida a ligação entre potência elétrica e dissipação térmica; alinhado o exemplo do LED ao capítulo anterior; acrescentada margem de potência e referência às condições térmicas. Preservados três pontos de inserção de figuras.
+
 
 ---
 
