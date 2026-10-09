@@ -1,91 +1,78 @@
-# Capítulo 13 — OS TANQUES DE ENERGIA – ENTENDENDO OS CAPACITORES
+# Capítulo 13 — O COMPONENTE QUE ILUMINA E ENSINA – TUDO SOBRE LEDS
 
 
-Chegou a hora de conhecer o componente
-que armazena energia: o capacitor!
+O LED (Diodo Emissor de Luz) é o primeiro componente que
+todo mundo quer ligar. E não é por acidente: é gratificante
+ver aquela luz acendendo!
 
-[INSERIR FIGURA 13.1 AQUI]
+[INSERIR FIGURA 12.1 AQUI]
 
-     Figura 11.1: Onde Vivem os Capacitores. Placa de
-      circuito com capacitores destacados.
+      Figura 10.1: A Evolução da Iluminação. Linha do
+       tempo: incandescente → fluorescente → LED.
 
-A Analogia Perfeita: O Tanque com Membrana
+Como o LED Realmente Funciona?
 
-Imagine um tanque com uma membrana de borracha.
-Quando você bombeia água, a membrana estica,
-armazenando energia. Quando libera, a membrana
-empurra a água de volta.
+Dentro do LED existe um material semicondutor especial.
+Quando os elétrons passam por ele, liberam energia na
+forma de luz!
 
-O capacitor funciona exatamente assim!
+A Polaridade Correta
 
-[INSERIR FIGURA 13.2 AQUI]
+      Ânodo (+): Pino longo (corrente entra)
 
-     Figura 11.2: Anatomia de um Capacitor. Diagrama
-      em corte mostrando placas e dielétrico.
+      Cátodo (-): Pino curto (corrente sai)
 
-Capacitância: A Medida do Armazenamento
+[INSERIR FIGURA 12.2 AQUI]
 
-     Farad (F): Unidade, mas é enorme!
+      Figura 10.2: Anatomia de um LED. Diagrama em
+       corte mostrando ânodo, cátodo, material
+       semicondutor.
 
-     Microfarad (μF): 0,000001 F
-
-     Nanofarad (nF): 0,000000001 F
-
-
-     Picofarad (pF): 0,000000000001 F
-
-[INSERIR FIGURA 13.3 AQUI]
-
-     Figura 11.3: Escala de Capacitâncias. Comparação
-      de tamanhos: cerâmico, eletrolítico,
-      supercapacitor.
-
-Comportamento em DC: Carga e Descarga
-
-Carregando: Tensão sobe exponencialmente
-Descarregando: Tensão cai exponencialmente
-
-[INSERIR FIGURA 13.4 AQUI]
-
-     Figura 11.4: Curvas de Carga e Descarga. Gráfico
-      exponencial.
-
-A Constante de Tempo (τ): O "Ritmo" do Capacitor
-
-τ=R×C
-
-Em 1τ: carrega 63% da tensão
-Em 5τ: carrega 99% (praticamente total)
-
-Aplicações Práticas
-
-  1. Filtragem de Ruído: Suaviza variações de tensão
-
-  2. Desacoplamento: Energia instantânea para CIs
-
-  3. Temporização: Delays com circuitos RC
-
-  4. Armazenamento: Picos de corrente momentâneos
+Os Três Segredos para um LED Feliz
 
 
-[INSERIR FIGURA 13.5 AQUI]
+   1. Tensão de Forward (Vf): Cada cor precisa de uma
+       tensão mínima
 
-     Figura 11.5: Aplicações dos Capacitores. Quatro
-      mini-diagramas de aplicações.
+          o   Vermelho: 1,8V - 2,2V
 
-Cuidados Importantíssimos!
+          o   Verde/Amarelo: 2,0V - 2,4V
 
-     Polaridade: Capacitores eletrolíticos têm
-      polaridade! Inverter = explosão!
+          o   Azul/Branco: 3,0V - 3,6V
 
-     Tensão de Trabalho: Nunca exceder a tensão
-      máxima!
+   2. Corrente Ideal (If): 15mA a 25mA para LEDs padrão
 
-[INSERIR FIGURA 13.6 AQUI]
+   3. Resistor Limitador: Sem ele, morte na certa!
 
-     Figura 11.6: Identificação e Cuidados. Capacitor
-      eletrolítico com faixa negativa e símbolos de
-      atenção.
+[INSERIR FIGURA 12.3 AQUI]
+
+      Figura 10.3: Tabela de Especificações. Cores e faixas
+       de tensão.
+
+Calculando o Resistor para LED
+
+Para fonte 12V e LED branco (Vf=3,2V, If=20mA):
+
+R = (12V - 3,2V) / 0,020A = 440Ω → usar 470Ω
+
+[INSERIR FIGURA 12.4 AQUI]
+
+      Figura 10.4: Cálculo do Resistor Passo a
+       Passo. Infográfico do cálculo.
+
+LEDs em Série e Paralelo
+
+Série: Soma as tensões de forward. Bom para fontes de
+tensão mais alta.
+
+Paralelo: Cada LED precisa de seu PRÓPRIO resistor!
+
+
+[INSERIR FIGURA 12.5 AQUI]
+
+      Figura 10.5: Associação de LEDs. Correto (série e
+       paralelo com resistores individuais) vs errado
+       (paralelo com um resistor).
 
 Um abraço do seu professor,
 
