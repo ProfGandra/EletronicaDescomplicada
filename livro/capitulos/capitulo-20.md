@@ -1,100 +1,95 @@
-# Capítulo 20 — SENSORES E ATUADORES – INTERFACE COM O MUNDO REAL
+# Capítulo 20 — MEMÓRIA E SEQUÊNCIA – FLIP-FLOPS Circuitos sequenciais têm memória! Eles lembram do
+
+passado e tomam decisões baseadas nele.
+
+[INSERIR FIGURA 19.1 AQUI]
+
+      Figura 17.1: Combinacional vs Sequencial. Circuito
+       sem memória vs com realimentação.
+
+O Flip-Flop SR (Set-Reset)
+
+O mais simples dos flip-flops:
+
+      S (Set): Coloca saída em 1
+
+      R (Reset): Coloca saída em 0
+
+      S=R=0: Mantém o estado anterior
+
+[INSERIR FIGURA 19.2 AQUI]
+
+      Figura 17.2: Flip-Flop SR com Portas
+       NAND. Diagrama de duas portas cruzadas.
+
+O Flip-Flop JK: O Versátil
+
+Resolve o problema da condição proibida do SR e
+adiciona toggle (inverte a cada clock).
 
 
-Sensores são os "sentidos" da eletrônica. Atuadores são os
-"músculos". Juntos, criam sistemas inteligentes!
-
-[INSERIR FIGURA 20.1 AQUI]
-
-      Figura 18.1: Dos Sentidos à Ação. Diagrama: sensor
-       → processamento → atuador.
-
-Sensores Analógicos vs Digitais
-
-Analógicos: Valor contínuo (0-5V)
-
-      Potenciômetro, LDR, LM35 (temperatura)
-
-      Precisam de ADC (Conversor Analógico-Digital)
-
-Digitais: Valor discreto (0 ou 1)
-
-      Botão, sensor magnético, sensor PIR de movimento
-
-[INSERIR FIGURA 20.2 AQUI]
-
-      Figura 18.2: Tipos de Sensores. Coleção dos sensores
-       mais comuns.
-
-Sensor LM35 (Temperatura)
-
-      10mV por grau Celsius
-
-      0°C = 0V, 100°C = 1,0V
+            CL
+J       K          Q
+            K
 
 
-      Preciso e fácil de usar!
-
-[INSERIR FIGURA 20.3 AQUI]
-
-      Figura 18.3: Sensor LM35. Conexão com Arduino e
-       gráfico linear.
-
-Sensor LDR (Luz)
-
-Resistor que varia com a luz:
-
-      Escuro: Alta resistência (até 1MΩ)
-
-      Claro: Baixa resistência (~10kΩ)
-
-Use em divisor de tensão com resistor fixo!
-
-[INSERIR FIGURA 20.4 AQUI]
-
-      Figura 18.4: Circuito com LDR. Divisor resistivo e
-       curva característica.
-
-Atuadores Comuns
-
-      LEDs: Indicação e iluminação
-
-      Relés: Controle de alta potência
-
-      Motores DC: Movimento contínuo
-
-      Servomotores: Posicionamento preciso
-
-      Solenoides: Movimento linear
-
-[INSERIR FIGURA 20.5 AQUI]
+                   Manté
+0       0   ↑
+                   m
 
 
-         Figura 18.5: Família de Atuadores. Coleção com
-          aplicações típicas.
+0       1   ↑      0
 
-Sistema Completo: Controlador de Temperatura
 
-Código básico para ligar ventilador quando está quente:
+1       0   ↑      1
 
-cpp
 
-void loop() {
+1       1   ↑      Toggle
 
-    int temp = analogRead(A0) * 0.488; // Converte para °C
+[INSERIR FIGURA 19.3 AQUI]
 
-    if (temp > 30) digitalWrite(9, HIGH);
+       Figura 17.3: Flip-Flop JK em Toggle. Diagrama de
+        tempo mostrando inversão a cada clock.
 
-    else digitalWrite(9, LOW);
+O Flip-Flop D (Data): O Mais Usado
 
-    delay(1000);
+Amostra o valor da entrada D na borda do clock e copia
+para a saída Q. Perfeito para transferir dados!
 
-}
+[INSERIR FIGURA 19.4 AQUI]
 
-[INSERIR FIGURA 20.6 AQUI]
+       Figura 17.4: Flip-Flop D. Diagrama de tempo
+        mostrando captura de dados.
 
-         Figura 18.6: Controlador de
-          Temperatura. Diagrama completo do sistema.
+Aplicações Práticas
+
+
+   1. Registradores de Deslocamento: Cadeias de flip-
+       flops para comunicação serial
+
+   2. Contadores: Flip-flops em cascata contam eventos!
+
+   3. Debouncing de Botões: Elimina tremores mecânicos
+
+[INSERIR FIGURA 19.5 AQUI]
+
+      Figura 17.5: Contador com Flip-Flops. Diagrama de
+       contador de 4 bits.
+
+Setup e Hold Time: Os Tempos Críticos
+
+      Setup Time: Tempo que D deve estar estável ANTES
+       do clock
+
+      Hold Time: Tempo que D deve permanecer estável
+       DEPOIS do clock
+
+Violar esses tempos causa comportamento imprevisível!
+
+[INSERIR FIGURA 19.6 AQUI]
+
+      Figura 17.6: Setup e Hold Time. Diagrama temporal
+       mostrando os tempos críticos.
 
 Um abraço do seu professor,
 
