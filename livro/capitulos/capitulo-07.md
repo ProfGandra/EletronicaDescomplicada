@@ -1,8 +1,5 @@
-# Capítulo 7 — SEU CAMPO DE TESTES – DOMINANDO A
+# Capítulo 7 — SEU CAMPO DE TESTES – DOMINANDO A PROTOBOARD
 
-> **Nota editorial:** capítulo 4 do manuscrito original, deslocado para a posição 7 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-PROTOBOARD
 
 O que é a Protoboard?
 A protoboard (ou placa de ensaio) é a ferramenta fundamental para
@@ -54,7 +51,7 @@ A Anatomia da Protoboard
 
          Canal Central: Espaço para encaixar CIs
 
-[INSERIR FIGURA 3.2 AQUI]
+[INSERIR FIGURA 7.1 AQUI]
 
          Figura 3.2: Como Funciona por Dentro. Diagrama
           em corte das trilhas metálicas internas.
@@ -71,7 +68,7 @@ Regras de Ouro da Boa Montagem
      4. Teste por etapas
 
 
-[INSERIR FIGURA 3.3 AQUI]
+[INSERIR FIGURA 7.2 AQUI]
 
       Figura 3.3: Boa vs Má Montagem. Comparação lado
        a lado.
@@ -80,13 +77,13 @@ Cores Padrão para Jumpers
 
       Vermelho: VCC (positivo)
 
-      Preto: GND (terra)
+      Preto: GND (referência comum; não confundir com terra de proteção)
 
       Amarelo/Laranja: Sinais
 
       Verde/Azul: Dados
 
-[INSERIR FIGURA 3.4 AQUI]
+[INSERIR FIGURA 7.3 AQUI]
 
       Figura 3.4: Técnicas de Cabos. Sequência mostrando
        organização e corte.
@@ -108,7 +105,7 @@ E aí, pronto para colocar a mão na massa? A protoboard é
 onde as ideias saem do papel e viram circuitos reais, sem
 precisar soldar nada!
 
-[INSERIR FIGURA 3.1 AQUI]
+[INSERIR FIGURA 7.4 AQUI]
 
 
 
@@ -118,4 +115,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
