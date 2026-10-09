@@ -1,50 +1,49 @@
-# Capítulo 9 — A PONTE PARA O MUNDO REAL – DIVISORES DE TENSÃO
+# Capítulo 9 — JUNTOS E MISTURADOS – ASSOCIAÇÃO DE RESISTORES
 
 
-Uma das aplicações mais úteis da associação em série é
-o divisor de tensão.
+Quando a gente precisa de um valor que não temos na
+caixinha, a solução é associar resistores.
 
-[INSERIR FIGURA 9.1 AQUI]
+[INSERIR FIGURA 8.1 AQUI]
 
-      Figura 8.1: A Mágica da Divisão de
-       Tensão. Transformando 9V em 3V com dois
-       resistores.
+      Figura 7.1: O Poder das Associações. Combinando
+       resistores para criar valores personalizados.
 
-A Fórmula do Divisor
+Associação em Série
 
-V_saída = V_total × (R₂ / (R₁ + R₂))
+R_total = R₁ + R₂ + R₃ + ...
 
-Aplicações Práticas
+[INSERIR FIGURA 8.2 AQUI]
 
-   1. Sensores analógicos (LDR, termistor)
+      Figura 7.2: Resistores em Série. Diagrama com
+       corrente constante.
 
-   2. Polarização de transistores
+Associação em Paralelo
 
-   3. Referência de tensão simples
+1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + ...
 
-[INSERIR FIGURA 9.2 AQUI]
+Para 2 resistores: R_total = (R₁ × R₂) / (R₁ + R₂)
 
-      Figura 8.2: Circuito Básico do Divisor. Diagrama
-       claro.
+[INSERIR FIGURA 8.3 AQUI]
 
-Limitação Importante
+      Figura 7.3: Resistores em Paralelo. Diagrama com
+       tensão constante.
 
-Divisor de tensão não é regulador! Conectar uma carga
-altera a tensão de saída.
+Associação Mista
 
 
-[INSERIR FIGURA 9.3 AQUI]
+Simplifique passo a passo: resolva os paralelos primeiro,
+depois some as séries.
 
-      Figura 8.3: O Efeito da Carga. Comparação com e
-       sem carga.
+[INSERIR FIGURA 8.4 AQUI]
+
+      Figura 7.4: Associação Mista. Simplificação passo a
+       passo.
 
 Um abraço do seu professor,
 
 Diego G. Gandra
 
-
-PARTE 2: COMPONENTES ATIVOS
-
 ---
 
-*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
+*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
