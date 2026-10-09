@@ -1,49 +1,95 @@
-# Capítulo 9 — JUNTOS E MISTURADOS – ASSOCIAÇÃO DE RESISTORES
+# Capítulo 9 — Juntos e misturados: associação de resistores
 
+Olá, tudo bem com você?
 
-Quando a gente precisa de um valor que não temos na
-caixinha, a solução é associar resistores.
+Imagine que você precisa de um resistor de 300 Ω, mas só encontrou resistores de 100 Ω na sua caixinha. E agora?
 
-[INSERIR FIGURA 8.1 AQUI]
+Antes de sair procurando outro componente, vale conhecer um recurso muito útil: **associar resistores**.
 
-      Figura 7.1: O Poder das Associações. Combinando
-       resistores para criar valores personalizados.
+Dependendo da ligação, conseguimos aumentar ou diminuir a resistência equivalente de um circuito.
 
-Associação em Série
+## 9.1 — Resistores em série
 
-R_total = R₁ + R₂ + R₃ + ...
+Quando ligamos resistores um depois do outro, sem ramificações entre eles, temos uma **associação em série**.
 
-[INSERIR FIGURA 8.2 AQUI]
+Nesse caso, a mesma corrente passa por todos os resistores, e a resistência equivalente é a soma dos valores:
 
-      Figura 7.2: Resistores em Série. Diagrama com
-       corrente constante.
+\[
+R_{eq}=R_1+R_2+R_3+\cdots
+\]
 
-Associação em Paralelo
+Por exemplo, três resistores de 100 Ω em série resultam em:
 
-1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + ...
+\[
+R_{eq}=100+100+100=300\ \Omega
+\]
 
-Para 2 resistores: R_total = (R₁ × R₂) / (R₁ + R₂)
+Pronto! Encontramos o valor de que precisávamos.
 
-[INSERIR FIGURA 8.3 AQUI]
+**[INSERIR FIGURA 9.1 — Três resistores de 100 Ω associados em série]**
 
-      Figura 7.3: Resistores em Paralelo. Diagrama com
-       tensão constante.
+*Legenda:* Na associação em série, as resistências se somam.
 
-Associação Mista
+## 9.2 — Resistores em paralelo
 
+Agora imagine dois resistores conectados entre os **mesmos dois pontos** do circuito. Temos uma associação em paralelo.
 
-Simplifique passo a passo: resolva os paralelos primeiro,
-depois some as séries.
+Nesse arranjo, a tensão nos resistores é a mesma, mas a corrente pode se dividir entre os caminhos.
 
-[INSERIR FIGURA 8.4 AQUI]
+Para calcular a resistência equivalente:
 
-      Figura 7.4: Associação Mista. Simplificação passo a
-       passo.
+\[
+\frac{1}{R_{eq}}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}+\cdots
+\]
+
+Se houver apenas dois resistores, podemos usar uma forma mais prática:
+
+\[
+R_{eq}=\frac{R_1R_2}{R_1+R_2}
+\]
+
+Dois resistores de 100 Ω em paralelo equivalem a:
+
+\[
+R_{eq}=\frac{100\times100}{100+100}=50\ \Omega
+\]
+
+Percebeu? Em paralelo, a resistência equivalente fica **menor do que a menor resistência individual**, considerando resistores de valores positivos.
+
+**[INSERIR FIGURA 9.2 — Dois resistores de 100 Ω associados em paralelo]**
+
+*Legenda:* A corrente encontra mais de um caminho, reduzindo a resistência equivalente.
+
+## 9.3 — E quando o circuito mistura tudo?
+
+Alguns circuitos apresentam associações em série e em paralelo ao mesmo tempo. Chamamos isso de **associação mista**.
+
+A estratégia é identificar pequenos grupos que você já sabe calcular, substituí-los por suas resistências equivalentes e repetir o processo.
+
+Por exemplo: dois resistores de 100 Ω em paralelo equivalem a 50 Ω. Se esse conjunto estiver em série com outro resistor de 150 Ω, teremos:
+
+\[
+R_{eq}=50+150=200\ \Omega
+\]
+
+**[INSERIR FIGURA 9.3 — Associação mista com dois resistores de 100 Ω em paralelo e um de 150 Ω em série]**
+
+*Legenda:* Simplifique o paralelo e depois some o resistor em série.
+
+## 9.4 — Hora de conferir com o multímetro
+
+Com o circuito **desconectado de qualquer fonte**, monte duas associações: dois resistores de 100 Ω em série e os mesmos dois em paralelo.
+
+Meça a resistência equivalente de cada montagem. Compare com os valores calculados.
+
+Talvez as leituras não sejam exatamente 200 Ω e 50 Ω. Isso acontece porque resistores reais possuem tolerâncias e o próprio instrumento tem limites de precisão.
+
+## Para encerrar
+
+Associação de resistores não é apenas um exercício de matemática. É uma ferramenta para adaptar valores, distribuir correntes e construir circuitos.
+
+No próximo capítulo, vamos aproveitar uma associação em série para criar algo muito útil: um **divisor de tensão**.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-
-*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
