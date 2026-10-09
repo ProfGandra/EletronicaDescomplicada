@@ -75,6 +75,12 @@ Por isso, utilize **óculos de segurança com proteção lateral**, adequados à
 
 É um cuidado simples que precisa se tornar um hábito.
 
+E, antes que você diga que os óculos incomodam, atrapalham ou que vai ser só um cortezinho rápido, permita-me fazer uma pergunta:
+
+**“Prefere usar os óculos ou uma cegueira misteriosa?”**
+
+Pois é. Acho que os óculos não incomodam tanto assim!
+
 **Na bancada, os olhos vêm antes do circuito!**
 
       Pulseira antiestática (para proteger componentes sensíveis contra ESD; não é EPI contra choque elétrico e não deve ser utilizada ao trabalhar com partes energizadas perigosas)
