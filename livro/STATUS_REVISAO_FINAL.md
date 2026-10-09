@@ -1,34 +1,23 @@
-# Situação da revisão — 09/10/2026
+# Situação editorial atual — 09/10/2026
 
-## Materiais no repositório
+## Consolidação local concluída
 
-- [23 capítulos](capitulos/) — arquivos Markdown atualizados com harmonização editorial e referências de figuras.
-- [Apêndices A–F](apendices/) — transcritos do manuscrito original.
-- [Código do projeto final](../../codigo/monitoramento_plantas.ino) — versão com calibração do sensor, histerese e limite de acionamento.
-- [Referências completas de imagens](../../referencias-imagens/REFERENCIAS_COMPLETAS.md) — descrições e prompts separados do texto didático.
+Foi gerado o documento **ELETRONICA_DC_DESCOMPLICADA_MANUSCRITO_CONSOLIDADO.docx**, em formato 16 × 23 cm, e um pacote ZIP que contém **23 capítulos Markdown extraídos dessa mesma matriz**, os apêndices A–F, o código Arduino, o sumário estrutural e o inventário de imagens.
 
-## Edição de trabalho em Word
+**Conferência estrutural:** 23 capítulos, 6 apêndices e 106 pares de marcadores/legendas de figuras no corpo dos capítulos, sem divergências automáticas de numeração. Os três prompts de imagem que apareciam indevidamente no Capítulo 3 foram movidos para arquivo separado. Foram harmonizados o exemplo de 360 Ω/0,129 W e descrições de componentes.
 
-Foi produzida uma edição revisada de 16 × 23 cm a partir do DOCX original, mantendo os 23 capítulos, os apêndices, as tabelas e as chamadas de imagens. A versão Word foi renderizada para inspeção visual (127 páginas sem as imagens definitivas).
+**Código:** verificação sintática com compilador C++ e stubs locais; sem compilação na Arduino IDE nem teste em bancada.
 
-**A versão DOCX revisada e os Markdown do GitHub não são cópias idênticas.** Os capítulos Markdown receberam harmonização e correções editoriais no repositório; a versão Word foi editada separadamente. Antes de gerar a prova gráfica, é necessário escolher o DOCX como matriz e conferir diferenças com os Markdown. O arquivo binário DOCX ainda não foi transferido ao GitHub.
+## Estado do GitHub
 
-## Verificações e correções
+Os 23 arquivos Markdown anteriores estão publicados no repositório, mas **não são garantidamente idênticos à matriz DOCX consolidada**. O pacote local reúne a versão canônica. O upload do arquivo DOCX binário e a substituição integral dos 23 Markdown pela nova exportação ainda não foram confirmados no GitHub.
 
-1. Sequência pedagógica reorganizada com segurança na posição 2.
-2. Exemplo de LED: 340 Ω calculados; 360 Ω recomendado em vez de 330 Ω para o alvo de 20 mA.
-3. Explicações de medições e precauções para a bancada.
-4. Referências à montagem de cargas de rede substituídas por exemplos de baixa tensão.
-5. Projeto de plantas: calibração, proteção lógica, limites de tempo e especificação de sensores.
-6. Marcadores e legendas de 103 figuras renumerados no arquivo Word.
-7. Código C++ submetido a uma **verificação de sintaxe com stubs locais**; **não** foi compilado na Arduino IDE nem ensaiado em bancada.
+## O que falta para publicação
 
-## Pendências externas e limitações
+1. Inserir imagens e verificar os circuitos representados.
+2. Compilar o projeto final na IDE e testar fisicamente o hardware.
+3. Atualizar sumário paginado e índice remissivo depois das imagens.
+4. Confirmar ISBN e ficha catalográfica.
+5. Conferir a prova gráfica final.
 
-- **Teste físico do projeto:** exige componentes reais, pinagem confirmada, fonte adequada e verificação de acionamento e sensores.
-- **Compatibilidade Arduino:** instalar bibliotecas, compilar para a placa escolhida e ajustar parâmetros conforme hardware real.
-- **ISBN e ficha catalográfica:** precisam de dados e emissão/validação apropriados; não podem ser inventados.
-- **Sumário paginado e prova gráfica:** dependem da inserção das figuras e fechamento editorial.
-- **Conferência final:** validar todos os esquemas, tabelas e exercícios, inclusive comparando o DOCX com o repositório.
-
-**Não declarar o livro pronto para publicação até concluir esses testes e a prova editorial.**
+Não declarar que o livro está pronto para impressão sem essas verificações.
