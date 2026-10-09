@@ -1,143 +1,100 @@
-# Capítulo 23 — PROJETO FINAL – SISTEMA DE CAPÍTULO 23: PROJETO FINAL – SISTEMA DE
-
-MONITORAMENTO DE PLANTAS AUTOMATIZADO
-
-Vamos construir um sistema completo que integra TUDO
-que aprendemos!
-
-[INSERIR FIGURA 23.1 AQUI]
-
-      Figura 22.1: Diagrama de Blocos do
-       Sistema. Sensores → Arduino → Atuadores → Display.
-
-Visão Geral do Projeto
-
-O sistema irá:
-
-      Monitorar umidade do solo, temperatura e
-       luminosidade
-
-      Controlar automaticamente irrigação e iluminação
-
-      Alertar visualmente quando precisar de intervenção
-
-      Exibir todas as informações em tempo real
-
-Lista de Componentes
-
-Sensores:
-
-      Sensor de umidade do solo (higrômetro)
-
-      Sensor de temperatura LM35
-
-      LDR (sensor de luz)
+# Capítulo 23 — GUIA DE SOBREVIVÊNCIA NA BANCADA – ORGANIZAÇÃO E EFICIÊNCIA
 
 
-     Botões para controle manual
+Uma bancada organizada não é só bonita - é funcional e te
+faz trabalhar melhor!
 
-Atuadores:
+[INSERIR FIGURA 22.1 AQUI]
 
-     Relé 5V para bomba d'água
+      Figura 20.1: Layout Ideal da Bancada. Diagrama
+       com zonas de trabalho.
 
-     Relé 5V para lâmpada
+O Triângulo de Ouro da Bancada
 
-     LED RGB para status
+Zona 1 (Trabalho Ativo): Protoboard, componentes em uso
+Zona 2 (Ferramentas): Alicates, multímetro, ferro de solda
+Zona 3 (Suprimentos): Componentes organizados
+Zona 4 (Documentação): Computador, datasheets, caderno
 
-     Buzzer para alertas
+Ferramentas Essenciais (Kit Básico)
 
-Processamento:
+Must-Have:
 
-     Arduino Uno
+      Multímetro digital
 
-     Display LCD 16x2 com I2C
+      Alicate de corte diagonal
 
-     Protoboard e jumpers
+      Alicate de bico fino
 
-Alimentação:
+      Ferro de solda 60W com suporte
 
-     Fonte DC de 12 V para bomba de 12 V; alimentação do Arduino conforme a especificação da placa.
+      Sugador de solda
 
-     Fonte DC regulada de 5 V para lógica e módulos, dimensionada para a corrente.
-
-[INSERIR FIGURA 23.2 AQUI]
-
-     Figura 22.2: Esquemático Detalhado. Diagrama
-      completo com todas as conexões.
-
-## Código revisado do projeto
-
-O código completo está disponível em [`codigo/monitoramento_plantas.ino`](../../codigo/monitoramento_plantas.ino). Ele prevê calibração do sensor, histerese, limite de acionamento da bomba e condição de desligamento diante de calibração inválida. **O código precisa ser compilado na Arduino IDE e ensaiado com os componentes reais antes de ser usado.**
-
-**[INSERIR FIGURA 23.3 AQUI]**
-
-*Figura 23.3: Código revisado do projeto e principais funções.*
-
-Teste e Calibração
-
-Calibração do Sensor de Umidade:
-
-        1. Registre o valor do ADC em referência seca; não suponha que seja zero.
-
-        2. Registre a leitura em substrato úmido de referência; água pura não é calibração universal.
-
-        3. Ajuste ADC_SECO e ADC_UMIDO após medir o sensor; os percentuais são relativos à calibração.
-
-Ajuste dos Limiares:
-
-           Umidade: ajustar limites após calibração e conforme a espécie cultivada.
+      Óculos de proteção!
 
 
-      Temperatura: 18-28°C para maioria das plantas
+Nice-to-Have:
 
-      Luminosidade: ajustar com o divisor LDR real; leituras ADC não são lux.
+      Fonte de alimentação ajustável
 
-Melhorias e Expansões
+      Osciloscópio
 
-Para levar para o próximo nível:
+      Estação de solda com controle de temperatura
 
-   1. Log de dados com cartão SD
+      Lupa articulada com LED
 
-   2. Conexão Wi-Fi com ESP8266
+[INSERIR FIGURA 22.2 AQUI]
 
-   3. App mobile para monitoramento remoto
+      Figura 20.2: As Ferramentas Essenciais. Foto
+       "exploded view" de cada ferramenta.
 
-   4. Machine learning para otimizar rega
+Sistema de Organização de Componentes
 
-   5. Dashboard web com gráficos
+Resistores: Organizador com divisórias (valores E12)
+Capacitores: Separar por tipo (cerâmicos, eletrolíticos)
+Semicondutores: Diodos, transistores, CIs separados
+Fios e Conectores: Por cor e tipo
 
-[INSERIR FIGURA 23.4 AQUI]
+[INSERIR FIGURA 22.3 AQUI]
 
-      Figura 22.4: Projeto Montado. Foto do sistema
-       completo funcionando.
+      Figura 20.3: Organizador Profissional. Foto com
+       etiquetas claras.
 
-Documentação do Projeto
+Lista Mínima para Começar
 
-Não esqueça de documentar:
+      Resistores: Valores de 10Ω a 1MΩ (série E12)
 
-      Esquemático final
+      Capacitores: 100pF, 1nF, 10nF, 100nF, 1μF, 10μF, 100μF
 
-      Lista de componentes com valores
-
-      Código comentado
-
-      Limiares de calibração
-
-      Lições aprendidas
+      LEDs: Vermelho, verde, azul, branco (5mm)
 
 
-Parabéns! Este projeto integra TUDO que aprendemos:
-sensores, atuadores, programação, segurança e boas
-práticas de bancada. Você agora não é mais um iniciante - é
-um maker!
+      Transistores: BC547 (NPN), BC557 (PNP)
+
+      Diodos: 1N4148, 1N4007
+
+      Potenciômetros: 1kΩ, 10kΩ, 100kΩ
+
+Dicas de Ouro do Profissional
+
+   1. "Limpeza semanal" - 15 minutos toda sexta
+
+   2. "Etiquete TUDO" - Caneta permanente é sua amiga
+
+   3. "Teste antes de guardar" - Componentes novos podem
+       ser defeituosos
+
+   4. "Documente seus projetos" - Fotos, esquemas,
+       aprendizados
+
+[INSERIR FIGURA 22.4 AQUI]
+
+      Figura 20.4: Antes e Depois. Bancada desorganizada
+       vs organizada.
 
 Um abraço do seu professor,
 
 Diego G. Gandra
-
----
-**Controle editorial:** capítulo transferido integralmente para revisão; não representa validação final de circuitos ou códigos.
-
 
 ---
 
