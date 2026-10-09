@@ -75,3 +75,8 @@ Agora que conhecemos tensão, corrente e resistência, estamos prontos para unir
 - Incluídas tabela de cores, exemplo numérico e verificação com multímetro.
 - **Referências de inserção das três imagens preservadas no próprio capítulo.**
 - A correspondência exata das imagens com o DOCX ainda requer conferência visual.
+
+
+---
+
+*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
