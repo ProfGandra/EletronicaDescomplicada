@@ -1,78 +1,63 @@
-# Capítulo 17 — O CÉREBRO DOS CIRCUITOS – CIRCUITOS INTEGRADOS
+# Capítulo 17 — A FONTE ESTÁVEL – REGULADORES DE TENSÃO
 
 
-Circuitos integrados (CIs) são caixas mágicas que
-contêm milhares de componentes dentro de um chip do
-tamanho de uma unha!
+Como transformamos os 110V/220V da tomada nos
+estáveis 5V ou 3,3V que nossos circuitos precisam?
 
-[INSERIR FIGURA 17.1 AQUI]
+[INSERIR FIGURA 16.1 AQUI]
 
-      Figura 15.1: A Evolução dos Circuitos
-       Integrados. Rádio antigo vs smartphone moderno.
+     Figura 14.1: A Jornada da Energia. Diagrama da
+      transformação AC → DC estável.
 
-Anatomia de um CI
+Os Três Estágios de uma Fonte
 
-Dentro do encapsulamento plástico existe uma pastilha
-de silício (chip) com circuitos microscópicos!
+  1. Transformação: Reduz a tensão alta (220V → 12V
+      AC)
 
-[INSERIR FIGURA 17.2 AQUI]
+  2. Retificação: Converte AC em DC pulsante
 
-      Figura 15.2: Anatomia de um Circuito
-       Integrado. Diagrama em camadas do CI.
+  3. Regulação: Estabiliza a tensão
 
-O CI Mais Famoso: NE555 (Timer)
+[INSERIR FIGURA 16.2 AQUI]
 
-Pode funcionar de três maneiras:
+     Figura 14.2: Os Três Estágios. Formas de onda em
+      cada estágio.
 
-   1. Monoestável: Gera um pulso
+O Herói: Regulador 78XX
 
-   2. Astável: Gera onda quadrada (pisca-pisca!)
+     7805 → 5V
 
-   3. Biestável: Interruptor com memória
+     7812 → 12V
 
-[INSERIR FIGURA 17.3 AQUI]
+     7824 → 24V
 
 
-      Figura 15.3: O Incrível NE555. Pinagem completa
-       do CI 555.
+[INSERIR FIGURA 16.3 AQUI]
 
-Circuito Pisca-Pisca com 555
+      Figura 14.3: O Regulador 7805. Pinagem e símbolo.
 
-f = 1,44 / ((R1 + 2×R2) × C1)
+Circuito Completo do 7805
 
-Componentes para ~1Hz: R1=1kΩ, R2=100kΩ, C1=10μF
+[INSERIR FIGURA 16.4 AQUI]
 
-[INSERIR FIGURA 17.4 AQUI]
+      Figura 14.4: Circuito Completo do 7805. Esquema
+       com capacitores de estabilização.
 
-      Figura 15.4: Pisca-Pisca com 555. Diagrama
-       esquemático completo.
+Cuidado com a Dissipação de Calor!
 
-Amplificador Operacional LM741
+P_dissipada = (V_in - V_out) × I_carga
 
-Ganho = 1 + (R2 / R1)
+Exemplo: 12V → 5V, 1A = 7 Watts de calor!
 
-[INSERIR FIGURA 17.5 AQUI]
+[INSERIR FIGURA 16.5 AQUI]
 
-      Figura 15.5: Amplificador com LM741. Circuito
-       não-inversor.
-
-DIP vs SMD
-
-      DIP: Perfeito para protoboard (iniciantes)
-
-      SMD: Minúsculo, para produção profissional
-
-[INSERIR FIGURA 17.6 AQUI]
-
-      Figura 15.6: DIP vs SMD. Comparação de tamanhos.
+      Figura 14.5: Dissipação de Calor. Sem dissipador vs
+       com dissipador.
 
 Um abraço do seu professor,
 
 Diego G. Gandra
 
-
-PARTE 3: SISTEMAS E APLICAÇÕES
-
 ---
 
-*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
+*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
