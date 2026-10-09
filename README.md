@@ -1,3 +1,5 @@
+> **Atualização editorial (09/10/2026):** o livro agora contém **24 capítulos**. O novo capítulo 3 aborda fontes de alimentação em corrente contínua; o sumário atualizado está em [livro/SUMARIO_E_STATUS.md](livro/SUMARIO_E_STATUS.md). A edição Word e as referências internas de figuras ainda precisam ser sincronizadas.
+
 # Eletrônica DC Descomplicada
 
 Autor: Diego Guimarães Gandra.
