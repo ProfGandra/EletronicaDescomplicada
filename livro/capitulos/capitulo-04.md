@@ -1,84 +1,80 @@
-# Capítulo 4 — A lei que reina absoluta: dominando a Lei de Ohm
+# Capítulo 4 — A natureza da resistência e o resistor
 
-*Correspondente ao capítulo 5 do manuscrito original.*
+*Capítulo 3 na nova sequência — capítulo 3 no manuscrito original.*
 
-E aí, curtiu o papo sobre pressão, fluxo e resistência? Se você aprender apenas uma relação matemática neste começo de jornada, que seja esta: a famosa, poderosa e indispensável **Lei de Ohm**.
+No capítulo anterior, aprendemos a importância de trabalhar com segurança. Agora vamos voltar à pergunta que interessa à nossa bancada: como controlar a corrente de um circuito? O que impede que uma fonte danifique um componente delicado? É aqui que entramos no terreno da resistência e do seu principal representante físico: o resistor.
 
-## A fórmula que você vai usar na bancada
+## A resistência como fenômeno físico
 
-Para um **condutor ôhmico**, mantidas aproximadamente constantes suas condições físicas, a tensão aplicada é proporcional à corrente:
+Antes de ser um componente com valor comercial, a resistência é uma propriedade elétrica dos materiais. Imagine os elétrons se deslocando em um condutor metálico. Nesse movimento, eles interagem com a estrutura do material, com suas vibrações e imperfeições. Essas interações dificultam o transporte ordenado das cargas e ajudam a explicar a resistência elétrica.
 
-**V = R × I**
+Sua unidade é o **ohm (Ω)**.
 
-- **V:** tensão, em volts (V).
-- **I:** corrente, em ampères (A).
-- **R:** resistência, em ohms (Ω).
+**[INSERIR FIGURA 3.1 — Resistência em um condutor]**
 
-A Lei de Ohm não significa que qualquer componente eletrônico tenha resistência constante. LEDs, diodos e transistores, por exemplo, têm comportamento não linear. Por enquanto, vamos aplicá-la principalmente aos resistores.
+*Legenda sugerida:* Representação didática das interações dos elétrons de condução com a estrutura de um material metálico.
 
-**[INSERIR FIGURA 4.1 — Georg Simon Ohm e a relação V = R × I]**
+*Referência de produção:* aproveitar a descrição microscópica do bloco de imagens correspondente ao capítulo original; evitar representar átomos como obstáculos macroscópicos rígidos.
 
-*Legenda:* Georg Simon Ohm e a relação entre tensão, corrente e resistência. *Referência original: figura “Georg Ohm e sua Descoberta”.*
+## O resistor: o componente de controle
 
-## O triângulo mágico
+Se a resistência é o fenômeno, o resistor é uma ferramenta que colocamos no circuito para obter um valor de resistência conhecido, dentro de uma tolerância.
 
-Quer descobrir a tensão? Multiplique resistência por corrente. Quer descobrir a corrente? Divida tensão por resistência. Quer descobrir a resistência? Divida tensão por corrente.
+Ele funciona como um “pedágio” no caminho da corrente — guardadas as limitações da analogia. Se queremos acender um LED ligado a uma fonte de 9 V, por exemplo, utilizamos um resistor em série para **limitar a corrente**. O resistor não “segura o excesso de tensão” sozinho: a tensão da fonte se distribui entre os elementos do circuito conforme suas características.
 
-**V = R × I**
+Na bancada, você encontrará resistores de filme de carbono, filme metálico e outros tipos, com diferentes potências e tolerâncias.
 
-**I = V / R**
+**[INSERIR FIGURA 3.2 — Resistor real e símbolo elétrico]**
 
-**R = V / I**
+*Legenda sugerida:* Resistor axial e seus símbolos esquemáticos usuais (retangular e zigue-zague).
 
-**[INSERIR FIGURA 4.2 — Triângulo da Lei de Ohm]**
+## Decodificando o componente: código de cores
 
-*Legenda:* Relações entre tensão, corrente e resistência. *Referência original: “O Triângulo Mágico da Lei de Ohm”.*
+Como o corpo de muitos resistores é pequeno demais para trazer o valor escrito por extenso, a indústria utiliza faixas coloridas para indicar o valor nominal e a tolerância.
 
-## Exemplo prático: calculando o resistor para um LED
+Nos resistores de **quatro faixas**, as duas primeiras representam os algarismos significativos, a terceira indica o multiplicador e a quarta, a tolerância.
 
-Imagine uma bateria de **9 V** e um LED vermelho cuja queda de tensão direta seja aproximadamente **2,2 V** na corrente de interesse. Vamos adotar, **apenas para este exemplo**, uma corrente de projeto de **20 mA**, desde que permitida pelo fabricante do LED.
+| Cor | Algarismo | Multiplicador |
+|---|---:|---:|
+| Preto | 0 | ×1 |
+| Marrom | 1 | ×10 |
+| Vermelho | 2 | ×100 |
+| Laranja | 3 | ×1.000 |
+| Amarelo | 4 | ×10.000 |
+| Verde | 5 | ×100.000 |
+| Azul | 6 | ×1.000.000 |
+| Violeta | 7 | ×10.000.000 |
+| Cinza | 8 | ×100.000.000 |
+| Branco | 9 | ×1.000.000.000 |
 
-O resistor em série precisa absorver a diferença de tensão:
+A faixa **dourada** normalmente indica tolerância de **±5%** e a **prateada**, de **±10%**, quando usadas na posição de tolerância. Resistores de cinco ou seis faixas seguem regras adicionais.
 
-**V_R = 9 − 2,2 = 6,8 V**
+**Exemplo:** marrom, preto, vermelho e dourado = 10 × 100 = **1.000 Ω**, ou **1 kΩ**, com tolerância de **±5%**. Na prática, isso significa que o valor pode estar entre **950 Ω e 1.050 Ω**.
 
-Converta a corrente para ampères:
+**[INSERIR FIGURA 3.3 — Código de cores dos resistores]**
 
-**20 mA = 0,020 A**
+*Legenda sugerida:* Identificação das faixas de um resistor de quatro bandas, com exemplo de 1 kΩ ±5%.
 
-Agora aplique a Lei de Ohm:
+## Atividade: a prática da leitura
 
-**R = 6,8 / 0,020 = 340 Ω**
+Pegue um resistor da sua caixa de componentes. Identifique a faixa de tolerância, geralmente mais afastada das demais, e deixe-a à direita. Leia as faixas da esquerda para a direita e consulte a tabela.
 
-Você dificilmente encontrará um resistor comum de exatamente 340 Ω na sua caixa. Um valor comercial de **360 Ω** fornece, nas condições assumidas:
+Depois, com o componente **fora de um circuito energizado**, confira o valor usando a função de resistência do multímetro. Uma pequena diferença em relação ao valor nominal é normal e pode estar dentro da tolerância.
 
-**I ≈ 6,8 / 360 ≈ 0,0189 A = 18,9 mA**
+Não se esqueça de outro detalhe: **resistor também tem limite de potência**. Não basta acertar o valor em ohms; é preciso escolher um componente capaz de dissipar o calor produzido no circuito. Vamos calcular isso nos próximos capítulos.
 
-E se você escolher **330 Ω**? A corrente calculada seria aproximadamente **20,6 mA**, um pouco acima da corrente de projeto. Não significa que todo LED vá queimar imediatamente, mas não é uma escolha que devemos recomendar sem conferir sua folha de dados.
-
-Lembre-se: a tensão da bateria, a queda de tensão do LED e a tolerância do resistor podem variar. O cálculo é um **dimensionamento inicial**, não uma promessa de corrente exata.
-
-**[INSERIR FIGURA 4.3 — LED com resistor em série e cálculo passo a passo]**
-
-*Legenda:* Exemplo de dimensionamento do resistor para um LED alimentado por 9 V. *Referência original: “Cálculo do Resistor para o LED”.*
-
-## Pare e pense!
-
-Uma fonte de 12 V ligada a um resistor de 1 kΩ produziria qual corrente?
-
-**Resposta:** I = 12 / 1.000 = 0,012 A = **12 mA**.
-
-Viu? Você já está calculando como alguém que entende o circuito, não apenas decorando uma fórmula.
-
-Um abraço do seu professor,
-
-**DIEGO GUIMARÃES GANDRA**
+Agora que conhecemos tensão, corrente e resistência, estamos prontos para unir essas ideias em uma ferramenta matemática fundamental: a **Lei de Ohm**.
 
 ---
 
 ### Registro editorial
 
-Revisadas a aplicabilidade da Lei de Ohm, as unidades e a escolha do resistor comercial. Mantidos os três pontos de inserção de imagens, com numeração ajustada à nova ordem.
+- Mantida a linguagem de conversa com o estudante e a analogia do “pedágio”.
+- Refinada a explicação microscópica da resistência.
+- Corrigida a afirmação de que o resistor simplesmente “segura excesso de tensão”.
+- Incluídas tabela de cores, exemplo numérico e verificação com multímetro.
+- **Referências de inserção das três imagens preservadas no próprio capítulo.**
+- A correspondência exata das imagens com o DOCX ainda requer conferência visual.
 
 
 ---
