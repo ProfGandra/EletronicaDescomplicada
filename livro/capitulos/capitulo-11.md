@@ -1,61 +1,85 @@
-# Capítulo 11 — LEIS DE KIRCHHOFF – AS REGRAS QUE GOVERNAM QUALQUER CIRCUITO
+# Capítulo 11 — Leis de Kirchhoff: seguindo os caminhos da eletricidade
 
+Olá, tudo bem com você?
 
-Depois de aprender a medir e montar circuitos, chegou a
-hora de entender as leis fundamentais que governam
-absolutamente todo circuito elétrico!
+Quando o circuito tem apenas uma bateria e um resistor, a análise costuma ser simples. Mas e quando aparecem vários caminhos, resistores e fontes?
 
-[INSERIR FIGURA 10.1 AQUI]
+Não precisamos adivinhar o que acontece. Existem duas regras que ajudam a organizar as contas: as **Leis de Kirchhoff**.
 
-       Figura 5.1: As Duas Leis Fundamentais. Mapa
-        mental das Leis de Kirchhoff.
+Os nomes podem parecer complicados. A ideia por trás deles, nem tanto.
 
-Lei das Correntes (Lei dos Nós)
+## 11.1 — Primeira lei: a corrente não desaparece
 
-"A soma das correntes que ENTRAM em um nó é igual à
-soma das correntes que SAEM do nó."
+Imagine um cruzamento de ruas. Se chegam carros por duas vias e não existe estacionamento no cruzamento, esses carros precisam sair por algum caminho.
 
-I₁ + I₂ = I₃ + I₄
+Com a corrente elétrica acontece algo parecido.
 
-[INSERIR FIGURA 10.2 AQUI]
+A **Lei das Correntes de Kirchhoff**, também chamada de **Lei dos Nós**, afirma que a soma das correntes que entram em um nó é igual à soma das correntes que saem dele.
 
-       Figura 5.2: Lei dos Nós Visualizada. Diagrama de nó
-        com correntes.
+Um nó é um ponto de conexão entre ramos do circuito.
 
-Lei das Tensões (Lei das Malhas)
+Se entram 2 mA e 3 mA e existe apenas uma saída, a corrente que sai será:
 
-"A soma das quedas de tensão em qualquer malha
-fechada é igual a zero."
+\[
+I_{saída}=2+3=5\ mA
+\]
 
-V_fonte - V₁ - V₂ - V₃ = 0
+**[INSERIR FIGURA 11.1 — Nó com duas correntes entrando e uma saindo]**
 
-[INSERIR FIGURA 10.3 AQUI]
+*Legenda:* Em um nó, a soma das correntes que entram é igual à soma das que saem.
 
+## 11.2 — Segunda lei: a tensão fecha a conta
 
-      Figura 5.3: Lei das Malhas Visualizada. Diagrama de
-       malha fechada.
+Agora imagine uma caminhada que começa em um ponto, percorre um caminho fechado e retorna exatamente ao mesmo lugar.
 
-Método Sistemático de Solução
+Ao completar o percurso, a variação total de altura é zero. Subimos em alguns trechos e descemos em outros.
 
-   1. Identificar todos os nós e malhas
+A **Lei das Tensões de Kirchhoff**, ou **Lei das Malhas**, funciona de maneira semelhante: em uma malha fechada, a soma algébrica das tensões é zero.
 
-   2. Atribuir sentidos para as correntes
+Considere uma fonte de 9 V e dois resistores em série. Se a queda de tensão no primeiro resistor for de 4 V, a queda no segundo será de 5 V:
 
-   3. Aplicar Lei dos Nós
+\[
+9-4-5=0
+\]
 
-   4. Aplicar Lei das Malhas
+A conta fechou!
 
-   5. Resolver o sistema de equações
+**[INSERIR FIGURA 11.2 — Malha com fonte de 9 V e quedas de 4 V e 5 V]**
 
-[INSERIR FIGURA 10.4 AQUI]
+*Legenda:* A elevação de tensão fornecida pela fonte é compensada pelas quedas no percurso fechado.
 
-      Figura 5.4: Método Passo a Passo. Fluxograma do
-       processo.
+## 11.3 — Como analisar um circuito mais complicado?
+
+Quando encontrar uma montagem com vários caminhos, siga uma sequência:
+
+1. Identifique os nós e os percursos fechados.
+2. Escolha sentidos de referência para as correntes.
+3. Aplique a Lei dos Nós para relacionar as correntes.
+4. Aplique a Lei das Malhas para relacionar as tensões.
+5. Resolva as equações e confira se os resultados fazem sentido.
+
+Se uma corrente calculada aparecer com sinal negativo, não significa necessariamente que a conta esteja errada. Pode indicar apenas que a corrente real segue o sentido oposto ao que você escolheu como referência.
+
+**[INSERIR FIGURA 11.3 — Exemplo de circuito com nós, sentidos de corrente e malha identificados]**
+
+*Legenda:* Identificar referências antes de calcular ajuda a evitar confusões.
+
+## 11.4 — Pare e pense
+
+Em um nó, entram 8 mA. Por um dos ramos, saem 3 mA. Quanto deve sair pelo outro ramo?
+
+Se você respondeu **5 mA**, acertou.
+
+Agora pense em uma malha com uma fonte de 12 V e duas quedas de tensão. Se uma delas vale 7 V, quanto vale a outra?
+
+**5 V**, para que a soma algébrica seja zero.
+
+## Para encerrar
+
+As Leis de Kirchhoff não substituem a Lei de Ohm. Elas trabalham juntas e nos ajudam a entender circuitos que não podem ser analisados apenas olhando um resistor isolado.
+
+No próximo capítulo, vamos conhecer um componente que se comporta de maneira diferente dependendo do sentido em que tentamos fazer a corrente passar: o **diodo**.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-
-*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
