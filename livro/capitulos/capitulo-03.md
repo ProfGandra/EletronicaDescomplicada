@@ -1,82 +1,188 @@
-# Capítulo 3 — A natureza da resistência e o resistor
+# Capítulo 3 — Fontes de alimentação em corrente contínua
 
-*Capítulo 3 na nova sequência — capítulo 3 no manuscrito original.*
+Olá, tudo bem com você?
 
-No capítulo anterior, aprendemos a importância de trabalhar com segurança. Agora vamos voltar à pergunta que interessa à nossa bancada: como controlar a corrente de um circuito? O que impede que uma fonte danifique um componente delicado? É aqui que entramos no terreno da resistência e do seu principal representante físico: o resistor.
+Até aqui, conversamos sobre tensão, corrente e resistência elétrica. Também aprendemos alguns cuidados importantes para trabalhar com segurança.
 
-## A resistência como fenômeno físico
+Mas existe uma pergunta que ainda precisamos responder: **de onde vem a energia elétrica que alimenta nossos circuitos?**
 
-Antes de ser um componente com valor comercial, a resistência é uma propriedade elétrica dos materiais. Imagine os elétrons se deslocando em um condutor metálico. Nesse movimento, eles interagem com a estrutura do material, com suas vibrações e imperfeições. Essas interações dificultam o transporte ordenado das cargas e ajudam a explicar a resistência elétrica.
+Afinal, resistores, LEDs e outros componentes não funcionam por vontade própria. Precisamos fornecer energia a eles. E é justamente sobre isso que vamos conversar.
 
-Sua unidade é o **ohm (Ω)**.
+## 3.1 — O que significa DC?
 
-**[INSERIR FIGURA 3.1 — Resistência em um condutor]**
+A sigla **DC** vem do inglês *Direct Current*, que significa **corrente contínua**. Em português, também utilizamos **CC**.
 
-*Legenda sugerida:* Representação didática das interações dos elétrons de condução com a estrutura de um material metálico.
+Na corrente contínua, as cargas elétricas circulam em um mesmo sentido ao longo do tempo. Imagine uma rua de mão única. Os carros podem acelerar ou diminuir a velocidade, mas continuam seguindo na mesma direção. É mais ou menos essa a ideia.
 
-*Referência de produção:* aproveitar a descrição microscópica do bloco de imagens correspondente ao capítulo original; evitar representar átomos como obstáculos macroscópicos rígidos.
+Já na **corrente alternada (AC ou CA)**, o sentido da corrente muda periodicamente. É o tipo de corrente utilizado na distribuição convencional de energia elétrica para nossas residências.
 
-## O resistor: o componente de controle
+Uma pilha fornece tensão contínua. Uma tomada residencial fornece tensão alternada.
 
-Se a resistência é o fenômeno, o resistor é uma ferramenta que colocamos no circuito para obter um valor de resistência conhecido, dentro de uma tolerância.
+E aqui temos uma curiosidade: embora muitos equipamentos sejam conectados à tomada, seus circuitos internos funcionam com tensão contínua. Como isso é possível? Vamos descobrir daqui a pouco.
 
-Ele funciona como um “pedágio” no caminho da corrente — guardadas as limitações da analogia. Se queremos acender um LED ligado a uma fonte de 9 V, por exemplo, utilizamos um resistor em série para **limitar a corrente**. O resistor não “segura o excesso de tensão” sozinho: a tensão da fonte se distribui entre os elementos do circuito conforme suas características.
+**[INSERIR FIGURA 3.1 — Corrente contínua e alternada]**
 
-Na bancada, você encontrará resistores de filme de carbono, filme metálico e outros tipos, com diferentes potências e tolerâncias.
+*Legenda:* Comparação entre uma tensão contínua de polaridade fixa e uma tensão alternada senoidal.
 
-**[INSERIR FIGURA 3.2 — Resistor real e símbolo elétrico]**
+Uma observação importante: tensão contínua não significa necessariamente tensão perfeitamente constante. Seu valor pode variar ao longo do tempo sem inverter a polaridade.
 
-*Legenda sugerida:* Resistor axial e seus símbolos esquemáticos usuais (retangular e zigue-zague).
+## 3.2 — De onde vem a tensão contínua?
 
-## Decodificando o componente: código de cores
+Existem diferentes maneiras de obter energia elétrica em DC.
 
-Como o corpo de muitos resistores é pequeno demais para trazer o valor escrito por extenso, a indústria utiliza faixas coloridas para indicar o valor nominal e a tolerância.
+### Pilhas e baterias
 
-Nos resistores de **quatro faixas**, as duas primeiras representam os algarismos significativos, a terceira indica o multiplicador e a quarta, a tolerância.
+São provavelmente as fontes mais conhecidas. Elas transformam energia química em energia elétrica por meio de reações eletroquímicas.
 
-| Cor | Algarismo | Multiplicador |
+Uma pilha alcalina AA, por exemplo, fornece aproximadamente **1,5 V** de tensão nominal. Já uma bateria automotiva convencional possui tensão nominal de **12 V**.
+
+E temos ainda as baterias recarregáveis utilizadas em celulares, notebooks e ferramentas elétricas.
+
+Uma informação importante: a tensão de uma pilha ou bateria pode variar conforme sua condição de carga e utilização. Portanto, não espere encontrar exatamente o valor nominal em todas as medições.
+
+### Painéis solares
+
+Os painéis fotovoltaicos transformam parte da energia luminosa recebida em energia elétrica.
+
+Sua saída é em corrente contínua, embora a tensão e a corrente disponíveis variem conforme a iluminação e as condições de funcionamento.
+
+São bastante utilizados em sistemas de geração de energia e também podem alimentar pequenos projetos eletrônicos.
+
+### Fontes de alimentação
+
+Agora chegamos a um equipamento que você encontrará com frequência em uma bancada.
+
+A fonte de alimentação!
+
+Ela recebe energia de uma origem, como a rede elétrica, e fornece uma saída adequada ao equipamento que desejamos alimentar.
+
+Mas existe um detalhe: a tomada de nossa casa fornece tensão alternada (AC), enquanto grande parte dos circuitos eletrônicos precisa de tensão contínua (DC).
+
+Como resolvemos isso?
+
+Por meio de um processo chamado **retificação**.
+
+De maneira simplificada, a retificação utiliza componentes eletrônicos para fazer com que a tensão resultante mantenha uma única polaridade. Um dos componentes mais utilizados nesse processo é o **diodo**.
+
+Entretanto, a tensão obtida logo após a retificação ainda apresenta oscilações. Por isso, as fontes também utilizam circuitos de filtragem e regulação, responsáveis por reduzir essas variações e fornecer uma tensão mais adequada ao funcionamento dos equipamentos.
+
+Em muitas fontes modernas, essas funções são realizadas por circuitos mais elaborados, mas o objetivo continua sendo o mesmo: disponibilizar uma alimentação DC adequada.
+
+**[INSERIR FIGURA 3.2 — Conversão de AC para DC]**
+
+*Legenda:* Representação simplificada das etapas de retificação, filtragem e regulação, mostrando a transformação de uma tensão alternada em uma tensão contínua.
+
+E como o diodo consegue realizar essa tarefa?
+
+Calma! Não precisamos descobrir tudo de uma vez.
+
+**Mais adiante, no capítulo sobre diodos, estudaremos seu funcionamento e compreenderemos melhor como ocorre a retificação.**
+
+Por enquanto, basta saber que é graças a esse processo, combinado com outras etapas de conversão, que conseguimos alimentar muitos de nossos circuitos DC utilizando a energia disponível na tomada.
+
+E não se esqueça: estamos falando do funcionamento interno das fontes, não de uma experiência para realizar diretamente na rede elétrica. Para nossas montagens, utilizaremos fontes comerciais apropriadas, com saídas DC de baixa tensão.
+
+**[INSERIR FIGURA 3.3 — Exemplos de fontes DC]**
+
+*Legenda:* Pilha, bateria, painel fotovoltaico, carregador USB e fonte de bancada.
+
+## 3.3 — Como escolher uma fonte de alimentação?
+
+Imagine que você montou um circuito que precisa de **5 V DC** para funcionar. Na bancada, encontra duas fontes:
+
+- Fonte A: 5 V — 2 A;
+- Fonte B: 12 V — 1 A.
+
+Qual delas devemos utilizar? A primeira, naturalmente!
+
+Mas por quê?
+
+Porque precisamos observar algumas características importantes.
+
+**Tensão:** a fonte deve fornecer uma tensão compatível com o circuito. Uma tensão excessiva pode danificar componentes.
+
+**Corrente disponível:** a fonte deve conseguir fornecer a corrente necessária ao funcionamento do circuito.
+
+Aqui existe uma confusão bastante comum. Uma fonte de 5 V e 2 A **não obriga o circuito a consumir 2 A**. Esses 2 A representam sua capacidade nominal de fornecimento.
+
+Se o circuito consumir apenas 200 mA, a fonte fornecerá aproximadamente essa corrente, desde que esteja operando normalmente.
+
+**Polaridade:** precisamos identificar corretamente os terminais positivo e negativo. Inverter a polaridade pode danificar componentes que não possuam proteção apropriada.
+
+E lembre-se: não basta que o conector encaixe. A fonte também precisa ser eletricamente compatível!
+
+**[INSERIR FIGURA 3.4 — Identificação de uma fonte DC]**
+
+*Legenda:* Exemplo de etiqueta de fonte de alimentação, destacando tensão de saída, corrente máxima e polaridade.
+
+## 3.4 — E quando precisamos de mais tensão?
+
+Você já percebeu que alguns brinquedos utilizam duas, três ou até quatro pilhas?
+
+Isso acontece porque podemos associar pilhas em série para aumentar a tensão disponível.
+
+Quando conectamos duas pilhas de 1,5 V em série, suas tensões se somam:
+
+**Vₜ = 1,5 + 1,5 = 3 V**
+
+Com três pilhas semelhantes, teremos aproximadamente 4,5 V.
+
+Simples, não é?
+
+Mas atenção: utilize suportes apropriados e pilhas compatíveis. Não misture pilhas novas e usadas, nem tipos químicos diferentes.
+
+**[INSERIR FIGURA 3.5 — Associação de pilhas em série]**
+
+*Legenda:* Duas pilhas de 1,5 V associadas em série, fornecendo aproximadamente 3 V.
+
+## 3.5 — Hora da prática!
+
+Vamos conferir algumas dessas informações utilizando um multímetro.
+
+Se você ainda não conhece bem o instrumento, não se preocupe. Teremos um capítulo específico para aprender a utilizá-lo.
+
+Por enquanto, realize a atividade com orientação do professor.
+
+**Materiais:** um multímetro digital, uma pilha AA, uma bateria de 9 V e uma fonte DC comercial de baixa tensão, com saída acessível e identificada.
+
+Configure o multímetro para medir tensão contínua, utilizando os terminais COM e V.
+
+Meça a tensão da pilha, depois a da bateria e, por último, a saída DC da fonte.
+
+Registre os valores encontrados:
+
+| Fonte | Tensão nominal | Tensão medida |
 |---|---:|---:|
-| Preto | 0 | ×1 |
-| Marrom | 1 | ×10 |
-| Vermelho | 2 | ×100 |
-| Laranja | 3 | ×1.000 |
-| Amarelo | 4 | ×10.000 |
-| Verde | 5 | ×100.000 |
-| Azul | 6 | ×1.000.000 |
-| Violeta | 7 | ×10.000.000 |
-| Cinza | 8 | ×100.000.000 |
-| Branco | 9 | ×1.000.000.000 |
+| Pilha AA | 1,5 V | ______ |
+| Bateria | 9 V | ______ |
+| Fonte DC | Conforme etiqueta | ______ |
 
-A faixa **dourada** normalmente indica tolerância de **±5%** e a **prateada**, de **±10%**, quando usadas na posição de tolerância. Resistores de cinco ou seis faixas seguem regras adicionais.
+Compare os resultados com os valores nominais.
 
-**Exemplo:** marrom, preto, vermelho e dourado = 10 × 100 = **1.000 Ω**, ou **1 kΩ**, com tolerância de **±5%**. Na prática, isso significa que o valor pode estar entre **950 Ω e 1.050 Ω**.
+Atenção: meça apenas saídas DC apropriadas. Não abra fontes de alimentação nem tente medir diretamente a rede elétrica nesta atividade. Nunca coloque o multímetro em modo de corrente diretamente entre os terminais de uma fonte.
 
-**[INSERIR FIGURA 3.3 — Código de cores dos resistores]**
+## 3.6 — Vamos ver se você entendeu?
 
-*Legenda sugerida:* Identificação das faixas de um resistor de quatro bandas, com exemplo de 1 kΩ ±5%.
+1. O que significa a sigla DC?
+2. Qual é a diferença entre corrente contínua e corrente alternada?
+3. Cite três maneiras de obter energia elétrica em corrente contínua.
+4. Uma fonte de 5 V e 2 A pode alimentar um circuito de 5 V que consome 300 mA? Por quê?
+5. Qual é a tensão nominal de três pilhas de 1,5 V associadas em série?
 
-## Atividade: a prática da leitura
+## 3.7 — Para encerrar
 
-Pegue um resistor da sua caixa de componentes. Identifique a faixa de tolerância, geralmente mais afastada das demais, e deixe-a à direita. Leia as faixas da esquerda para a direita e consulte a tabela.
+Agora sabemos de onde vem a energia elétrica utilizada em nossos circuitos.
 
-Depois, com o componente **fora de um circuito energizado**, confira o valor usando a função de resistência do multímetro. Uma pequena diferença em relação ao valor nominal é normal e pode estar dentro da tolerância.
+Conhecemos pilhas, baterias, painéis solares e fontes de alimentação. Também aprendemos que precisamos observar a tensão, a corrente disponível e a polaridade antes de conectar qualquer equipamento.
 
-Não se esqueça de outro detalhe: **resistor também tem limite de potência**. Não basta acertar o valor em ohms; é preciso escolher um componente capaz de dissipar o calor produzido no circuito. Vamos calcular isso nos próximos capítulos.
+E aqui fica uma dica que pode evitar bastante dor de cabeça:
 
-Agora que conhecemos tensão, corrente e resistência, estamos prontos para unir essas ideias em uma ferramenta matemática fundamental: a **Lei de Ohm**.
+**Antes de procurar defeitos em um circuito, confira se ele está recebendo a alimentação correta.**
 
----
+Às vezes, o problema não está no componente, na montagem ou no projeto. Está simplesmente na fonte!
 
-### Registro editorial
+No próximo capítulo, vamos conhecer melhor um dos componentes mais utilizados na eletrônica: o resistor.
 
-- Mantida a linguagem de conversa com o estudante e a analogia do “pedágio”.
-- Refinada a explicação microscópica da resistência.
-- Corrigida a afirmação de que o resistor simplesmente “segura excesso de tensão”.
-- Incluídas tabela de cores, exemplo numérico e verificação com multímetro.
-- **Referências de inserção das três imagens preservadas no próprio capítulo.**
-- A correspondência exata das imagens com o DOCX ainda requer conferência visual.
+Um abraço do seu professor,
 
-
----
-
-*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
