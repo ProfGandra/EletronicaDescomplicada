@@ -1,11 +1,8 @@
-# Capítulo 19 — MEMÓRIA E SEQUÊNCIA – FLIP-FLOPS
+# Capítulo 19 — MEMÓRIA E SEQUÊNCIA – FLIP-FLOPS Circuitos sequenciais têm memória! Eles lembram do
 
-> **Nota editorial:** capítulo 18 do manuscrito original, deslocado para a posição 19 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-Circuitos sequenciais têm memória! Eles lembram do
 passado e tomam decisões baseadas nele.
 
-[INSERIR FIGURA 17.1 AQUI]
+[INSERIR FIGURA 19.1 AQUI]
 
       Figura 17.1: Combinacional vs Sequencial. Circuito
        sem memória vs com realimentação.
@@ -20,7 +17,7 @@ O mais simples dos flip-flops:
 
       S=R=0: Mantém o estado anterior
 
-[INSERIR FIGURA 17.2 AQUI]
+[INSERIR FIGURA 19.2 AQUI]
 
       Figura 17.2: Flip-Flop SR com Portas
        NAND. Diagrama de duas portas cruzadas.
@@ -49,7 +46,7 @@ J       K          Q
 
 1       1   ↑      Toggle
 
-[INSERIR FIGURA 17.3 AQUI]
+[INSERIR FIGURA 19.3 AQUI]
 
        Figura 17.3: Flip-Flop JK em Toggle. Diagrama de
         tempo mostrando inversão a cada clock.
@@ -59,7 +56,7 @@ O Flip-Flop D (Data): O Mais Usado
 Amostra o valor da entrada D na borda do clock e copia
 para a saída Q. Perfeito para transferir dados!
 
-[INSERIR FIGURA 17.4 AQUI]
+[INSERIR FIGURA 19.4 AQUI]
 
        Figura 17.4: Flip-Flop D. Diagrama de tempo
         mostrando captura de dados.
@@ -74,7 +71,7 @@ Aplicações Práticas
 
    3. Debouncing de Botões: Elimina tremores mecânicos
 
-[INSERIR FIGURA 17.5 AQUI]
+[INSERIR FIGURA 19.5 AQUI]
 
       Figura 17.5: Contador com Flip-Flops. Diagrama de
        contador de 4 bits.
@@ -89,7 +86,7 @@ Setup e Hold Time: Os Tempos Críticos
 
 Violar esses tempos causa comportamento imprevisível!
 
-[INSERIR FIGURA 17.6 AQUI]
+[INSERIR FIGURA 19.6 AQUI]
 
       Figura 17.6: Setup e Hold Time. Diagrama temporal
        mostrando os tempos críticos.
@@ -100,4 +97,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
