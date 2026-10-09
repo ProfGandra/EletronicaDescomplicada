@@ -1,13 +1,10 @@
-# Capítulo 15 — RELÉS E ELETROMAGNETISMO –
+# Capítulo 15 — RELÉS E ELETROMAGNETISMO – CONTROLE DE ALTA POTÊNCIA
 
-> **Nota editorial:** capítulo 14 do manuscrito original, deslocado para a posição 15 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-CONTROLE DE ALTA POTÊNCIA
 
 Os relés usam eletromagnetismo para controlar
 circuitos de alta potência com poucos miliampères!
 
-[INSERIR FIGURA 13.1 AQUI]
+[INSERIR FIGURA 15.1 AQUI]
 
      Figura 13.1: O Poder do
       Eletromagnetismo. Sequência: bateria → campo
@@ -29,7 +26,7 @@ Anatomia de um Relé
 Vantagens: Isolamento elétrico total entre controle e
 carga!
 
-[INSERIR FIGURA 13.2 AQUI]
+[INSERIR FIGURA 15.2 AQUI]
 
 
      Figura 13.2: Dentro de um Relé. Diagrama em corte
@@ -45,7 +42,7 @@ Tipos de Contatos: NA, NF e COM
      NF (Normalmente Fechado): Abre quando
       energizado
 
-[INSERIR FIGURA 13.3 AQUI]
+[INSERIR FIGURA 15.3 AQUI]
 
      Figura 13.3: Tipos de Contatos. Diagrama
       mostrando os três terminais.
@@ -55,14 +52,14 @@ Circuito de Acionamento
 Use um transistor para acionar o relé a partir de um
 Arduino:
 
-[INSERIR FIGURA 13.4 AQUI]
+[INSERIR FIGURA 15.4 AQUI]
 
      Figura 13.4: Acionamento com Transistor. Circuito
       completo com diodo de proteção.
 
 Aplicações Práticas
 
-     Controle de lâmpadas 110V/220V
+     Controle de cargas DC de baixa tensão; cargas ligadas à rede exigem profissional habilitado.
 
      Motores elétricos
 
@@ -71,7 +68,7 @@ Aplicações Práticas
 
      Automação residencial
 
-[INSERIR FIGURA 13.5 AQUI]
+[INSERIR FIGURA 15.5 AQUI]
 
      Figura 13.5: Controle de Lâmpada 110V. Diagrama
       mostrando isolamento completo.
@@ -82,4 +79,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
