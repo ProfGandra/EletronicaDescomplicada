@@ -1,15 +1,12 @@
-# Capítulo 18 — A LÓGICA DA ELETRÔNICA – PORTAS
+# Capítulo 18 — A LÓGICA DA ELETRÔNICA – PORTAS LÓGICAS
 
-> **Nota editorial:** capítulo 17 do manuscrito original, deslocado para a posição 18 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-LÓGICAS
 
 As portas lógicas são os blocos fundamentais de toda a
 computação moderna. Do smartphone aos
 supercomputadores, tudo começa com esses circuitos
 simples!
 
-[INSERIR FIGURA 16.1 AQUI]
+[INSERIR FIGURA 18.1 AQUI]
 
       Figura 16.1: Do Analógico ao Digital. Sinal analógico
        (contínuo) vs digital (0V e 5V).
@@ -54,7 +51,7 @@ As 7 Portas Lógicas Fundamentais
 
      Saída 1 se entradas forem IGUAIS
 
-[INSERIR FIGURA 16.2 AQUI]
+[INSERIR FIGURA 18.2 AQUI]
 
      Figura 16.2: As Sete Portas Completas. Grid com
       símbolos, expressões e tabelas verdade.
@@ -64,7 +61,7 @@ O CI 74HC00: Quatro Portas NAND
 Um dos CIs mais úteis, contém 4 portas NAND
 independentes.
 
-[INSERIR FIGURA 16.3 AQUI]
+[INSERIR FIGURA 18.3 AQUI]
 
 
       Figura 16.3: CI 74HC00. Pinagem completa do
@@ -79,7 +76,7 @@ Níveis Lógicos na Prática
       Zona Proibida: 0,8V a 2,0V (comportamento
        indefinido!)
 
-[INSERIR FIGURA 16.4 AQUI]
+[INSERIR FIGURA 18.4 AQUI]
 
       Figura 16.4: Níveis Lógicos. Gráfico mostrando as
        faixas de tensão.
@@ -90,4 +87,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
