@@ -86,3 +86,8 @@ Um abraço do seu professor,
 - Corrigida a afirmação de que o LED possui simplesmente uma resistência baixa; explicado seu comportamento não ôhmico.
 - Eliminada a promessa de corrente “exata” obtida apenas pelo resistor.
 - Normalizada a sequência de legendas; imagens originais ainda precisam ser verificadas e incorporadas.
+
+
+---
+
+*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
