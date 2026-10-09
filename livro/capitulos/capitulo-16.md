@@ -1,58 +1,77 @@
-# Capítulo 16 — A FONTE ESTÁVEL – REGULADORES DE TENSÃO
+# Capítulo 16 — RELÉS E ELETROMAGNETISMO – CONTROLE DE ALTA POTÊNCIA
 
 
-Como transformamos os 110V/220V da tomada nos
-estáveis 5V ou 3,3V que nossos circuitos precisam?
+Os relés usam eletromagnetismo para controlar
+circuitos de alta potência com poucos miliampères!
 
-[INSERIR FIGURA 16.1 AQUI]
+[INSERIR FIGURA 15.1 AQUI]
 
-     Figura 14.1: A Jornada da Energia. Diagrama da
-      transformação AC → DC estável.
+     Figura 13.1: O Poder do
+      Eletromagnetismo. Sequência: bateria → campo
+      magnético → movimento.
 
-Os Três Estágios de uma Fonte
+O Princípio do Eletromagnetismo
 
-  1. Transformação: Reduz a tensão alta (220V → 12V
-      AC)
+Quando corrente flui por um fio, ela cria um campo
+magnético. Enrolando o fio em bobina e colocando
+núcleo de ferro, criamos um eletroímã!
 
-  2. Retificação: Converte AC em DC pulsante
+Anatomia de um Relé
 
-  3. Regulação: Estabiliza a tensão
+  1. Bobina: Cria o campo magnético
 
-[INSERIR FIGURA 16.2 AQUI]
+  2. Contatos: Chaves mecânicas acionadas pelo
+      magnetismo
 
-     Figura 14.2: Os Três Estágios. Formas de onda em
-      cada estágio.
+Vantagens: Isolamento elétrico total entre controle e
+carga!
 
-O Herói: Regulador 78XX
-
-     7805 → 5V
-
-     7812 → 12V
-
-     7824 → 24V
+[INSERIR FIGURA 15.2 AQUI]
 
 
-[INSERIR FIGURA 16.3 AQUI]
+     Figura 13.2: Dentro de um Relé. Diagrama em corte
+      mostrando bobina, núcleo e contatos.
 
-      Figura 14.3: O Regulador 7805. Pinagem e símbolo.
+Tipos de Contatos: NA, NF e COM
 
-Circuito Completo do 7805
+     COM (Comum): Terminal central
 
-[INSERIR FIGURA 16.4 AQUI]
+     NA (Normalmente Aberto): Fecha quando
+      energizado
 
-      Figura 14.4: Circuito Completo do 7805. Esquema
-       com capacitores de estabilização.
+     NF (Normalmente Fechado): Abre quando
+      energizado
 
-Cuidado com a Dissipação de Calor!
+[INSERIR FIGURA 15.3 AQUI]
 
-P_dissipada = (V_in - V_out) × I_carga
+     Figura 13.3: Tipos de Contatos. Diagrama
+      mostrando os três terminais.
 
-Exemplo: 12V → 5V, 1A = 7 Watts de calor!
+Circuito de Acionamento
 
-[INSERIR FIGURA 16.5 AQUI]
+Use um transistor para acionar o relé a partir de um
+Arduino:
 
-      Figura 14.5: Dissipação de Calor. Sem dissipador vs
-       com dissipador.
+[INSERIR FIGURA 15.4 AQUI]
+
+     Figura 13.4: Acionamento com Transistor. Circuito
+      completo com diodo de proteção.
+
+Aplicações Práticas
+
+     Controle de cargas DC de baixa tensão; cargas ligadas à rede exigem profissional habilitado.
+
+     Motores elétricos
+
+     Sistemas de segurança
+
+
+     Automação residencial
+
+[INSERIR FIGURA 15.5 AQUI]
+
+     Figura 13.5: Controle de Lâmpada 110V. Diagrama
+      mostrando isolamento completo.
 
 Um abraço do seu professor,
 
