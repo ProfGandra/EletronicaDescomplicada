@@ -1,13 +1,10 @@
-# Capítulo 9 — A PONTE PARA O MUNDO REAL –
+# Capítulo 9 — A PONTE PARA O MUNDO REAL – DIVISORES DE TENSÃO
 
-> **Nota editorial:** capítulo 9 do manuscrito original, deslocado para a posição 9 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-DIVISORES DE TENSÃO
 
 Uma das aplicações mais úteis da associação em série é
 o divisor de tensão.
 
-[INSERIR FIGURA 8.1 AQUI]
+[INSERIR FIGURA 9.1 AQUI]
 
       Figura 8.1: A Mágica da Divisão de
        Tensão. Transformando 9V em 3V com dois
@@ -25,7 +22,7 @@ Aplicações Práticas
 
    3. Referência de tensão simples
 
-[INSERIR FIGURA 8.2 AQUI]
+[INSERIR FIGURA 9.2 AQUI]
 
       Figura 8.2: Circuito Básico do Divisor. Diagrama
        claro.
@@ -36,7 +33,7 @@ Divisor de tensão não é regulador! Conectar uma carga
 altera a tensão de saída.
 
 
-[INSERIR FIGURA 8.3 AQUI]
+[INSERIR FIGURA 9.3 AQUI]
 
       Figura 8.3: O Efeito da Carga. Comparação com e
        sem carga.
@@ -50,4 +47,4 @@ PARTE 2: COMPONENTES ATIVOS
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
