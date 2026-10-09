@@ -1,113 +1,71 @@
-# Capítulo 7 — SEU CAMPO DE TESTES – DOMINANDO A PROTOBOARD
+# Capítulo 7 — SEUS OLHOS E OUVIDOS NO MUNDO ELÉTRICO – DOMINANDO O MULTÍMETRO
 
 
-O que é a Protoboard?
-A protoboard (ou placa de ensaio) é a ferramenta fundamental para
-quem está começando na eletrônica. Imagine-a como um tabuleiro de
-xadrez, onde cada casa é um ponto de conexão que permite testar
-circuitos sem a necessidade de solda. É o seu laboratório portátil,
-onde protótipos ganham vida e erros são facilmente corrigidos.
+E aí, tudo bem? De nada adianta entender a teoria se você
+não consegue enxergar o que está acontecendo nos seus
+circuitos, certo? O multímetro é exatamente isso: os seus
+olhos e ouvidos no mundo invisível da eletricidade.
 
-Como Funciona a Anatomia Interna
-A magia da protoboard está escondida sob o plástico. Por baixo dos
-furos, existem trilhas metálicas que conectam grupos de terminais:
-         Área                              Descrição
-Linhas de              São as colunas verticais laterais (geralmente
-Alimentação            marcadas com linhas vermelha e azul). Elas
-(Barramentos)          permitem distribuir energia (VCC e GND) ao
-                       longo de todo o comprimento da placa.
-Blocos Centrais        São as linhas horizontais de 5 furos. Todos os
-                       furos de uma mesma linha horizontal estão
-                       conectados eletricamente entre si.
-Canal Central          O espaço vazio no meio da placa. Ele é
-(Vala)                 essencial para encaixar Circuitos Integrados (CI)
-                       sem que os pinos opostos fiquem em curto-
-                       circuito.
+É o instrumento mais importante da sua bancada, e dominá-
+lo é tão crucial quanto dominar a Lei de Ohm.
 
-Regras de Ouro para o Uso
-     Nunca force os componentes: Pinos de componentes devem
-      entrar suavemente. Se precisar de força, o componente pode
-      estar torto.
-     Cuidado com os curtos: Sempre verifique se o positivo e o
-      negativo não estão se tocando em algum ponto do circuito.
+[INSERIR FIGURA 6.1 AQUI]
+
+      Figura 2.1: O Multímetro - Seu Companheiro
+       Indispensável. Multímetro digital moderno com
+       pontas de prova.
+
+As Funções Básicas: O que cada símbolo significa
+
+Tensão DC (V⎓): Mede a "pressão" em corrente contínua
+Tensão AC (V~): Mede a "pressão" em corrente alternada
+Corrente DC (A⎓): Mede o "fluxo" em corrente contínua
+Resistência (Ω): Mede a "dificuldade" à passagem da
+corrente
+Continuidade (   🔊): Emite um bipe quando há conexão
 
 
-        Mantenha a organização: Use fios de cores diferentes (ex:
-         vermelho para positivo, preto para negativo) para facilitar a
-         leitura do circuito.
-        Padrão de montagem: Sempre que possível, monte seu
-         circuito da esquerda para a direita, seguindo o fluxo lógico do
-         sinal.
-         Figura 3.1: A Protoboard - Seu Laboratório
-          Instantâneo. Foto de protoboard com componentes
-          organizados.
+      Figura 2.2: Painel do Multímetro Decodificado.
 
-A Anatomia da Protoboard
+Como Medir Corretamente
 
-         Área Central: 5 furos conectados verticalmente
+Tensão (Volts): EM PARALELO com o componente
+Corrente (Ampères): EM SÉRIE - quebre o circuito!
+Resistência (Ohms): Componente DESLIGADO do circuito
 
-         Barras de Alimentação: Linhas horizontais longas (+
-          e -)
+[INSERIR FIGURA 6.2 AQUI]
 
-         Canal Central: Espaço para encaixar CIs
+     Figura 2.3: Como Conectar para Cada Medida. Três
+      diagramas mostrando as conexões corretas.
 
-[INSERIR FIGURA 7.1 AQUI]
+Erros Comuns (e Como Evitá-los)
 
-         Figura 3.2: Como Funciona por Dentro. Diagrama
-          em corte das trilhas metálicas internas.
+     Medir corrente em paralelo →   ⚡ PERIGO! Queima o
+      multímetro!
 
-Regras de Ouro da Boa Montagem
-
-     1. Organização é tudo
-
-     2. Use as barras de alimentação
-
-     3. Siga o fluxo do sinal (entradas à esquerda, saídas à
-          direita)
-
-     4. Teste por etapas
+     Medir resistência com circuito ligado → Leitura
+      errada!
 
 
-[INSERIR FIGURA 7.2 AQUI]
+      Escala errada → Leituras imprecisas
 
-      Figura 3.3: Boa vs Má Montagem. Comparação lado
-       a lado.
+[INSERIR FIGURA 6.3 AQUI]
 
-Cores Padrão para Jumpers
+      Figura 2.4: Os Erros que Custam Caro. Ilustração
+       estilo "Não Faça Isso".
 
-      Vermelho: VCC (positivo)
+Dica de Ouro: A Regra das 3 Verificações
 
-      Preto: GND (referência comum; não confundir com terra de proteção)
+   1. Pontas nas entradas corretas?
 
-      Amarelo/Laranja: Sinais
+   2. Função selecionada é a adequada?
 
-      Verde/Azul: Dados
+   3. Escala apropriada para o valor esperado?
 
-[INSERIR FIGURA 7.3 AQUI]
+[INSERIR FIGURA 6.4 AQUI]
 
-      Figura 3.4: Técnicas de Cabos. Sequência mostrando
-       organização e corte.
-
-Seu Primeiro Exercício: Circuito
-Simples
-  1.    Conecte uma bateria de 9V aos barramentos laterais.
-  2.    Insira um resistor de 330Ω em uma linha horizontal.
-  3.    Conecte o terminal positivo do LED à mesma linha do resistor.
-  4.    Conecte o terminal negativo (perna menor) do LED ao
-        barramento negativo (GND).
-   5. Observe a iluminação!
-Dominar a protoboard é o primeiro passo para parar de apenas "ler"
-sobre eletrônica e começar a "construir" de fato. Com ela, sua
-criatividade não tem limites!
-
-
-E aí, pronto para colocar a mão na massa? A protoboard é
-onde as ideias saem do papel e viram circuitos reais, sem
-precisar soldar nada!
-
-[INSERIR FIGURA 7.4 AQUI]
-
-
+      Figura 2.5: Checklist de Segurança. Infográfico com
+       os 3 passos.
 
 Um abraço do seu professor,
 
