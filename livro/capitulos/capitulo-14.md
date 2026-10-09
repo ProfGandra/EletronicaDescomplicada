@@ -1,80 +1,91 @@
-# Capítulo 14 — O INTERRUPTOR CONTROLADO POR ELETRICIDADE – TRANSISTORES BJT
+# Capítulo 14 — OS TANQUES DE ENERGIA – ENTENDENDO OS CAPACITORES
 
 
-O transistor é provavelmente o componente mais
-importante da eletrônica moderna. É graças a ele que
-temos computadores, celulares e toda a eletrônica
-inteligente!
+Chegou a hora de conhecer o componente
+que armazena energia: o capacitor!
 
-[INSERIR FIGURA 14.1 AQUI]
+[INSERIR FIGURA 13.1 AQUI]
 
-      Figura 12.1: A Revolução do Transistor. Válvula
-       gigante vs transistor pequeno.
+     Figura 11.1: Onde Vivem os Capacitores. Placa de
+      circuito com capacitores destacados.
 
-A Analogia Perfeita: A Torneira com Alavanca
+A Analogia Perfeita: O Tanque com Membrana
 
-Uma pequena corrente na base controla uma corrente
-muito maior entre o coletor e o emissor.
+Imagine um tanque com uma membrana de borracha.
+Quando você bombeia água, a membrana estica,
+armazenando energia. Quando libera, a membrana
+empurra a água de volta.
 
-[INSERIR FIGURA 14.2 AQUI]
+O capacitor funciona exatamente assim!
 
-      Figura 12.2: Analogia da Torneira. Alavanca
-       pequena controlando grande fluxo.
+[INSERIR FIGURA 13.2 AQUI]
 
-Os Três Terminais do BJT
+     Figura 11.2: Anatomia de um Capacitor. Diagrama
+      em corte mostrando placas e dielétrico.
 
-   1. Base (B): O "controle" - corrente pequena aqui
+Capacitância: A Medida do Armazenamento
 
-   2. Coletor (C): Entrada da corrente principal
+     Farad (F): Unidade, mas é enorme!
 
-   3. Emissor (E): Saída da corrente principal
+     Microfarad (μF): 0,000001 F
 
-[INSERIR FIGURA 14.3 AQUI]
-
-
-      Figura 12.3: Anatomia de um Transistor
-       BJT. Símbolo, encapsulamento e pinagem.
-
-Modos de Operação
-
-Corte (Chave Aberta): Sem corrente na base → transistor
-desligado
-Saturação (Chave Fechada): Corrente suficiente na base
-→ transistor ligado
-
-[INSERIR FIGURA 14.4 AQUI]
-
-      Figura 12.4: Modos de Operação. LED apagado vs
-       LED aceso.
-
-Calculando o Resistor de Base
-
-R_B = (V_fonte - 0,7V) / I_B
-
-Onde I_B = I_C / β (β é o ganho, geralmente 100-300)
-
-Exemplo: Controlando Motor com Arduino
-
-Arduino (5V, 20mA) controlando motor 12V/500mA:
-
-I_B = 0,5A / 100 = 0,005A (5mA)
-R_B = (5V - 0,7V) / 0,005A = 860Ω → usar 1kΩ
-
-[INSERIR FIGURA 14.5 AQUI]
-
-      Figura 12.5: Controlando Carga de Alta
-       Potência. Diagrama do circuito completo.
-
-Diodo de Proteção: ESSENCIAL!
+     Nanofarad (nF): 0,000000001 F
 
 
-Para cargas indutivas (motores, relés), use um diodo em
-paralelo com a carga para proteger o transistor!
+     Picofarad (pF): 0,000000000001 F
 
-[INSERIR FIGURA 14.6 AQUI]
+[INSERIR FIGURA 13.3 AQUI]
 
-     Figura 12.6: Proteção com Diodo. Diagrama
-      mostrando o diodo de livre circulação.
+     Figura 11.3: Escala de Capacitâncias. Comparação
+      de tamanhos: cerâmico, eletrolítico,
+      supercapacitor.
+
+Comportamento em DC: Carga e Descarga
+
+Carregando: Tensão sobe exponencialmente
+Descarregando: Tensão cai exponencialmente
+
+[INSERIR FIGURA 13.4 AQUI]
+
+     Figura 11.4: Curvas de Carga e Descarga. Gráfico
+      exponencial.
+
+A Constante de Tempo (τ): O "Ritmo" do Capacitor
+
+τ=R×C
+
+Em 1τ: carrega 63% da tensão
+Em 5τ: carrega 99% (praticamente total)
+
+Aplicações Práticas
+
+  1. Filtragem de Ruído: Suaviza variações de tensão
+
+  2. Desacoplamento: Energia instantânea para CIs
+
+  3. Temporização: Delays com circuitos RC
+
+  4. Armazenamento: Picos de corrente momentâneos
+
+
+[INSERIR FIGURA 13.5 AQUI]
+
+     Figura 11.5: Aplicações dos Capacitores. Quatro
+      mini-diagramas de aplicações.
+
+Cuidados Importantíssimos!
+
+     Polaridade: Capacitores eletrolíticos têm
+      polaridade! Inverter = explosão!
+
+     Tensão de Trabalho: Nunca exceder a tensão
+      máxima!
+
+[INSERIR FIGURA 13.6 AQUI]
+
+     Figura 11.6: Identificação e Cuidados. Capacitor
+      eletrolítico com faixa negativa e símbolos de
+      atenção.
 
 Um abraço do seu professor,
 
