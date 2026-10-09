@@ -1,77 +1,80 @@
-# Capítulo 15 — RELÉS E ELETROMAGNETISMO – CONTROLE DE ALTA POTÊNCIA
+# Capítulo 15 — O INTERRUPTOR CONTROLADO POR ELETRICIDADE – TRANSISTORES BJT
 
 
-Os relés usam eletromagnetismo para controlar
-circuitos de alta potência com poucos miliampères!
+O transistor é provavelmente o componente mais
+importante da eletrônica moderna. É graças a ele que
+temos computadores, celulares e toda a eletrônica
+inteligente!
 
-[INSERIR FIGURA 15.1 AQUI]
+[INSERIR FIGURA 14.1 AQUI]
 
-     Figura 13.1: O Poder do
-      Eletromagnetismo. Sequência: bateria → campo
-      magnético → movimento.
+      Figura 12.1: A Revolução do Transistor. Válvula
+       gigante vs transistor pequeno.
 
-O Princípio do Eletromagnetismo
+A Analogia Perfeita: A Torneira com Alavanca
 
-Quando corrente flui por um fio, ela cria um campo
-magnético. Enrolando o fio em bobina e colocando
-núcleo de ferro, criamos um eletroímã!
+Uma pequena corrente na base controla uma corrente
+muito maior entre o coletor e o emissor.
 
-Anatomia de um Relé
+[INSERIR FIGURA 14.2 AQUI]
 
-  1. Bobina: Cria o campo magnético
+      Figura 12.2: Analogia da Torneira. Alavanca
+       pequena controlando grande fluxo.
 
-  2. Contatos: Chaves mecânicas acionadas pelo
-      magnetismo
+Os Três Terminais do BJT
 
-Vantagens: Isolamento elétrico total entre controle e
-carga!
+   1. Base (B): O "controle" - corrente pequena aqui
 
-[INSERIR FIGURA 15.2 AQUI]
+   2. Coletor (C): Entrada da corrente principal
 
+   3. Emissor (E): Saída da corrente principal
 
-     Figura 13.2: Dentro de um Relé. Diagrama em corte
-      mostrando bobina, núcleo e contatos.
-
-Tipos de Contatos: NA, NF e COM
-
-     COM (Comum): Terminal central
-
-     NA (Normalmente Aberto): Fecha quando
-      energizado
-
-     NF (Normalmente Fechado): Abre quando
-      energizado
-
-[INSERIR FIGURA 15.3 AQUI]
-
-     Figura 13.3: Tipos de Contatos. Diagrama
-      mostrando os três terminais.
-
-Circuito de Acionamento
-
-Use um transistor para acionar o relé a partir de um
-Arduino:
-
-[INSERIR FIGURA 15.4 AQUI]
-
-     Figura 13.4: Acionamento com Transistor. Circuito
-      completo com diodo de proteção.
-
-Aplicações Práticas
-
-     Controle de cargas DC de baixa tensão; cargas ligadas à rede exigem profissional habilitado.
-
-     Motores elétricos
-
-     Sistemas de segurança
+[INSERIR FIGURA 14.3 AQUI]
 
 
-     Automação residencial
+      Figura 12.3: Anatomia de um Transistor
+       BJT. Símbolo, encapsulamento e pinagem.
 
-[INSERIR FIGURA 15.5 AQUI]
+Modos de Operação
 
-     Figura 13.5: Controle de Lâmpada 110V. Diagrama
-      mostrando isolamento completo.
+Corte (Chave Aberta): Sem corrente na base → transistor
+desligado
+Saturação (Chave Fechada): Corrente suficiente na base
+→ transistor ligado
+
+[INSERIR FIGURA 14.4 AQUI]
+
+      Figura 12.4: Modos de Operação. LED apagado vs
+       LED aceso.
+
+Calculando o Resistor de Base
+
+R_B = (V_fonte - 0,7V) / I_B
+
+Onde I_B = I_C / β (β é o ganho, geralmente 100-300)
+
+Exemplo: Controlando Motor com Arduino
+
+Arduino (5V, 20mA) controlando motor 12V/500mA:
+
+I_B = 0,5A / 100 = 0,005A (5mA)
+R_B = (5V - 0,7V) / 0,005A = 860Ω → usar 1kΩ
+
+[INSERIR FIGURA 14.5 AQUI]
+
+      Figura 12.5: Controlando Carga de Alta
+       Potência. Diagrama do circuito completo.
+
+Diodo de Proteção: ESSENCIAL!
+
+
+Para cargas indutivas (motores, relés), use um diodo em
+paralelo com a carga para proteger o transistor!
+
+[INSERIR FIGURA 14.6 AQUI]
+
+     Figura 12.6: Proteção com Diodo. Diagrama
+      mostrando o diodo de livre circulação.
 
 Um abraço do seu professor,
 
