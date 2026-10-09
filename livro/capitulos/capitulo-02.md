@@ -59,9 +59,25 @@ Equipamento de Proteção Individual (EPI) Mínimo
 
 Para Baixa Tensão (<50V):
 
-      Óculos de proteção (para solda e cortes)
+      Óculos de segurança com proteção lateral, adequados à atividade (soldagem, corte de terminais e preparação de fios)
 
-      Pulseira anti-estática (para CIs sensíveis)
+### Proteção dos olhos: um cuidado indispensável
+
+Antes de começar a trabalhar na bancada, precisamos falar de um equipamento simples, mas extremamente importante: **os óculos de segurança**.
+
+Durante atividades como soldagem, corte de terminais, preparação de fios e montagem de circuitos, pequenos fragmentos metálicos ou respingos de solda podem atingir os olhos.
+
+E, convenhamos, perder a visão por causa de um pedacinho de terminal de resistor seria uma maneira bastante desagradável de aprender eletrônica!
+
+Por isso, utilize **óculos de segurança com proteção lateral**, adequados à atividade, especialmente ao cortar terminais e realizar soldagens.
+
+Óculos comuns de leitura não substituem os óculos de segurança. E lembre-se de que os óculos protegem contra partículas e respingos, mas não substituem a ventilação e a exaustão necessárias durante a soldagem.
+
+É um cuidado simples que precisa se tornar um hábito.
+
+**Na bancada, os olhos vêm antes do circuito!**
+
+      Pulseira antiestática (para proteger componentes sensíveis contra ESD; não é EPI contra choque elétrico e não deve ser utilizada ao trabalhar com partes energizadas perigosas)
 
 Para Alta Tensão (>50V):
 
