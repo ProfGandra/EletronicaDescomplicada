@@ -79,3 +79,8 @@ Um abraço do seu professor,
 ### Registro editorial
 
 Revisadas a aplicabilidade da Lei de Ohm, as unidades e a escolha do resistor comercial. Mantidos os três pontos de inserção de imagens, com numeração ajustada à nova ordem.
+
+
+---
+
+*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
