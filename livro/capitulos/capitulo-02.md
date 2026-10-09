@@ -1,161 +1,111 @@
-# Capítulo 2 — Segurança eletrônica: porque brincar com fogo queima (literalmente) CAPÍTULO 22: SEGURANÇA ELETRÔNICA – PORQUE
+# Capítulo 2 — Segurança na bancada: antes de ligar, pense!
 
-BRINCAR COM FOGO QUEIMA (LITERALMENTE)
+Olá, tudo bem com você?
 
-Este é provavelmente o capítulo mais importante do livro.
-Porque de nada adianta saber eletrônica se você não viver
-para usufruir do conhecimento!
+Antes de colocar a mão nos componentes e começar a montar nossos circuitos, precisamos conversar sobre uma coisa importante: **segurança**.
 
-[INSERIR FIGURA 2.1 AQUI]
+Calma! Não vamos transformar este livro em um curso de segurança do trabalho.
 
-      Figura 21.1: Os Quatro Cavaleiros do Apocalipse
-       Eletrônico. Ilustração mostrando: Alta Tensão, Alta
-       Corrente, ESD e Toxicidade.
+A ideia é bem mais simples: aprender alguns hábitos que evitam acidentes, componentes queimados e aquela situação constrangedora de descobrir que o problema era um fio ligado no lugar errado.
 
-Os 4 Inimigos da Segurança Eletrônica
+A eletrônica é fascinante. E fica muito melhor quando terminamos a atividade com o circuito funcionando e todos os dedos no lugar!
 
-1. Alta Tensão (>50V) - O Assassino Silencioso
+## 2.1 — Uma bancada organizada ajuda mais do que parece
 
-      AC é mais perigosa que DC (causa contração
-       muscular)
+Você já tentou encontrar um resistor no meio de fios, alicates, parafusos e componentes espalhados?
 
-      Nunca trabalhe sozinho com alta tensão
+Às vezes, a bancada parece ter sido atingida por um pequeno tornado.
 
-      Use apenas uma mão (evita corrente através do
-       coração)
+Além de dificultar o trabalho, a desorganização favorece erros. Um pedaço de fio esquecido pode provocar um curto-circuito. Uma ferramenta apoiada sobre uma placa energizada também pode causar problemas.
 
-2. Alta Corrente - O Incendiário
+Por isso, procure manter apenas o material necessário para a atividade, organize os componentes e deixe líquidos longe dos equipamentos.
 
-      Circuitos indutivos geram picos perigosos
+E nada de apoiar o ferro de solda quente em qualquer lugar. Ele precisa de um suporte apropriado.
 
-      Baterias Li-Po podem explodir se curto-circuitadas
+**[INSERIR FIGURA 2.1 — Bancada organizada para montagem eletrônica]**
 
-      Fusíveis são seus amigos!
+*Legenda:* Exemplo de bancada didática com componentes organizados, ferramentas em seus suportes e área livre para a montagem.
 
-3. ESD (Descarga Eletrostática) - O Assassino Invisível
+## 2.2 — Antes de ligar, confira a alimentação
 
+No capítulo seguinte, vamos conhecer melhor as fontes de alimentação em corrente contínua. Por enquanto, guarde uma regra:
 
-      3.000V para você sentir, 50V para matar um CI!
+**Nunca conecte uma fonte ao circuito sem conferir sua tensão e sua polaridade.**
 
-      Use pulseira anti-estática com componentes sensíveis
+Um circuito projetado para 5 V pode ser danificado se receber uma tensão muito maior. E inverter os terminais positivo e negativo também pode causar estragos.
 
-      Superfícies condutoras na bancada dissipam carga
+Antes de energizar a montagem, dê uma última olhada nas conexões. Verifique se existem fios soltos, terminais encostando onde não deveriam ou componentes instalados de maneira incorreta.
 
-4. Toxicidade - O Perigo Oculto
+Para nossas primeiras experiências, utilizaremos **pilhas e fontes comerciais de baixa tensão, adequadas ao projeto**. A tomada e o interior das fontes conectadas à rede elétrica não fazem parte dessas atividades.
 
-      Fumaça de solda contém metais pesados - use
-       exaustor
+Também vale lembrar que uma bateria, mesmo de baixa tensão, pode fornecer uma corrente elevada em caso de curto-circuito. Portanto, nunca una diretamente seus dois terminais com um fio.
 
-      Lave as mãos após manusear componentes antigos
+**[INSERIR FIGURA 2.2 — Conferência da alimentação antes de ligar]**
 
-      Ventilação adequada é essencial
+*Legenda:* Verificação da tensão, da polaridade e das conexões de um circuito didático antes da energização.
 
-Equipamento de Proteção Individual (EPI) Mínimo
+## 2.3 — Ferramentas e soldagem exigem atenção
 
-[INSERIR FIGURA 2.2 AQUI]
+Alicate de corte, desencapador, pinça e ferro de solda são ferramentas comuns na eletrônica.
 
-      Figura 21.2: Kit de Segurança Pessoal. Foto
-       mostrando: óculos, luvas, pulseira anti-estática.
+E todas merecem respeito.
 
-Para Baixa Tensão (<50V):
+Ao cortar o terminal de um componente, segure a parte que será removida para evitar que ela seja lançada. Não direcione o corte para o rosto ou para outras pessoas.
 
-      Óculos de segurança com proteção lateral, adequados à atividade (soldagem, corte de terminais e preparação de fios)
+O ferro de solda merece atenção especial: sua ponta pode atingir temperaturas capazes de provocar queimaduras sérias. Segure-o pelo cabo, utilize um suporte adequado e mantenha os dedos longe da ponta aquecida.
 
-### Proteção dos olhos: um cuidado indispensável
+Durante a soldagem, trabalhe em local com ventilação e **exaustão apropriadas para os fumos produzidos**. Não coloque o rosto sobre a região de solda e lave as mãos depois da atividade.
 
-Antes de começar a trabalhar na bancada, precisamos falar de um equipamento simples, mas extremamente importante: **os óculos de segurança**.
+Terminou? Desligue o equipamento e espere esfriar antes de guardá-lo.
 
-Durante atividades como soldagem, corte de terminais, preparação de fios e montagem de circuitos, pequenos fragmentos metálicos ou respingos de solda podem atingir os olhos.
+Não é preciso ter medo das ferramentas. Precisamos apenas aprender a utilizá-las corretamente.
 
-E, convenhamos, perder a visão por causa de um pedacinho de terminal de resistor seria uma maneira bastante desagradável de aprender eletrônica!
+## 2.4 — E os óculos de segurança?
 
-Por isso, utilize **óculos de segurança com proteção lateral**, adequados à atividade, especialmente ao cortar terminais e realizar soldagens.
+Agora chegamos a um assunto que sempre aparece nas minhas aulas.
 
-Óculos comuns de leitura não substituem os óculos de segurança. E lembre-se de que os óculos protegem contra partículas e respingos, mas não substituem a ventilação e a exaustão necessárias durante a soldagem.
+Durante cortes de terminais, preparação de fios e soldagem, pequenos fragmentos ou respingos podem atingir os olhos. Por isso, utilize **óculos de segurança com proteção lateral**, adequados à atividade.
 
-É um cuidado simples que precisa se tornar um hábito.
+Óculos de leitura comuns não substituem óculos de segurança. E os óculos não substituem a exaustão durante a soldagem: cada cuidado tem sua função.
 
-E, antes que você diga que os óculos incomodam, atrapalham ou que vai ser só um cortezinho rápido, permita-me fazer uma pergunta:
+Sempre aparece alguém dizendo que vai ser só um cortezinho rápido ou que colocar os óculos dá trabalho.
+
+Nessas horas, costumo perguntar:
 
 **“Prefere usar os óculos ou uma cegueira misteriosa?”**
 
-Pois é. Acho que os óculos não incomodam tanto assim!
+Pois é. De repente, os óculos já não parecem tão incômodos assim!
 
-**Na bancada, os olhos vêm antes do circuito!**
+**[INSERIR FIGURA 2.3 — Proteção ocular na bancada]**
 
-      Pulseira antiestática (para proteger componentes sensíveis contra ESD; não é EPI contra choque elétrico e não deve ser utilizada ao trabalhar com partes energizadas perigosas)
+*Legenda:* Estudante utilizando óculos de segurança com proteção lateral durante o corte de terminais de componentes.
 
-Para Alta Tensão (>50V):
+## 2.5 — O último olhar antes de energizar
 
-      TUDO acima +
+Antes de ligar seu circuito, faça uma conferência rápida:
 
-      Luvas isolantes (classe 00 ou superior)
+1. A bancada está organizada e sem objetos metálicos soltos sobre a montagem?
+2. A fonte fornece a tensão correta?
+3. Os polos positivo e negativo estão conectados corretamente?
+4. Existem fios desencapados ou terminais encostando indevidamente?
+5. As ferramentas quentes estão em seus suportes e os óculos de segurança estão sendo utilizados quando a atividade exige?
 
-      Tapete de borracha
+Se encontrou algum problema, **desligue a alimentação antes de corrigir a montagem**.
 
+É melhor gastar alguns segundos conferindo do que vários minutos tentando descobrir por que o circuito não funciona.
 
-      NUNCA sozinho!
+Ou, pior, descobrir pelo cheiro.
 
-Primeiros Socorros para Choques Elétricos
+## Para encerrar
 
-PASSO 1: Desligue a energia (não toque na vítima enquanto
-energizada!)
-PASSO 2: Afaste com material não condutor (madeira,
-plástico, borracha)
-PASSO 3: Verifique respiração - inicie RCP se necessário
-PASSO 4: Chame ajuda - 192 (SAMU) ou 193 (Bombeiros)
+Segurança na eletrônica não precisa ser um assunto complicado. Na maioria das nossas atividades, ela começa com atitudes simples: organizar, conferir, utilizar as ferramentas corretamente e proteger os olhos.
 
-[INSERIR FIGURA 2.3 AQUI]
+Um componente queimado pode ser substituído. Uma montagem errada pode ser refeita.
 
-      Figura 21.3: Procedimento de Resgate. Diagrama em
-       sequência dos passos.
+Mas nossa saúde merece um cuidado bem maior.
 
-Prevenção de Incêndios
-
-Regra de Ouro: Sempre tenha um extintor Classe C (para
-fogo elétrico) na sua bancada.
-
-Causas Comuns de Incêndio:
-
-      Componentes superaquecidos
-
-      Curto-circuito em baterias Li-Po
-
-      Fiação inadequada para a corrente
-
-      Solda com ferro muito quente em materiais
-       inflamáveis
-
-Checklist de Segurança Pré-Energização
-
-
-Antes de ligar QUALQUER circuito, verifique:
-
-   1. Inspeção visual - soldas frias, fios soltos
-
-   2. Teste de continuidade - verifique curtos não
-       intencionais
-
-   3. Cálculo de potência - componentes dentro da
-       especificação
-
-   4. Proteções instaladas - fusíveis, diodos de proteção
-
-   5. Área limpa - sem materiais inflamáveis próximos
-
-[INSERIR FIGURA 2.4 AQUI]
-
-      Figura 21.4: Checklist de Segurança. Infográfico
-       com caixas de verificação.
+No próximo capítulo, vamos descobrir de onde vem a energia elétrica que alimenta nossos circuitos e como escolher uma fonte adequada.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-**Controle editorial:** verificar orientações sobre choque elétrico, capacitores e proteção de bancada antes da impressão.
-
-
----
-
-*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
