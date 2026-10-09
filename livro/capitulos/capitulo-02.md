@@ -72,6 +72,32 @@ Terminou? Desligue o equipamento e espere esfriar antes de guardá-lo.
 
 Não é preciso ter medo das ferramentas. Precisamos apenas aprender a utilizá-las corretamente.
 
+### E a roupa para trabalhar na bancada?
+
+Quando falamos em segurança na soldagem, normalmente pensamos nas mãos e nos olhos. Mas você já parou para pensar na roupa que está usando?
+
+Tecidos sintéticos, como o nylon, podem derreter quando expostos ao calor intenso e aderir à pele, agravando uma queimadura.
+
+Para nossas atividades de bancada, a recomendação é simples:
+
+**Calça jeans e camiseta de algodão. Não tem erro!**
+
+O algodão não derrete como o nylon quando exposto ao calor, embora também possa queimar. Evite roupas sintéticas, peças muito largas e mangas soltas próximas ao ferro de solda.
+
+Já reparou que muitos profissionais da área utilizam jalecos?
+
+Não é apenas para ficar com aquela aparência de cientista de laboratório!
+
+O jaleco ajuda a proteger a roupa e a pele contra pequenos respingos e contatos acidentais, **desde que seja confeccionado com material adequado à atividade**. Nem todo jaleco oferece a mesma proteção: quando há risco térmico, é importante evitar tecidos que possam derreter e verificar se a vestimenta é apropriada.
+
+E nada de mangas soltas passeando perto do ferro de solda!
+
+Afinal, como costumo dizer em sala:
+
+**“Cuidado com a roupa de nylon! Você não vai querer virar uma tocha humana!”**
+
+É um exagero proposital, claro. O contato com o ferro quente não transforma alguém automaticamente em uma tocha, mas o risco de queimadura é real.
+
 ## 2.4 — E os óculos de segurança?
 
 Agora chegamos a um assunto que sempre aparece nas minhas aulas.
