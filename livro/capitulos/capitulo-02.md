@@ -52,7 +52,19 @@ E todas merecem respeito.
 
 Ao cortar o terminal de um componente, segure a parte que será removida para evitar que ela seja lançada. Não direcione o corte para o rosto ou para outras pessoas.
 
-O ferro de solda merece atenção especial: sua ponta pode atingir temperaturas capazes de provocar queimaduras sérias. Segure-o pelo cabo, utilize um suporte adequado e mantenha os dedos longe da ponta aquecida.
+O ferro de solda merece atenção especial. Sua ponta pode atingir temperaturas de centenas de graus Celsius, suficientes para provocar **queimaduras de primeiro, segundo ou até terceiro grau**, dependendo da temperatura, do tempo de contato e da região atingida.
+
+Uma queimadura de primeiro grau costuma afetar a camada mais superficial da pele. A de segundo grau atinge camadas mais profundas e pode formar bolhas. Já a de terceiro grau destrói toda a espessura da pele e exige atendimento médico imediato. E atenção: **a ausência de dor intensa não significa que uma queimadura seja leve**.
+
+Por isso, segure o ferro **sempre pelo cabo isolado**, utilize um suporte apropriado e mantenha os dedos longe da ponta e das partes metálicas aquecidas.
+
+E aqui vai uma frase que costumo usar em sala de aula:
+
+**“Se você sentiu cheiro de frango ao soldar, talvez esteja segurando no lugar errado...”**
+
+Pode parecer exagero, mas a brincadeira ajuda a lembrar de uma coisa séria: ferro de solda não é ferramenta para pegar de qualquer jeito.
+
+Se ocorrer uma queimadura, interrompa a atividade e resfrie a região com **água corrente fresca por cerca de 20 minutos**, sem usar gelo, pomadas caseiras ou tentar estourar bolhas. Queimaduras profundas, extensas ou em regiões sensíveis precisam de avaliação médica.
 
 Durante a soldagem, trabalhe em local com ventilação e **exaustão apropriadas para os fumos produzidos**. Não coloque o rosto sobre a região de solda e lave as mãos depois da atividade.
 
