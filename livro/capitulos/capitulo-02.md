@@ -1,15 +1,12 @@
-# Capítulo 2 — Segurança eletrônica: porque brincar com fogo queima (literalmente)
+# Capítulo 2 — Segurança eletrônica: porque brincar com fogo queima (literalmente) CAPÍTULO 22: SEGURANÇA ELETRÔNICA – PORQUE
 
-> **Nota editorial:** antecipado do capítulo 22 original para antes da primeira montagem. Referências de imagens preservadas no texto-base; conferir numeração antes da diagramação.
-
-CAPÍTULO 22: SEGURANÇA ELETRÔNICA – PORQUE
 BRINCAR COM FOGO QUEIMA (LITERALMENTE)
 
 Este é provavelmente o capítulo mais importante do livro.
 Porque de nada adianta saber eletrônica se você não viver
 para usufruir do conhecimento!
 
-[INSERIR FIGURA 21.1 AQUI]
+[INSERIR FIGURA 2.1 AQUI]
 
       Figura 21.1: Os Quatro Cavaleiros do Apocalipse
        Eletrônico. Ilustração mostrando: Alta Tensão, Alta
@@ -55,7 +52,7 @@ Os 4 Inimigos da Segurança Eletrônica
 
 Equipamento de Proteção Individual (EPI) Mínimo
 
-[INSERIR FIGURA 21.2 AQUI]
+[INSERIR FIGURA 2.2 AQUI]
 
       Figura 21.2: Kit de Segurança Pessoal. Foto
        mostrando: óculos, luvas, pulseira anti-estática.
@@ -86,7 +83,7 @@ plástico, borracha)
 PASSO 3: Verifique respiração - inicie RCP se necessário
 PASSO 4: Chame ajuda - 192 (SAMU) ou 193 (Bombeiros)
 
-[INSERIR FIGURA 21.3 AQUI]
+[INSERIR FIGURA 2.3 AQUI]
 
       Figura 21.3: Procedimento de Resgate. Diagrama em
        sequência dos passos.
@@ -124,7 +121,7 @@ Antes de ligar QUALQUER circuito, verifique:
 
    5. Área limpa - sem materiais inflamáveis próximos
 
-[INSERIR FIGURA 21.4 AQUI]
+[INSERIR FIGURA 2.4 AQUI]
 
       Figura 21.4: Checklist de Segurança. Infográfico
        com caixas de verificação.
@@ -135,3 +132,8 @@ Diego G. Gandra
 
 ---
 **Controle editorial:** verificar orientações sobre choque elétrico, capacitores e proteção de bancada antes da impressão.
+
+
+---
+
+*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
