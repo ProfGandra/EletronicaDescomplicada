@@ -1,96 +1,155 @@
-# Capítulo 22 — GUIA DE SOBREVIVÊNCIA NA BANCADA – ORGANIZAÇÃO E EFICIÊNCIA
+# Capítulo 22 — O CÉREBRO PROGRAMÁVEL – INTRODUÇÃO AO ARDUINO
 
 
-Uma bancada organizada não é só bonita - é funcional e te
-faz trabalhar melhor!
+Microcontroladores são computadores completos em um
+único chip. O Arduino é a plataforma que democratizou o
+acesso a esses dispositivos incríveis!
 
-[INSERIR FIGURA 22.1 AQUI]
+[INSERIR FIGURA 21.1 AQUI]
 
-      Figura 20.1: Layout Ideal da Bancada. Diagrama
-       com zonas de trabalho.
+      Figura 19.1: Do Circuito Fixo ao
+       Programável. Circuito complexo vs um único chip.
 
-O Triângulo de Ouro da Bancada
+O que tem dentro de um Microcontrolador?
 
-Zona 1 (Trabalho Ativo): Protoboard, componentes em uso
-Zona 2 (Ferramentas): Alicates, multímetro, ferro de solda
-Zona 3 (Suprimentos): Componentes organizados
-Zona 4 (Documentação): Computador, datasheets, caderno
+      CPU: Executa instruções
 
-Ferramentas Essenciais (Kit Básico)
+      Memória RAM: Dados temporários
 
-Must-Have:
+      Memória Flash: Armazena o programa
 
-      Multímetro digital
+      Periféricos: ADC, timers, comunicação serial
 
-      Alicate de corte diagonal
+      Portas de I/O: Conexão com o mundo exterior
 
-      Alicate de bico fino
+[INSERIR FIGURA 21.2 AQUI]
 
-      Ferro de solda 60W com suporte
+      Figura 19.2: Anatomia de um
+       Microcontrolador. Diagrama em blocos.
 
-      Sugador de solda
+A Placa Arduino Uno
 
-      Óculos de proteção!
-
-
-Nice-to-Have:
-
-      Fonte de alimentação ajustável
-
-      Osciloscópio
-
-      Estação de solda com controle de temperatura
-
-      Lupa articulada com LED
-
-[INSERIR FIGURA 22.2 AQUI]
-
-      Figura 20.2: As Ferramentas Essenciais. Foto
-       "exploded view" de cada ferramenta.
-
-Sistema de Organização de Componentes
-
-Resistores: Organizador com divisórias (valores E12)
-Capacitores: Separar por tipo (cerâmicos, eletrolíticos)
-Semicondutores: Diodos, transistores, CIs separados
-Fios e Conectores: Por cor e tipo
-
-[INSERIR FIGURA 22.3 AQUI]
-
-      Figura 20.3: Organizador Profissional. Foto com
-       etiquetas claras.
-
-Lista Mínima para Começar
-
-      Resistores: Valores de 10Ω a 1MΩ (série E12)
-
-      Capacitores: 100pF, 1nF, 10nF, 100nF, 1μF, 10μF, 100μF
-
-      LEDs: Vermelho, verde, azul, branco (5mm)
+[INSERIR FIGURA 21.3 AQUI]
 
 
-      Transistores: BC547 (NPN), BC557 (PNP)
+         Figura 19.3: A Placa Arduino Uno. Diagrama com
+          pinos identificados.
 
-      Diodos: 1N4148, 1N4007
+Pinos do Arduino
 
-      Potenciômetros: 1kΩ, 10kΩ, 100kΩ
+         Digitais (0-13): Entrada ou saída (0V ou 5V)
 
-Dicas de Ouro do Profissional
+         Analógicos (A0-A5): Leem 0-5V (resolução 10 bits →
+          0-1023)
 
-   1. "Limpeza semanal" - 15 minutos toda sexta
+         PWM (~3,5,6,9,10,11): Saída "analógica" por pulsação
+          rápida
 
-   2. "Etiquete TUDO" - Caneta permanente é sua amiga
+         5V, 3.3V, GND: Alimentação
 
-   3. "Teste antes de guardar" - Componentes novos podem
-       ser defeituosos
+Seu Primeiro Programa: Blink
 
-   4. "Documente seus projetos" - Fotos, esquemas,
-       aprendizados
+cpp
 
-[INSERIR FIGURA 22.4 AQUI]
+void setup() {
 
-      Figura 20.4: Antes e Depois. Bancada desorganizada
-       vs organizada.
+    pinMode(13, OUTPUT);         // Configura pino 13 como saída
+
+}
+
+
+
+void loop() {
+
+    digitalWrite(13, HIGH); // Acende o LED
+
+    delay(1000);        // Espera 1 segundo
+
+    digitalWrite(13, LOW); // Apaga o LED
+
+    delay(1000);        // Espera 1 segundo
+
+
+}
+
+[INSERIR FIGURA 21.4 AQUI]
+
+         Figura 19.4: Código do Pisca-Pisca. Screenshot do
+          IDE com explicações.
+
+Conceitos Fundamentais de Programação
+
+Variáveis:
+
+cpp
+
+int velocidade = 1000;
+
+Estruturas de Controle:
+
+cpp
+
+if (leitura > 500) {
+
+    digitalWrite(13, HIGH);
+
+} else {
+
+    digitalWrite(13, LOW);
+
+}
+
+Loops:
+
+cpp
+
+for (int i = 0; i < 10; i++) {
+
+    digitalWrite(13, HIGH);
+
+
+    delay(100);
+
+    digitalWrite(13, LOW);
+
+    delay(100);
+
+}
+
+[INSERIR FIGURA 21.5 AQUI]
+
+         Figura 19.5: Exemplos de Código. Blocos com
+          sintaxe colorida.
+
+Projeto: Controlador de LED com Potenciômetro
+
+cpp
+
+void setup() {
+
+    pinMode(9, OUTPUT);
+
+}
+
+
+
+void loop() {
+
+    int leitura = analogRead(A0);
+
+    int brilho = map(leitura, 0, 1023, 0, 255);
+
+    analogWrite(9, brilho);
+
+    delay(10);
+
+}
+
+
+[INSERIR FIGURA 21.6 AQUI]
+
+      Figura 19.6: Circuito do Controlador de
+       Brilho. Diagrama esquemático.
 
 Um abraço do seu professor,
 
