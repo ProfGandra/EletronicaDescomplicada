@@ -1,14 +1,11 @@
-# Capítulo 12 — O COMPONENTE QUE ILUMINA E ENSINA
+# Capítulo 12 — O COMPONENTE QUE ILUMINA E ENSINA – TUDO SOBRE LEDS
 
-> **Nota editorial:** capítulo 11 do manuscrito original, deslocado para a posição 12 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-– TUDO SOBRE LEDS
 
 O LED (Diodo Emissor de Luz) é o primeiro componente que
 todo mundo quer ligar. E não é por acidente: é gratificante
 ver aquela luz acendendo!
 
-[INSERIR FIGURA 10.1 AQUI]
+[INSERIR FIGURA 12.1 AQUI]
 
       Figura 10.1: A Evolução da Iluminação. Linha do
        tempo: incandescente → fluorescente → LED.
@@ -25,7 +22,7 @@ A Polaridade Correta
 
       Cátodo (-): Pino curto (corrente sai)
 
-[INSERIR FIGURA 10.2 AQUI]
+[INSERIR FIGURA 12.2 AQUI]
 
       Figura 10.2: Anatomia de um LED. Diagrama em
        corte mostrando ânodo, cátodo, material
@@ -47,7 +44,7 @@ Os Três Segredos para um LED Feliz
 
    3. Resistor Limitador: Sem ele, morte na certa!
 
-[INSERIR FIGURA 10.3 AQUI]
+[INSERIR FIGURA 12.3 AQUI]
 
       Figura 10.3: Tabela de Especificações. Cores e faixas
        de tensão.
@@ -58,7 +55,7 @@ Para fonte 12V e LED branco (Vf=3,2V, If=20mA):
 
 R = (12V - 3,2V) / 0,020A = 440Ω → usar 470Ω
 
-[INSERIR FIGURA 10.4 AQUI]
+[INSERIR FIGURA 12.4 AQUI]
 
       Figura 10.4: Cálculo do Resistor Passo a
        Passo. Infográfico do cálculo.
@@ -71,7 +68,7 @@ tensão mais alta.
 Paralelo: Cada LED precisa de seu PRÓPRIO resistor!
 
 
-[INSERIR FIGURA 10.5 AQUI]
+[INSERIR FIGURA 12.5 AQUI]
 
       Figura 10.5: Associação de LEDs. Correto (série e
        paralelo com resistores individuais) vs errado
@@ -83,4 +80,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
