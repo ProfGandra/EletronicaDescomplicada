@@ -1,155 +1,100 @@
-# Capítulo 21 — O CÉREBRO PROGRAMÁVEL – INTRODUÇÃO AO ARDUINO
+# Capítulo 21 — SENSORES E ATUADORES – INTERFACE COM O MUNDO REAL
 
 
-Microcontroladores são computadores completos em um
-único chip. O Arduino é a plataforma que democratizou o
-acesso a esses dispositivos incríveis!
+Sensores são os "sentidos" da eletrônica. Atuadores são os
+"músculos". Juntos, criam sistemas inteligentes!
 
-[INSERIR FIGURA 21.1 AQUI]
+[INSERIR FIGURA 20.1 AQUI]
 
-      Figura 19.1: Do Circuito Fixo ao
-       Programável. Circuito complexo vs um único chip.
+      Figura 18.1: Dos Sentidos à Ação. Diagrama: sensor
+       → processamento → atuador.
 
-O que tem dentro de um Microcontrolador?
+Sensores Analógicos vs Digitais
 
-      CPU: Executa instruções
+Analógicos: Valor contínuo (0-5V)
 
-      Memória RAM: Dados temporários
+      Potenciômetro, LDR, LM35 (temperatura)
 
-      Memória Flash: Armazena o programa
+      Precisam de ADC (Conversor Analógico-Digital)
 
-      Periféricos: ADC, timers, comunicação serial
+Digitais: Valor discreto (0 ou 1)
 
-      Portas de I/O: Conexão com o mundo exterior
+      Botão, sensor magnético, sensor PIR de movimento
 
-[INSERIR FIGURA 21.2 AQUI]
+[INSERIR FIGURA 20.2 AQUI]
 
-      Figura 19.2: Anatomia de um
-       Microcontrolador. Diagrama em blocos.
+      Figura 18.2: Tipos de Sensores. Coleção dos sensores
+       mais comuns.
 
-A Placa Arduino Uno
+Sensor LM35 (Temperatura)
 
-[INSERIR FIGURA 21.3 AQUI]
+      10mV por grau Celsius
+
+      0°C = 0V, 100°C = 1,0V
 
 
-         Figura 19.3: A Placa Arduino Uno. Diagrama com
-          pinos identificados.
+      Preciso e fácil de usar!
 
-Pinos do Arduino
+[INSERIR FIGURA 20.3 AQUI]
 
-         Digitais (0-13): Entrada ou saída (0V ou 5V)
+      Figura 18.3: Sensor LM35. Conexão com Arduino e
+       gráfico linear.
 
-         Analógicos (A0-A5): Leem 0-5V (resolução 10 bits →
-          0-1023)
+Sensor LDR (Luz)
 
-         PWM (~3,5,6,9,10,11): Saída "analógica" por pulsação
-          rápida
+Resistor que varia com a luz:
 
-         5V, 3.3V, GND: Alimentação
+      Escuro: Alta resistência (até 1MΩ)
 
-Seu Primeiro Programa: Blink
+      Claro: Baixa resistência (~10kΩ)
+
+Use em divisor de tensão com resistor fixo!
+
+[INSERIR FIGURA 20.4 AQUI]
+
+      Figura 18.4: Circuito com LDR. Divisor resistivo e
+       curva característica.
+
+Atuadores Comuns
+
+      LEDs: Indicação e iluminação
+
+      Relés: Controle de alta potência
+
+      Motores DC: Movimento contínuo
+
+      Servomotores: Posicionamento preciso
+
+      Solenoides: Movimento linear
+
+[INSERIR FIGURA 20.5 AQUI]
+
+
+         Figura 18.5: Família de Atuadores. Coleção com
+          aplicações típicas.
+
+Sistema Completo: Controlador de Temperatura
+
+Código básico para ligar ventilador quando está quente:
 
 cpp
-
-void setup() {
-
-    pinMode(13, OUTPUT);         // Configura pino 13 como saída
-
-}
-
-
 
 void loop() {
 
-    digitalWrite(13, HIGH); // Acende o LED
+    int temp = analogRead(A0) * 0.488; // Converte para °C
 
-    delay(1000);        // Espera 1 segundo
+    if (temp > 30) digitalWrite(9, HIGH);
 
-    digitalWrite(13, LOW); // Apaga o LED
+    else digitalWrite(9, LOW);
 
-    delay(1000);        // Espera 1 segundo
-
-
-}
-
-[INSERIR FIGURA 21.4 AQUI]
-
-         Figura 19.4: Código do Pisca-Pisca. Screenshot do
-          IDE com explicações.
-
-Conceitos Fundamentais de Programação
-
-Variáveis:
-
-cpp
-
-int velocidade = 1000;
-
-Estruturas de Controle:
-
-cpp
-
-if (leitura > 500) {
-
-    digitalWrite(13, HIGH);
-
-} else {
-
-    digitalWrite(13, LOW);
+    delay(1000);
 
 }
 
-Loops:
+[INSERIR FIGURA 20.6 AQUI]
 
-cpp
-
-for (int i = 0; i < 10; i++) {
-
-    digitalWrite(13, HIGH);
-
-
-    delay(100);
-
-    digitalWrite(13, LOW);
-
-    delay(100);
-
-}
-
-[INSERIR FIGURA 21.5 AQUI]
-
-         Figura 19.5: Exemplos de Código. Blocos com
-          sintaxe colorida.
-
-Projeto: Controlador de LED com Potenciômetro
-
-cpp
-
-void setup() {
-
-    pinMode(9, OUTPUT);
-
-}
-
-
-
-void loop() {
-
-    int leitura = analogRead(A0);
-
-    int brilho = map(leitura, 0, 1023, 0, 255);
-
-    analogWrite(9, brilho);
-
-    delay(10);
-
-}
-
-
-[INSERIR FIGURA 21.6 AQUI]
-
-      Figura 19.6: Circuito do Controlador de
-       Brilho. Diagrama esquemático.
+         Figura 18.6: Controlador de
+          Temperatura. Diagrama completo do sistema.
 
 Um abraço do seu professor,
 
