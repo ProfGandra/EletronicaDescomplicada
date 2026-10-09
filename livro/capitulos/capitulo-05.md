@@ -85,3 +85,8 @@ Um abraço do seu professor,
 ### Registro editorial
 
 Corrigida a ligação entre potência elétrica e dissipação térmica; alinhado o exemplo do LED ao capítulo anterior; acrescentada margem de potência e referência às condições térmicas. Preservados três pontos de inserção de figuras.
+
+
+---
+
+*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
