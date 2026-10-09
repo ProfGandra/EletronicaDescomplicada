@@ -1,14 +1,11 @@
-# Capítulo 23 — PROJETO FINAL – SISTEMA DE
+# Capítulo 23 — PROJETO FINAL – SISTEMA DE CAPÍTULO 23: PROJETO FINAL – SISTEMA DE
 
-> **Edição de trabalho:** transcrição do capítulo 23 do DOCX original; conferir figuras, equações e numeração na revisão final.
-
-CAPÍTULO 23: PROJETO FINAL – SISTEMA DE
 MONITORAMENTO DE PLANTAS AUTOMATIZADO
 
 Vamos construir um sistema completo que integra TUDO
 que aprendemos!
 
-[INSERIR FIGURA 22.1 AQUI]
+[INSERIR FIGURA 23.1 AQUI]
 
       Figura 22.1: Diagrama de Blocos do
        Sistema. Sensores → Arduino → Atuadores → Display.
@@ -59,11 +56,11 @@ Processamento:
 
 Alimentação:
 
-     Fonte 12V para Arduino e relés
+     Fonte DC de 12 V para bomba de 12 V; alimentação do Arduino conforme a especificação da placa.
 
-     Fonte 5V separada para lógica
+     Fonte DC regulada de 5 V para lógica e módulos, dimensionada para a corrente.
 
-[INSERIR FIGURA 22.2 AQUI]
+[INSERIR FIGURA 23.2 AQUI]
 
      Figura 22.2: Esquemático Detalhado. Diagrama
       completo com todas as conexões.
@@ -198,7 +195,7 @@ int lerUmidade() {
 
     int valor = analogRead(SENSOR_UMIDADE);
 
-    return map(valor, 0, 1023, 100, 0);
+    // Calibrar usando ADC_SECO e ADC_UMIDO medidos no sensor real.
 
 }
 
@@ -320,7 +317,7 @@ void indicarStatus(int umidade, float temperatura) {
 
 }
 
-[INSERIR FIGURA 22.3 AQUI]
+[INSERIR FIGURA 23.3 AQUI]
 
            Figura 22.3: Código do Projeto. Screenshot do código
             completo comentado.
@@ -329,20 +326,20 @@ Teste e Calibração
 
 Calibração do Sensor de Umidade:
 
-        1. Leia valor no ar (seco) → 0%
+        1. Registre o valor do ADC em referência seca; não suponha que seja zero.
 
-        2. Leia valor na água (molhado) → 100%
+        2. Registre a leitura em substrato úmido de referência; água pura não é calibração universal.
 
         3. Ajuste o map() conforme seus valores
 
 Ajuste dos Limiares:
 
-           Umidade: 30-40% para plantas tropicais
+           Umidade: ajustar limites após calibração e conforme a espécie cultivada.
 
 
       Temperatura: 18-28°C para maioria das plantas
 
-      Luminosidade: 500-800 para plantas de sombra
+      Luminosidade: ajustar com o divisor LDR real; leituras ADC não são lux.
 
 Melhorias e Expansões
 
@@ -358,7 +355,7 @@ Para levar para o próximo nível:
 
    5. Dashboard web com gráficos
 
-[INSERIR FIGURA 22.4 AQUI]
+[INSERIR FIGURA 23.4 AQUI]
 
       Figura 22.4: Projeto Montado. Foto do sistema
        completo funcionando.
@@ -389,3 +386,8 @@ Diego G. Gandra
 
 ---
 **Controle editorial:** capítulo transferido integralmente para revisão; não representa validação final de circuitos ou códigos.
+
+
+---
+
+*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
