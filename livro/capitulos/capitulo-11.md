@@ -1,117 +1,56 @@
-# Capítulo 11 — A VÁLVULA UNIDIRECIONAL – ENTENDENDO OS DIODOS
+# Capítulo 11 — LEIS DE KIRCHHOFF – AS REGRAS QUE GOVERNAM QUALQUER CIRCUITO
 
 
-E aí, tudo bem? Antes de mergulharmos nos LEDs,
-precisamos entender o componente que deu origem a eles:
-o diodo semicondutor!
+Depois de aprender a medir e montar circuitos, chegou a
+hora de entender as leis fundamentais que governam
+absolutamente todo circuito elétrico!
 
-[INSERIR FIGURA 11.1 AQUI]
+[INSERIR FIGURA 10.1 AQUI]
 
-     Figura 9.1: O Símbolo Universal do
-      Diodo. Ilustração do símbolo do diodo e sua analogia
-      com uma válvula hidráulica unidirecional.
+       Figura 5.1: As Duas Leis Fundamentais. Mapa
+        mental das Leis de Kirchhoff.
 
-A Analogia Perfeita: A Válvula de Retenção
+Lei das Correntes (Lei dos Nós)
 
-Imagine uma válvula que deixa a água passar num sentido,
-mas bloqueia no sentido inverso. Exatamente assim
-funciona um diodo!
+"A soma das correntes que ENTRAM em um nó é igual à
+soma das correntes que SAEM do nó."
 
-     Sentido direto (polarização direta): Conduz
-      corrente livremente
+I₁ + I₂ = I₃ + I₄
 
-     Sentido inverso (polarização reversa): Bloqueia a
-      corrente
+[INSERIR FIGURA 10.2 AQUI]
 
-[INSERIR FIGURA 11.2 AQUI]
+       Figura 5.2: Lei dos Nós Visualizada. Diagrama de nó
+        com correntes.
 
+Lei das Tensões (Lei das Malhas)
 
-      Figura 9.2: Analogia da Válvula
-       Hidráulica. Diagrama mostrando fluxo permitido
-       (verde) e bloqueado (vermelho).
+"A soma das quedas de tensão em qualquer malha
+fechada é igual a zero."
 
-Polarização: O Segredo do Controle
+V_fonte - V₁ - V₂ - V₃ = 0
 
-Polarização Direta (Conduzindo):
-
-      Ânodo (+) no positivo, Cátodo (-) no negativo
-
-      Corrente flui após vencer barreira de ~0,7V
-
-Polarização Reversa (Bloqueando):
-
-      Ânodo (+) no negativo, Cátodo (-) no positivo
-
-      Quase nenhuma corrente flui
-
-[INSERIR FIGURA 11.3 AQUI]
-
-      Figura 9.3: Polarização do Diodo. Dois diagramas
-       lado a lado mostrando condução e bloqueio.
-
-A Tensão de Forward (Vf): A "Pressão" Necessária
-
-Para diodos de silício comuns: Vf ≈ 0,7V
-
-Aplicações Práticas Incríveis
-
-   1. Retificação de AC para DC: Base de todas as fontes
-       de alimentação!
-
-   2. Proteção contra Polaridade Inversa: Impede que
-       bateria ligada errado queime o circuito
+[INSERIR FIGURA 10.3 AQUI]
 
 
-     3. Circuitos Clipper e Clamper: Moldam sinais
-         elétricos
+      Figura 5.3: Lei das Malhas Visualizada. Diagrama de
+       malha fechada.
 
-[INSERIR FIGURA 11.4 AQUI]
+Método Sistemático de Solução
 
-        Figura 9.4: Ponte Retificadora. Diagrama da ponte
-         de diodos transformando AC em DC pulsante.
+   1. Identificar todos os nós e malhas
 
-Tipos Comuns de Diodos
+   2. Atribuir sentidos para as correntes
 
-                 Model
-Tipo                       Característica    Aplicação
-                 o
+   3. Aplicar Lei dos Nós
 
+   4. Aplicar Lei das Malhas
 
-Retificad        1N400                       Fontes de
-                           1A, 1000V
-or               7                           alimentação
+   5. Resolver o sistema de equações
 
+[INSERIR FIGURA 10.4 AQUI]
 
-                 1N414                       Circuitos de alta
-Sinal                      Rápido
-                 8                           frequência
-
-
-                                             Referência de
-Zener            BZX85     Regula tensão
-                                             tensão
-
-
-                 1N581     Queda baixa
-Schottky                                     Alta frequência
-                 9         (~0,3V)
-
-[INSERIR FIGURA 11.5 AQUI]
-
-
-      Figura 9.5: Família de Diodos. Coleção dos diodos
-       mais comuns com seus encapsulamentos.
-
-Testando um Diodo com Multímetro
-
-      Polarização direta: Mostra Vf (0,5V a 0,8V)
-
-      Polarização reversa: Mostra "OL" (circuito aberto)
-
-[INSERIR FIGURA 11.6 AQUI]
-
-      Figura 9.6: Teste com Multímetro. Sequência
-       mostrando medição direta e reversa.
+      Figura 5.4: Método Passo a Passo. Fluxograma do
+       processo.
 
 Um abraço do seu professor,
 
