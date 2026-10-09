@@ -1,13 +1,10 @@
-# Capítulo 22 — GUIA DE SOBREVIVÊNCIA NA BANCADA –
+# Capítulo 22 — GUIA DE SOBREVIVÊNCIA NA BANCADA – ORGANIZAÇÃO E EFICIÊNCIA
 
-> **Nota editorial:** capítulo 21 do manuscrito original, deslocado para a posição 22 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-ORGANIZAÇÃO E EFICIÊNCIA
 
 Uma bancada organizada não é só bonita - é funcional e te
 faz trabalhar melhor!
 
-[INSERIR FIGURA 20.1 AQUI]
+[INSERIR FIGURA 22.1 AQUI]
 
       Figura 20.1: Layout Ideal da Bancada. Diagrama
        com zonas de trabalho.
@@ -46,7 +43,7 @@ Nice-to-Have:
 
       Lupa articulada com LED
 
-[INSERIR FIGURA 20.2 AQUI]
+[INSERIR FIGURA 22.2 AQUI]
 
       Figura 20.2: As Ferramentas Essenciais. Foto
        "exploded view" de cada ferramenta.
@@ -58,7 +55,7 @@ Capacitores: Separar por tipo (cerâmicos, eletrolíticos)
 Semicondutores: Diodos, transistores, CIs separados
 Fios e Conectores: Por cor e tipo
 
-[INSERIR FIGURA 20.3 AQUI]
+[INSERIR FIGURA 22.3 AQUI]
 
       Figura 20.3: Organizador Profissional. Foto com
        etiquetas claras.
@@ -90,7 +87,7 @@ Dicas de Ouro do Profissional
    4. "Documente seus projetos" - Fotos, esquemas,
        aprendizados
 
-[INSERIR FIGURA 20.4 AQUI]
+[INSERIR FIGURA 22.4 AQUI]
 
       Figura 20.4: Antes e Depois. Bancada desorganizada
        vs organizada.
@@ -101,4 +98,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
