@@ -1,89 +1,77 @@
-# Capítulo 18 — A LÓGICA DA ELETRÔNICA – PORTAS LÓGICAS
+# Capítulo 18 — O CÉREBRO DOS CIRCUITOS – CIRCUITOS INTEGRADOS
 
 
-As portas lógicas são os blocos fundamentais de toda a
-computação moderna. Do smartphone aos
-supercomputadores, tudo começa com esses circuitos
-simples!
+Circuitos integrados (CIs) são caixas mágicas que
+contêm milhares de componentes dentro de um chip do
+tamanho de uma unha!
 
-[INSERIR FIGURA 18.1 AQUI]
+[INSERIR FIGURA 17.1 AQUI]
 
-      Figura 16.1: Do Analógico ao Digital. Sinal analógico
-       (contínuo) vs digital (0V e 5V).
+      Figura 15.1: A Evolução dos Circuitos
+       Integrados. Rádio antigo vs smartphone moderno.
 
-O que são Portas Lógicas?
+Anatomia de um CI
 
-Circuitos que realizam operações lógicas básicas. Recebem
-entradas (0 ou 1) e produzem uma saída conforme
-uma tabela verdade.
+Dentro do encapsulamento plástico existe uma pastilha
+de silício (chip) com circuitos microscópicos!
 
-As 7 Portas Lógicas Fundamentais
+[INSERIR FIGURA 17.2 AQUI]
 
-1. Porta NOT (Inversora)
+      Figura 15.2: Anatomia de um Circuito
+       Integrado. Diagrama em camadas do CI.
 
-      Saída é o inverso da entrada
+O CI Mais Famoso: NE555 (Timer)
 
-      Tabela: 0→1, 1→0
+Pode funcionar de três maneiras:
 
-2. Porta AND (E)
+   1. Monoestável: Gera um pulso
 
+   2. Astável: Gera onda quadrada (pisca-pisca!)
 
-     Saída 1 apenas se TODAS entradas forem 1
+   3. Biestável: Interruptor com memória
 
-3. Porta OR (OU)
-
-     Saída 1 se PELO MENOS UMA entrada for 1
-
-4. Porta NAND (NO E)
-
-     AND seguida de NOT (saída 0 apenas se todas forem
-      1)
-
-5. Porta NOR (NOU)
-
-     OR seguida de NOT (saída 1 apenas se todas forem 0)
-
-6. Porta XOR (OU Exclusivo)
-
-     Saída 1 se entradas forem DIFERENTES
-
-7. Porta XNOR (NOU Exclusivo)
-
-     Saída 1 se entradas forem IGUAIS
-
-[INSERIR FIGURA 18.2 AQUI]
-
-     Figura 16.2: As Sete Portas Completas. Grid com
-      símbolos, expressões e tabelas verdade.
-
-O CI 74HC00: Quatro Portas NAND
-
-Um dos CIs mais úteis, contém 4 portas NAND
-independentes.
-
-[INSERIR FIGURA 18.3 AQUI]
+[INSERIR FIGURA 17.3 AQUI]
 
 
-      Figura 16.3: CI 74HC00. Pinagem completa do
-       encapsulamento DIP-14.
+      Figura 15.3: O Incrível NE555. Pinagem completa
+       do CI 555.
 
-Níveis Lógicos na Prática
+Circuito Pisca-Pisca com 555
 
-      0 Lógico: 0V a 0,8V
+f = 1,44 / ((R1 + 2×R2) × C1)
 
-      1 Lógico: 2,0V a 5V
+Componentes para ~1Hz: R1=1kΩ, R2=100kΩ, C1=10μF
 
-      Zona Proibida: 0,8V a 2,0V (comportamento
-       indefinido!)
+[INSERIR FIGURA 17.4 AQUI]
 
-[INSERIR FIGURA 18.4 AQUI]
+      Figura 15.4: Pisca-Pisca com 555. Diagrama
+       esquemático completo.
 
-      Figura 16.4: Níveis Lógicos. Gráfico mostrando as
-       faixas de tensão.
+Amplificador Operacional LM741
+
+Ganho = 1 + (R2 / R1)
+
+[INSERIR FIGURA 17.5 AQUI]
+
+      Figura 15.5: Amplificador com LM741. Circuito
+       não-inversor.
+
+DIP vs SMD
+
+      DIP: Perfeito para protoboard (iniciantes)
+
+      SMD: Minúsculo, para produção profissional
+
+[INSERIR FIGURA 17.6 AQUI]
+
+      Figura 15.6: DIP vs SMD. Comparação de tamanhos.
 
 Um abraço do seu professor,
 
 Diego G. Gandra
+
+
+PARTE 3: SISTEMAS E APLICAÇÕES
 
 ---
 
