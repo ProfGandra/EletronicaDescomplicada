@@ -1,60 +1,49 @@
-# Capítulo 10 — LEIS DE KIRCHHOFF – AS REGRAS QUE GOVERNAM QUALQUER CIRCUITO
+# Capítulo 10 — A PONTE PARA O MUNDO REAL – DIVISORES DE TENSÃO
 
 
-Depois de aprender a medir e montar circuitos, chegou a
-hora de entender as leis fundamentais que governam
-absolutamente todo circuito elétrico!
+Uma das aplicações mais úteis da associação em série é
+o divisor de tensão.
 
-[INSERIR FIGURA 10.1 AQUI]
+[INSERIR FIGURA 9.1 AQUI]
 
-       Figura 5.1: As Duas Leis Fundamentais. Mapa
-        mental das Leis de Kirchhoff.
+      Figura 8.1: A Mágica da Divisão de
+       Tensão. Transformando 9V em 3V com dois
+       resistores.
 
-Lei das Correntes (Lei dos Nós)
+A Fórmula do Divisor
 
-"A soma das correntes que ENTRAM em um nó é igual à
-soma das correntes que SAEM do nó."
+V_saída = V_total × (R₂ / (R₁ + R₂))
 
-I₁ + I₂ = I₃ + I₄
+Aplicações Práticas
 
-[INSERIR FIGURA 10.2 AQUI]
+   1. Sensores analógicos (LDR, termistor)
 
-       Figura 5.2: Lei dos Nós Visualizada. Diagrama de nó
-        com correntes.
+   2. Polarização de transistores
 
-Lei das Tensões (Lei das Malhas)
+   3. Referência de tensão simples
 
-"A soma das quedas de tensão em qualquer malha
-fechada é igual a zero."
+[INSERIR FIGURA 9.2 AQUI]
 
-V_fonte - V₁ - V₂ - V₃ = 0
+      Figura 8.2: Circuito Básico do Divisor. Diagrama
+       claro.
 
-[INSERIR FIGURA 10.3 AQUI]
+Limitação Importante
+
+Divisor de tensão não é regulador! Conectar uma carga
+altera a tensão de saída.
 
 
-      Figura 5.3: Lei das Malhas Visualizada. Diagrama de
-       malha fechada.
+[INSERIR FIGURA 9.3 AQUI]
 
-Método Sistemático de Solução
-
-   1. Identificar todos os nós e malhas
-
-   2. Atribuir sentidos para as correntes
-
-   3. Aplicar Lei dos Nós
-
-   4. Aplicar Lei das Malhas
-
-   5. Resolver o sistema de equações
-
-[INSERIR FIGURA 10.4 AQUI]
-
-      Figura 5.4: Método Passo a Passo. Fluxograma do
-       processo.
+      Figura 8.3: O Efeito da Carga. Comparação com e
+       sem carga.
 
 Um abraço do seu professor,
 
 Diego G. Gandra
+
+
+PARTE 2: COMPONENTES ATIVOS
 
 ---
 
