@@ -1,15 +1,12 @@
-# Capítulo 14 — O INTERRUPTOR CONTROLADO POR
+# Capítulo 14 — O INTERRUPTOR CONTROLADO POR ELETRICIDADE – TRANSISTORES BJT
 
-> **Nota editorial:** capítulo 13 do manuscrito original, deslocado para a posição 14 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-ELETRICIDADE – TRANSISTORES BJT
 
 O transistor é provavelmente o componente mais
 importante da eletrônica moderna. É graças a ele que
 temos computadores, celulares e toda a eletrônica
 inteligente!
 
-[INSERIR FIGURA 12.1 AQUI]
+[INSERIR FIGURA 14.1 AQUI]
 
       Figura 12.1: A Revolução do Transistor. Válvula
        gigante vs transistor pequeno.
@@ -19,7 +16,7 @@ A Analogia Perfeita: A Torneira com Alavanca
 Uma pequena corrente na base controla uma corrente
 muito maior entre o coletor e o emissor.
 
-[INSERIR FIGURA 12.2 AQUI]
+[INSERIR FIGURA 14.2 AQUI]
 
       Figura 12.2: Analogia da Torneira. Alavanca
        pequena controlando grande fluxo.
@@ -32,7 +29,7 @@ Os Três Terminais do BJT
 
    3. Emissor (E): Saída da corrente principal
 
-[INSERIR FIGURA 12.3 AQUI]
+[INSERIR FIGURA 14.3 AQUI]
 
 
       Figura 12.3: Anatomia de um Transistor
@@ -45,7 +42,7 @@ desligado
 Saturação (Chave Fechada): Corrente suficiente na base
 → transistor ligado
 
-[INSERIR FIGURA 12.4 AQUI]
+[INSERIR FIGURA 14.4 AQUI]
 
       Figura 12.4: Modos de Operação. LED apagado vs
        LED aceso.
@@ -63,7 +60,7 @@ Arduino (5V, 20mA) controlando motor 12V/500mA:
 I_B = 0,5A / 100 = 0,005A (5mA)
 R_B = (5V - 0,7V) / 0,005A = 860Ω → usar 1kΩ
 
-[INSERIR FIGURA 12.5 AQUI]
+[INSERIR FIGURA 14.5 AQUI]
 
       Figura 12.5: Controlando Carga de Alta
        Potência. Diagrama do circuito completo.
@@ -74,7 +71,7 @@ Diodo de Proteção: ESSENCIAL!
 Para cargas indutivas (motores, relés), use um diodo em
 paralelo com a carga para proteger o transistor!
 
-[INSERIR FIGURA 12.6 AQUI]
+[INSERIR FIGURA 14.6 AQUI]
 
      Figura 12.6: Proteção com Diodo. Diagrama
       mostrando o diodo de livre circulação.
@@ -85,4 +82,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
