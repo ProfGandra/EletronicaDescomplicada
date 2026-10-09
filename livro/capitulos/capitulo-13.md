@@ -1,13 +1,10 @@
-# Capítulo 13 — OS TANQUES DE ENERGIA – ENTENDENDO
+# Capítulo 13 — OS TANQUES DE ENERGIA – ENTENDENDO OS CAPACITORES
 
-> **Nota editorial:** capítulo 12 do manuscrito original, deslocado para a posição 13 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-OS CAPACITORES
 
 Chegou a hora de conhecer o componente
 que armazena energia: o capacitor!
 
-[INSERIR FIGURA 11.1 AQUI]
+[INSERIR FIGURA 13.1 AQUI]
 
      Figura 11.1: Onde Vivem os Capacitores. Placa de
       circuito com capacitores destacados.
@@ -21,7 +18,7 @@ empurra a água de volta.
 
 O capacitor funciona exatamente assim!
 
-[INSERIR FIGURA 11.2 AQUI]
+[INSERIR FIGURA 13.2 AQUI]
 
      Figura 11.2: Anatomia de um Capacitor. Diagrama
       em corte mostrando placas e dielétrico.
@@ -37,7 +34,7 @@ Capacitância: A Medida do Armazenamento
 
      Picofarad (pF): 0,000000000001 F
 
-[INSERIR FIGURA 11.3 AQUI]
+[INSERIR FIGURA 13.3 AQUI]
 
      Figura 11.3: Escala de Capacitâncias. Comparação
       de tamanhos: cerâmico, eletrolítico,
@@ -48,7 +45,7 @@ Comportamento em DC: Carga e Descarga
 Carregando: Tensão sobe exponencialmente
 Descarregando: Tensão cai exponencialmente
 
-[INSERIR FIGURA 11.4 AQUI]
+[INSERIR FIGURA 13.4 AQUI]
 
      Figura 11.4: Curvas de Carga e Descarga. Gráfico
       exponencial.
@@ -71,7 +68,7 @@ Aplicações Práticas
   4. Armazenamento: Picos de corrente momentâneos
 
 
-[INSERIR FIGURA 11.5 AQUI]
+[INSERIR FIGURA 13.5 AQUI]
 
      Figura 11.5: Aplicações dos Capacitores. Quatro
       mini-diagramas de aplicações.
@@ -84,7 +81,7 @@ Cuidados Importantíssimos!
      Tensão de Trabalho: Nunca exceder a tensão
       máxima!
 
-[INSERIR FIGURA 11.6 AQUI]
+[INSERIR FIGURA 13.6 AQUI]
 
      Figura 11.6: Identificação e Cuidados. Capacitor
       eletrolítico com faixa negativa e símbolos de
@@ -96,4 +93,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
