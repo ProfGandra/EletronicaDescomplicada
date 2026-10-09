@@ -1,14 +1,11 @@
-# Capítulo 21 — O CÉREBRO PROGRAMÁVEL –
+# Capítulo 21 — O CÉREBRO PROGRAMÁVEL – INTRODUÇÃO AO ARDUINO
 
-> **Nota editorial:** capítulo 20 do manuscrito original, deslocado para a posição 21 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-INTRODUÇÃO AO ARDUINO
 
 Microcontroladores são computadores completos em um
 único chip. O Arduino é a plataforma que democratizou o
 acesso a esses dispositivos incríveis!
 
-[INSERIR FIGURA 19.1 AQUI]
+[INSERIR FIGURA 21.1 AQUI]
 
       Figura 19.1: Do Circuito Fixo ao
        Programável. Circuito complexo vs um único chip.
@@ -25,14 +22,14 @@ O que tem dentro de um Microcontrolador?
 
       Portas de I/O: Conexão com o mundo exterior
 
-[INSERIR FIGURA 19.2 AQUI]
+[INSERIR FIGURA 21.2 AQUI]
 
       Figura 19.2: Anatomia de um
        Microcontrolador. Diagrama em blocos.
 
 A Placa Arduino Uno
 
-[INSERIR FIGURA 19.3 AQUI]
+[INSERIR FIGURA 21.3 AQUI]
 
 
          Figura 19.3: A Placa Arduino Uno. Diagrama com
@@ -75,7 +72,7 @@ void loop() {
 
 }
 
-[INSERIR FIGURA 19.4 AQUI]
+[INSERIR FIGURA 21.4 AQUI]
 
          Figura 19.4: Código do Pisca-Pisca. Screenshot do
           IDE com explicações.
@@ -119,7 +116,7 @@ for (int i = 0; i < 10; i++) {
 
 }
 
-[INSERIR FIGURA 19.5 AQUI]
+[INSERIR FIGURA 21.5 AQUI]
 
          Figura 19.5: Exemplos de Código. Blocos com
           sintaxe colorida.
@@ -149,7 +146,7 @@ void loop() {
 }
 
 
-[INSERIR FIGURA 19.6 AQUI]
+[INSERIR FIGURA 21.6 AQUI]
 
       Figura 19.6: Circuito do Controlador de
        Brilho. Diagrama esquemático.
@@ -160,4 +157,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
