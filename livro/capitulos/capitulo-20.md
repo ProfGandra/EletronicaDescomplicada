@@ -1,13 +1,10 @@
-# Capítulo 20 — SENSORES E ATUADORES – INTERFACE
+# Capítulo 20 — SENSORES E ATUADORES – INTERFACE COM O MUNDO REAL
 
-> **Nota editorial:** capítulo 19 do manuscrito original, deslocado para a posição 20 na sequência pedagógica. Texto-base preservado para revisão comparativa. As referências de figuras e fórmulas devem ser conferidas com o DOCX antes da publicação impressa.
-
-COM O MUNDO REAL
 
 Sensores são os "sentidos" da eletrônica. Atuadores são os
 "músculos". Juntos, criam sistemas inteligentes!
 
-[INSERIR FIGURA 18.1 AQUI]
+[INSERIR FIGURA 20.1 AQUI]
 
       Figura 18.1: Dos Sentidos à Ação. Diagrama: sensor
        → processamento → atuador.
@@ -24,7 +21,7 @@ Digitais: Valor discreto (0 ou 1)
 
       Botão, sensor magnético, sensor PIR de movimento
 
-[INSERIR FIGURA 18.2 AQUI]
+[INSERIR FIGURA 20.2 AQUI]
 
       Figura 18.2: Tipos de Sensores. Coleção dos sensores
        mais comuns.
@@ -38,7 +35,7 @@ Sensor LM35 (Temperatura)
 
       Preciso e fácil de usar!
 
-[INSERIR FIGURA 18.3 AQUI]
+[INSERIR FIGURA 20.3 AQUI]
 
       Figura 18.3: Sensor LM35. Conexão com Arduino e
        gráfico linear.
@@ -53,7 +50,7 @@ Resistor que varia com a luz:
 
 Use em divisor de tensão com resistor fixo!
 
-[INSERIR FIGURA 18.4 AQUI]
+[INSERIR FIGURA 20.4 AQUI]
 
       Figura 18.4: Circuito com LDR. Divisor resistivo e
        curva característica.
@@ -70,7 +67,7 @@ Atuadores Comuns
 
       Solenoides: Movimento linear
 
-[INSERIR FIGURA 18.5 AQUI]
+[INSERIR FIGURA 20.5 AQUI]
 
 
          Figura 18.5: Família de Atuadores. Coleção com
@@ -94,7 +91,7 @@ void loop() {
 
 }
 
-[INSERIR FIGURA 18.6 AQUI]
+[INSERIR FIGURA 20.6 AQUI]
 
          Figura 18.6: Controlador de
           Temperatura. Diagrama completo do sistema.
@@ -105,4 +102,4 @@ Diego G. Gandra
 
 ---
 
-**Ponto de controle editorial:** verificar todas as chamadas de figura e sua numeração após a reorganização; validar cálculos, esquemas e exemplos antes de impressão.
+*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
