@@ -75,19 +75,3 @@ A **tensão** fornece a diferença de potencial. A **corrente** descreve o fluxo
 Um abraço do seu professor,
 
 **DIEGO GANDRA**
-
----
-
-### Registro de adequações deste capítulo
-
-- Preservados o tratamento direto ao estudante, a analogia hidráulica, o humor e a despedida do autor.
-- Refinada a definição de tensão como diferença de potencial, e de corrente como fluxo de carga por unidade de tempo.
-- Esclarecido o sentido convencional da corrente e o movimento dos elétrons em condutores metálicos.
-- Corrigida a afirmação de que o LED possui simplesmente uma resistência baixa; explicado seu comportamento não ôhmico.
-- Eliminada a promessa de corrente “exata” obtida apenas pelo resistor.
-- Normalizada a sequência de legendas; imagens originais ainda precisam ser verificadas e incorporadas.
-
-
----
-
-*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
