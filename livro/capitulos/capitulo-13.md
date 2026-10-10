@@ -1,83 +1,71 @@
-# Capítulo 13 — O COMPONENTE QUE ILUMINA E ENSINA – TUDO SOBRE LEDS
+# Capítulo 13 — LEDs: quando a eletrônica acende
 
+Olá, tudo bem com você?
 
-O LED (Diodo Emissor de Luz) é o primeiro componente que
-todo mundo quer ligar. E não é por acidente: é gratificante
-ver aquela luz acendendo!
+Poucas coisas são tão satisfatórias nas primeiras aulas de eletrônica quanto montar um circuito e ver um LED acender. É um resultado simples, mas que mostra que a corrente está passando por onde planejamos.
 
-[INSERIR FIGURA 12.1 AQUI]
+O **LED** é um diodo emissor de luz. Assim como os diodos do capítulo anterior, ele tem polaridade e precisa funcionar dentro de limites definidos.
 
-      Figura 10.1: A Evolução da Iluminação. Linha do
-       tempo: incandescente → fluorescente → LED.
+## 13.1 — De onde vem a luz?
 
-Como o LED Realmente Funciona?
+Em um LED, a passagem de corrente em polarização direta provoca a emissão de luz no material semicondutor.
 
-Dentro do LED existe um material semicondutor especial.
-Quando os elétrons passam por ele, liberam energia na
-forma de luz!
+A cor depende das características desse material. Por isso, LEDs de cores diferentes podem apresentar **quedas de tensão direta diferentes**.
 
-A Polaridade Correta
+**[INSERIR FIGURA 13.1 — LED com seus terminais e região emissora identificados]**
 
-      Ânodo (+): Pino longo (corrente entra)
+## 13.2 — Qual lado é o positivo?
 
-      Cátodo (-): Pino curto (corrente sai)
+Em muitos LEDs comuns, o terminal mais longo corresponde ao **ânodo** e o mais curto ao **cátodo**. Uma face achatada no encapsulamento também costuma indicar o lado do cátodo.
 
-[INSERIR FIGURA 12.2 AQUI]
+Mas cuidado: terminais já cortados e modelos diferentes podem dificultar essa identificação. Quando houver dúvida, consulte as informações do componente.
 
-      Figura 10.2: Anatomia de um LED. Diagrama em
-       corte mostrando ânodo, cátodo, material
-       semicondutor.
+**[INSERIR FIGURA 13.2 — Identificação do ânodo e do cátodo em LED comum]**
 
-Os Três Segredos para um LED Feliz
+## 13.3 — O resistor que protege o LED
 
+Um LED não deve ser conectado diretamente a uma fonte de tensão sem um circuito apropriado para limitar a corrente.
 
-   1. Tensão de Forward (Vf): Cada cor precisa de uma
-       tensão mínima
+Para um LED comum com resistor em série, usamos:
 
-          o   Vermelho: 1,8V - 2,2V
+\[
+R=\frac{V_{fonte}-V_f}{I}
+\]
 
-          o   Verde/Amarelo: 2,0V - 2,4V
+Aqui, \(V_f\) é a queda de tensão direta do LED e \(I\) é a corrente desejada.
 
-          o   Azul/Branco: 3,0V - 3,6V
+Imagine uma fonte de **12 V**, um LED branco com \(V_f\) aproximada de **3,2 V** e uma corrente de projeto de **20 mA**:
 
-   2. Corrente Ideal (If): 15mA a 25mA para LEDs padrão
+\[
+R=\frac{12-3,2}{0,020}=440\ \Omega
+\]
 
-   3. Resistor Limitador: Sem ele, morte na certa!
+Podemos escolher o valor comercial de **470 Ω**, que fornece uma corrente um pouco menor. A potência dissipada nesse resistor fica próxima de **0,17 W**; portanto, um resistor de **1/4 W** atende ao cálculo nominal, desde que respeitadas as condições reais de operação.
 
-[INSERIR FIGURA 12.3 AQUI]
+Esses valores são exemplos, não regras universais. A corrente admissível e a queda de tensão dependem do LED utilizado.
 
-      Figura 10.3: Tabela de Especificações. Cores e faixas
-       de tensão.
+**[INSERIR FIGURA 13.3 — LED branco e resistor de 470 Ω em série com fonte de 12 V]**
 
-Calculando o Resistor para LED
+## 13.4 — Vários LEDs no mesmo circuito
 
-Para fonte 12V e LED branco (Vf=3,2V, If=20mA):
+Em **série**, os LEDs compartilham a mesma corrente e suas quedas de tensão se somam. Precisamos garantir que a fonte tenha tensão suficiente e que exista limitação de corrente adequada.
 
-R = (12V - 3,2V) / 0,020A = 440Ω → usar 470Ω
+Em **paralelo**, LEDs não necessariamente dividem a corrente de maneira igual. Em montagens simples, a escolha mais segura é usar **um resistor limitador para cada ramo de LED**.
 
-[INSERIR FIGURA 12.4 AQUI]
+**[INSERIR FIGURA 13.4 — LEDs em série e em ramos paralelos com resistores individuais]**
 
-      Figura 10.4: Cálculo do Resistor Passo a
-       Passo. Infográfico do cálculo.
+## Hora de praticar
 
-LEDs em Série e Paralelo
+Monte um LED com resistor em série na protoboard, utilizando uma fonte didática adequada. Antes de ligar, confira a polaridade e o valor do resistor.
 
-Série: Soma as tensões de forward. Bom para fontes de
-tensão mais alta.
+Se não acender, desligue a fonte e verifique as conexões. Não é preciso descobrir o erro pelo cheiro de componente queimado!
 
-Paralelo: Cada LED precisa de seu PRÓPRIO resistor!
+## Para encerrar
 
+Um LED ensina muita coisa de uma vez: polaridade, corrente, resistência e potência.
 
-[INSERIR FIGURA 12.5 AQUI]
-
-      Figura 10.5: Associação de LEDs. Correto (série e
-       paralelo com resistores individuais) vs errado
-       (paralelo com um resistor).
+No próximo capítulo, vamos conhecer um componente que não emite luz, mas consegue armazenar energia em um campo elétrico: o capacitor.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-
-*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
