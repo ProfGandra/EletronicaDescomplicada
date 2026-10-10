@@ -1,12 +1,11 @@
 # Capítulo 6 — O perigo da fumaça: potência elétrica
 
-*Correspondente ao capítulo 7 do manuscrito original.*
 
 Já viu aquele resistor esquentando demais, mudando de cor ou até soltando cheiro de queimado? Isso tem tudo a ver com **potência elétrica**. Ignorar a potência é como construir uma casa sem conferir se a fiação aguenta o chuveiro.
 
 Mas calma: não precisamos de fumaça para aprender!
 
-**[INSERIR FIGURA 5.1 — Resistor em operação normal, superaquecido e danificado]**
+**[INSERIR FIGURA 6.1 — Resistor em operação normal, superaquecido e danificado]**
 
 *Legenda:* Quando a potência dissipada ultrapassa as condições admissíveis do componente. *Referência original: “Do Útil ao Desastre”.*
 
@@ -30,7 +29,7 @@ Isso não significa que toda essa energia será necessariamente transformada em 
 
 Nos resistores, a energia elétrica é transformada principalmente em calor. É o chamado **efeito Joule**.
 
-**[INSERIR FIGURA 5.2 — Dissipação térmica no resistor]**
+**[INSERIR FIGURA 6.2 — Dissipação térmica no resistor]**
 
 *Legenda:* Conversão de energia elétrica em calor no resistor. *Referência original: “O Efeito Joule em Ação”.*
 
@@ -60,9 +59,9 @@ Retomemos o circuito anterior, com resistor de **360 Ω** e corrente estimada de
 
 Um resistor de **1/4 W (0,25 W)** oferece uma margem em relação à potência calculada, nas condições assumidas. Ainda assim, confirme as condições de operação e as especificações do componente.
 
-No exemplo anterior do manuscrito, com **330 Ω e 20 mA**, a potência seria **0,132 W**; a conta estava correta, mas agora usamos o resistor de 360 Ω escolhido no capítulo 4 para manter os exemplos consistentes.
+Para manter a continuidade, vamos utilizar o resistor de 360 Ω que escolhemos no capítulo anterior.
 
-**[INSERIR FIGURA 5.3 — Resistores de diferentes potências nominais]**
+**[INSERIR FIGURA 6.3 — Resistores de diferentes potências nominais]**
 
 *Legenda:* Comparação entre resistores com diferentes capacidades de dissipação. *Referência original: “Tamanho é Documento!”.*
 
@@ -79,14 +78,3 @@ E lembre-se: a fumaça pode até render uma história divertida na bancada. Mas,
 Um abraço do seu professor,
 
 **DIEGO GUIMARÃES GANDRA**
-
----
-
-### Registro editorial
-
-Corrigida a ligação entre potência elétrica e dissipação térmica; alinhado o exemplo do LED ao capítulo anterior; acrescentada margem de potência e referência às condições térmicas. Preservados três pontos de inserção de figuras.
-
-
----
-
-*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
