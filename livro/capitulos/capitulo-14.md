@@ -1,96 +1,75 @@
-# Capítulo 14 — OS TANQUES DE ENERGIA – ENTENDENDO OS CAPACITORES
+# Capítulo 14 — Capacitores: energia guardada por um instante
 
+Olá, tudo bem com você?
 
-Chegou a hora de conhecer o componente
-que armazena energia: o capacitor!
+Até aqui, trabalhamos bastante com resistores e diodos. Agora vamos conhecer um componente que aparece em fontes, temporizadores e praticamente todo equipamento eletrônico: **o capacitor**.
 
-[INSERIR FIGURA 13.1 AQUI]
+## 14.1 — Uma comparação para começar
 
-     Figura 11.1: Onde Vivem os Capacitores. Placa de
-      circuito com capacitores destacados.
+Imagine um tanque com uma membrana elástica. Ao pressioná-la, você armazena energia; quando a pressão diminui, ela pode devolver parte dessa energia.
 
-A Analogia Perfeita: O Tanque com Membrana
+A comparação ajuda a visualizar o que acontece, mas um capacitor não guarda água nem funciona como uma bateria. Ele **armazena energia em um campo elétrico** entre suas partes condutoras, separadas por um material isolante chamado **dielétrico**.
 
-Imagine um tanque com uma membrana de borracha.
-Quando você bombeia água, a membrana estica,
-armazenando energia. Quando libera, a membrana
-empurra a água de volta.
+**[INSERIR FIGURA 14.1 — Estrutura simplificada de um capacitor com placas e dielétrico]**
 
-O capacitor funciona exatamente assim!
+## 14.2 — O que é capacitância?
 
-[INSERIR FIGURA 13.2 AQUI]
+A **capacitância** indica a relação entre a carga elétrica armazenada e a tensão aplicada. Sua unidade é o **farad (F)**.
 
-     Figura 11.2: Anatomia de um Capacitor. Diagrama
-      em corte mostrando placas e dielétrico.
+Como um farad costuma ser muito grande para diversos circuitos didáticos, encontramos valores em:
 
-Capacitância: A Medida do Armazenamento
+- **Microfarads (µF):** um milionésimo de farad.
+- **Nanofarads (nF):** um bilionésimo de farad.
+- **Picofarads (pF):** um trilionésimo de farad.
 
-     Farad (F): Unidade, mas é enorme!
+**[INSERIR FIGURA 14.2 — Capacitores cerâmicos e eletrolíticos com valores identificados]**
 
-     Microfarad (μF): 0,000001 F
+## 14.3 — Carga, descarga e tempo
 
-     Nanofarad (nF): 0,000000001 F
+Quando conectamos um capacitor a uma fonte através de um resistor, a tensão sobre ele aumenta gradualmente. Ao descarregá-lo por um resistor, a tensão diminui.
 
+Em um circuito **RC simples**, a constante de tempo é:
 
-     Picofarad (pF): 0,000000000001 F
+\[
+\tau=R\times C
+\]
 
-[INSERIR FIGURA 13.3 AQUI]
+Após uma constante de tempo, a tensão de carga chega a aproximadamente **63%** do valor final. Depois de cinco constantes de tempo, está muito próxima desse valor.
 
-     Figura 11.3: Escala de Capacitâncias. Comparação
-      de tamanhos: cerâmico, eletrolítico,
-      supercapacitor.
+Por exemplo, com **10 kΩ** e **100 µF**:
 
-Comportamento em DC: Carga e Descarga
+\[
+\tau=10\,000\times0,0001=1\ s
+\]
 
-Carregando: Tensão sobe exponencialmente
-Descarregando: Tensão cai exponencialmente
+Isso significa que o circuito tem uma constante de tempo de um segundo. Não quer dizer que o capacitor esteja completamente carregado após esse período.
 
-[INSERIR FIGURA 13.4 AQUI]
+**[INSERIR FIGURA 14.3 — Curvas de carga e descarga de capacitor em circuito RC]**
 
-     Figura 11.4: Curvas de Carga e Descarga. Gráfico
-      exponencial.
+## 14.4 — Para que usamos capacitores?
 
-A Constante de Tempo (τ): O "Ritmo" do Capacitor
+Eles podem ajudar a suavizar variações de tensão, reduzir ruídos, desacoplar a alimentação de circuitos integrados e criar intervalos de tempo em circuitos RC.
 
-τ=R×C
+É por isso que você encontra capacitores tanto perto de conectores de alimentação quanto ao lado de pequenos chips.
 
-Em 1τ: carrega 63% da tensão
-Em 5τ: carrega 99% (praticamente total)
+**[INSERIR FIGURA 14.4 — Aplicações de capacitores em filtragem, desacoplamento e temporização]**
 
-Aplicações Práticas
+## 14.5 — Atenção à polaridade e à tensão máxima
 
-  1. Filtragem de Ruído: Suaviza variações de tensão
+Muitos **capacitores eletrolíticos** são polarizados. Instalar um desses componentes ao contrário pode provocar aquecimento, vazamento ou ruptura.
 
-  2. Desacoplamento: Energia instantânea para CIs
+Também precisamos respeitar sua **tensão nominal**. E lembre-se: alguns capacitores podem permanecer carregados mesmo depois que a alimentação foi desligada.
 
-  3. Temporização: Delays com circuitos RC
+Em nossas atividades, trabalhe apenas com circuitos didáticos de baixa tensão e descarregue os capacitores de maneira controlada, conforme o projeto. Não provoque curto-circuitos entre os terminais para descarregá-los.
 
-  4. Armazenamento: Picos de corrente momentâneos
+**[INSERIR FIGURA 14.5 — Marcação de polaridade e tensão nominal de capacitor eletrolítico]**
 
+## Para encerrar
 
-[INSERIR FIGURA 13.5 AQUI]
+O capacitor nos apresenta uma ideia importante: nem tudo acontece instantaneamente em um circuito.
 
-     Figura 11.5: Aplicações dos Capacitores. Quatro
-      mini-diagramas de aplicações.
-
-Cuidados Importantíssimos!
-
-     Polaridade: Capacitores eletrolíticos têm
-      polaridade! Inverter = explosão!
-
-     Tensão de Trabalho: Nunca exceder a tensão
-      máxima!
-
-[INSERIR FIGURA 13.6 AQUI]
-
-     Figura 11.6: Identificação e Cuidados. Capacitor
-      eletrolítico com faixa negativa e símbolos de
-      atenção.
+No próximo capítulo, vamos conhecer o transistor, componente que permite controlar uma corrente usando um sinal elétrico.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-
-*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
