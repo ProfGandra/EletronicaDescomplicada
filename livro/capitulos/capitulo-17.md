@@ -1,63 +1,67 @@
-# Capítulo 17 — A FONTE ESTÁVEL – REGULADORES DE TENSÃO
+# Capítulo 17 — Reguladores de tensão: uma alimentação mais estável
 
+Olá, tudo bem com você?
 
-Como transformamos os 110V/220V da tomada nos
-estáveis 5V ou 3,3V que nossos circuitos precisam?
+Imagine que um circuito precise de **5 V** para funcionar, mas a fonte disponível forneça **12 V**. Podemos simplesmente ligar um no outro?
 
-[INSERIR FIGURA 16.1 AQUI]
+Claro que não!
 
-     Figura 14.1: A Jornada da Energia. Diagrama da
-      transformação AC → DC estável.
+Precisamos de uma solução que entregue a tensão apropriada e suporte a corrente exigida pelo circuito. Uma das opções é o **regulador de tensão**.
 
-Os Três Estágios de uma Fonte
+## 17.1 — Relembrando o caminho da energia
 
-  1. Transformação: Reduz a tensão alta (220V → 12V
-      AC)
+No Capítulo 3, vimos que muitas fontes comerciais recebem energia da rede elétrica e fornecem tensão contínua aos nossos equipamentos.
 
-  2. Retificação: Converte AC em DC pulsante
+Dependendo do projeto, a conversão pode envolver transformação ou chaveamento, retificação, filtragem e regulação. Não existe uma única sequência interna obrigatória para todas as fontes modernas.
 
-  3. Regulação: Estabiliza a tensão
+Aqui vamos trabalhar **apenas com a saída de fontes DC comerciais e seguras**, sem abrir equipamentos ligados à rede.
 
-[INSERIR FIGURA 16.2 AQUI]
+**[INSERIR FIGURA 17.1 — Diagrama conceitual de fonte AC/DC comercial e saída contínua regulada]**
 
-     Figura 14.2: Os Três Estágios. Formas de onda em
-      cada estágio.
+## 17.2 — Conhecendo a família 78XX
 
-O Herói: Regulador 78XX
+Reguladores lineares clássicos da família **78XX** são conhecidos por fornecer tensões de saída fixas. Alguns exemplos são:
 
-     7805 → 5V
+- **7805:** 5 V.
+- **7812:** 12 V.
+- **7824:** 24 V.
 
-     7812 → 12V
+O número ajuda a identificar a tensão nominal, mas isso não dispensa a consulta à **folha de dados**: tensão de entrada, corrente, dissipação, capacitores recomendados e pinagem dependem do componente e do fabricante.
 
-     7824 → 24V
+**[INSERIR FIGURA 17.2 — Regulador 7805 com identificação dos terminais conforme folha de dados]**
 
+## 17.3 — Por que o regulador esquenta?
 
-[INSERIR FIGURA 16.3 AQUI]
+Um regulador linear reduz a tensão dissipando parte da energia na forma de calor.
 
-      Figura 14.3: O Regulador 7805. Pinagem e símbolo.
+Uma aproximação útil é:
 
-Circuito Completo do 7805
+\[
+P_{dissipada}=(V_{entrada}-V_{saída})\times I_{carga}
+\]
 
-[INSERIR FIGURA 16.4 AQUI]
+Se a entrada for de **12 V**, a saída de **5 V** e a corrente de **1 A**, teremos:
 
-      Figura 14.4: Circuito Completo do 7805. Esquema
-       com capacitores de estabilização.
+\[
+P=(12-5)\times1=7\ W
+\]
 
-Cuidado com a Dissipação de Calor!
+Sete watts de calor em um componente pequeno são muita coisa! Esse exemplo é um **alerta de projeto**, não uma sugestão de montagem: a operação pode exigir dissipador e pode ultrapassar os limites térmicos do regulador escolhido.
 
-P_dissipada = (V_in - V_out) × I_carga
+**[INSERIR FIGURA 17.3 — Comparação entre regulador linear sem dissipador e com dissipador]**
 
-Exemplo: 12V → 5V, 1A = 7 Watts de calor!
+## 17.4 — Regulador linear ou conversor chaveado?
 
-[INSERIR FIGURA 16.5 AQUI]
+Reguladores lineares são úteis em diversas situações, mas podem desperdiçar bastante energia quando a diferença entre entrada e saída é grande.
 
-      Figura 14.5: Dissipação de Calor. Sem dissipador vs
-       com dissipador.
+Conversores chaveados, como os módulos **buck**, podem oferecer eficiência maior em muitas aplicações. A escolha depende da tensão, da corrente, do ruído permitido, do custo e da complexidade do circuito.
+
+## Para encerrar
+
+Uma boa alimentação não depende apenas de obter a tensão desejada. Precisamos considerar corrente, aquecimento e limites dos componentes.
+
+No próximo capítulo, vamos conhecer os circuitos integrados, que reúnem muitos elementos eletrônicos em um único encapsulamento.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-
-*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
