@@ -1,144 +1,90 @@
-# Capítulo 24 — PROJETO FINAL – SISTEMA DE CAPÍTULO 23: PROJETO FINAL – SISTEMA DE
+# Capítulo 24 — Projeto final: monitoramento automatizado de plantas
 
-MONITORAMENTO DE PLANTAS AUTOMATIZADO
+Olá, tudo bem com você?
 
-Vamos construir um sistema completo que integra TUDO
-que aprendemos!
+Chegamos ao nosso projeto final!
 
-[INSERIR FIGURA 23.1 AQUI]
+Durante o livro, conhecemos resistores, diodos, transistores, sensores, atuadores e o Arduino. Agora vamos reunir esses conhecimentos em uma aplicação: **um sistema de monitoramento de plantas**.
 
-      Figura 22.1: Diagrama de Blocos do
-       Sistema. Sensores → Arduino → Atuadores → Display.
+A ideia é acompanhar as condições do ambiente e, com os componentes apropriados, comandar dispositivos de baixa tensão.
 
-Visão Geral do Projeto
+## 24.1 — O que queremos construir?
 
-O sistema irá:
+O projeto reúne leituras de **umidade do solo, temperatura e luminosidade**. Também pode indicar o estado do sistema por LEDs ou display e comandar uma pequena bomba de irrigação, conforme as condições programadas.
 
-      Monitorar umidade do solo, temperatura e
-       luminosidade
+Pense no funcionamento em três etapas: **medir, decidir e agir**.
 
-      Controlar automaticamente irrigação e iluminação
+**[INSERIR FIGURA 24.1 — Diagrama de blocos com sensores, Arduino, indicadores e bomba]**
 
-      Alertar visualmente quando precisar de intervenção
+## 24.2 — Separando os componentes
 
-      Exibir todas as informações em tempo real
+A proposta original utiliza:
 
-Lista de Componentes
+- **Sensores:** umidade do solo, LM35 para temperatura e LDR para luminosidade.
+- **Entradas de comando:** botões para operação manual.
+- **Indicação:** LED RGB, buzzer e display LCD 16 × 2 com interface I²C.
+- **Controle:** Arduino Uno.
+- **Acionamento:** módulo apropriado para comandar bomba DC e, se previsto no projeto, iluminação de baixa tensão.
+- **Montagem:** protoboard, jumpers e conexões adequadas.
+- **Alimentação:** fontes DC comerciais, dimensionadas para cada parte do sistema.
 
-Sensores:
+A bomba de 12 V não deve ser alimentada diretamente por um pino do Arduino. Seu acionamento exige um dispositivo compatível com a corrente de funcionamento e de partida, além das proteções necessárias.
 
-      Sensor de umidade do solo (higrômetro)
+**[INSERIR FIGURA 24.2 — Esquema elétrico completo do sistema, a validar antes da publicação]**
 
-      Sensor de temperatura LM35
+## 24.3 — A importância da calibração
 
-      LDR (sensor de luz)
+Não podemos presumir que um sensor de umidade mostre zero quando está seco e o valor máximo quando está molhado.
 
+Precisamos registrar leituras de referência com o **sensor e o substrato realmente utilizados**. Depois, ajustamos os limites de acionamento conforme a planta e as condições do cultivo.
 
-     Botões para controle manual
+O LDR também precisa ser interpretado de acordo com o divisor de tensão montado. Uma leitura analógica do Arduino não equivale automaticamente a uma medição em lux.
 
-Atuadores:
+Para o LM35, a conversão depende da referência de tensão do conversor analógico-digital e das características do sensor.
 
-     Relé 5V para bomba d'água
+**[INSERIR FIGURA 24.3 — Calibração dos sensores com leituras de referência]**
 
-     Relé 5V para lâmpada
+## 24.4 — E o programa?
 
-     LED RGB para status
+O código do projeto está organizado no repositório:
 
-     Buzzer para alertas
+[`codigo/monitoramento_plantas.ino`](../../codigo/monitoramento_plantas.ino)
 
-Processamento:
+A versão disponível prevê calibração do sensor de umidade, histerese para evitar acionamentos repetidos, limite de tempo para a bomba e desligamento diante de calibração inválida.
 
-     Arduino Uno
+**Antes de utilizar o sistema**, o código precisa ser compilado e testado com o circuito real. Não devemos considerar uma montagem validada apenas porque seu programa está escrito.
 
-     Display LCD 16x2 com I2C
+## 24.5 — Testando por etapas
 
-     Protoboard e jumpers
+Em vez de conectar tudo de uma vez, faça os testes gradualmente:
 
-Alimentação:
+1. Confira a alimentação e as conexões, com o circuito desligado.
+2. Teste individualmente as leituras dos sensores.
+3. Verifique se os valores variam de maneira coerente.
+4. Teste os indicadores sem conectar a bomba.
+5. Verifique o estágio de acionamento da bomba com a alimentação apropriada.
+6. Só então integre as partes e avalie o comportamento do sistema.
 
-     Fonte DC de 12 V para bomba de 12 V; alimentação do Arduino conforme a especificação da placa.
+Como trabalharemos com água e eletrônica, mantenha recipientes e mangueiras afastados das placas e das conexões elétricas. Use apenas alimentação de baixa tensão adequada e proteja o circuito contra respingos.
 
-     Fonte DC regulada de 5 V para lógica e módulos, dimensionada para a corrente.
+**[INSERIR FIGURA 24.4 — Montagem final com separação física entre eletrônica e reservatório de água]**
 
-[INSERIR FIGURA 23.2 AQUI]
+## 24.6 — O que podemos melhorar?
 
-     Figura 22.2: Esquemático Detalhado. Diagrama
-      completo com todas as conexões.
+Depois que o sistema básico estiver funcionando, podemos pensar em registrar dados, incluir comunicação sem fio, construir um painel de acompanhamento ou estudar estratégias mais avançadas de irrigação.
 
-## Código revisado do projeto
+Mas não tenha pressa. Um sistema simples, bem compreendido e testado vale muito mais do que um projeto cheio de recursos que ninguém consegue explicar.
 
-O código completo está disponível em [`codigo/monitoramento_plantas.ino`](../../codigo/monitoramento_plantas.ino). Ele prevê calibração do sensor, histerese, limite de acionamento da bomba e condição de desligamento diante de calibração inválida. **O código precisa ser compilado na Arduino IDE e ensaiado com os componentes reais antes de ser usado.**
+## Para encerrar
 
-**[INSERIR FIGURA 23.3 AQUI]**
+Se você chegou até aqui, percebeu que eletrônica não é apenas decorar fórmulas ou identificar componentes.
 
-*Figura 23.3: Código revisado do projeto e principais funções.*
+É **entender um problema, planejar uma solução, montar, medir, testar e melhorar**.
 
-Teste e Calibração
+E, quando alguma coisa não funcionar de primeira, lembre-se: descobrir o motivo também faz parte do aprendizado.
 
-Calibração do Sensor de Umidade:
-
-        1. Registre o valor do ADC em referência seca; não suponha que seja zero.
-
-        2. Registre a leitura em substrato úmido de referência; água pura não é calibração universal.
-
-        3. Ajuste ADC_SECO e ADC_UMIDO após medir o sensor; os percentuais são relativos à calibração.
-
-Ajuste dos Limiares:
-
-           Umidade: ajustar limites após calibração e conforme a espécie cultivada.
-
-
-      Temperatura: 18-28°C para maioria das plantas
-
-      Luminosidade: ajustar com o divisor LDR real; leituras ADC não são lux.
-
-Melhorias e Expansões
-
-Para levar para o próximo nível:
-
-   1. Log de dados com cartão SD
-
-   2. Conexão Wi-Fi com ESP8266
-
-   3. App mobile para monitoramento remoto
-
-   4. Machine learning para otimizar rega
-
-   5. Dashboard web com gráficos
-
-[INSERIR FIGURA 23.4 AQUI]
-
-      Figura 22.4: Projeto Montado. Foto do sistema
-       completo funcionando.
-
-Documentação do Projeto
-
-Não esqueça de documentar:
-
-      Esquemático final
-
-      Lista de componentes com valores
-
-      Código comentado
-
-      Limiares de calibração
-
-      Lições aprendidas
-
-
-Parabéns! Este projeto integra TUDO que aprendemos:
-sensores, atuadores, programação, segurança e boas
-práticas de bancada. Você agora não é mais um iniciante - é
-um maker!
+Foi um prazer acompanhar você nesta jornada.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-**Controle editorial:** capítulo transferido integralmente para revisão; não representa validação final de circuitos ou códigos.
-
-
----
-
-*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
