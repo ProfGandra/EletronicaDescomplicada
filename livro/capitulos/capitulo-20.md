@@ -1,100 +1,60 @@
-# Capítulo 20 — MEMÓRIA E SEQUÊNCIA – FLIP-FLOPS Circuitos sequenciais têm memória! Eles lembram do
+# Capítulo 20 — Flip-flops: quando o circuito precisa lembrar
 
-passado e tomam decisões baseadas nele.
+Olá, tudo bem com você?
 
-[INSERIR FIGURA 19.1 AQUI]
+Até aqui, as portas lógicas produziram saídas de acordo com as entradas daquele instante. Mas imagine um circuito que precisa lembrar se um botão foi acionado.
 
-      Figura 17.1: Combinacional vs Sequencial. Circuito
-       sem memória vs com realimentação.
+Para isso, precisamos de **memória**. E um dos blocos fundamentais dessa ideia é o **flip-flop**.
 
-O Flip-Flop SR (Set-Reset)
+## 20.1 — Combinacional ou sequencial?
 
-O mais simples dos flip-flops:
+Um circuito **combinacional** depende dos valores atuais de suas entradas. Já um circuito **sequencial** também depende de um estado armazenado anteriormente.
 
-      S (Set): Coloca saída em 1
+Pense em um interruptor eletrônico que continua ligado depois que você solta o botão. Ele precisa guardar a informação de que recebeu o comando.
 
-      R (Reset): Coloca saída em 0
+**[INSERIR FIGURA 20.1 — Comparação entre circuito combinacional e sequencial]**
 
-      S=R=0: Mantém o estado anterior
+## 20.2 — A memória mais simples: SR
 
-[INSERIR FIGURA 19.2 AQUI]
+Um circuito de memória **SR** utiliza comandos de *Set* (definir) e *Reset* (reiniciar).
 
-      Figura 17.2: Flip-Flop SR com Portas
-       NAND. Diagrama de duas portas cruzadas.
+Na versão com portas **NOR** e entradas ativas em nível alto:
 
-O Flip-Flop JK: O Versátil
+- S = 1 e R = 0: a saída Q passa para 1.
+- S = 0 e R = 1: Q passa para 0.
+- S = 0 e R = 0: o estado anterior é mantido.
+- S = 1 e R = 1: condição não permitida para essa configuração.
 
-Resolve o problema da condição proibida do SR e
-adiciona toggle (inverte a cada clock).
+Atenção: uma implementação com portas **NAND** costuma usar entradas ativas em nível baixo, com tabela diferente. Não podemos misturar as duas versões.
 
+**[INSERIR FIGURA 20.2 — Latch SR com portas NOR e tabela de estados]**
 
-            CL
-J       K          Q
-            K
+## 20.3 — Flip-flops D e JK
 
+O **flip-flop D** captura o estado da entrada D em um evento de clock, de acordo com o tipo de componente. É muito utilizado em registradores e armazenamento de dados.
 
-                   Manté
-0       0   ↑
-                   m
+O **JK** permite operações de definir, reiniciar, manter e alternar o estado (*toggle*). Em uma versão acionada na borda do clock, J = K = 1 faz a saída alternar a cada evento válido.
 
+**[INSERIR FIGURA 20.3 — Flip-flop D e exemplo de sinais de clock]**
 
-0       1   ↑      0
+## 20.4 — Por que o tempo importa?
 
+Em circuitos sincronizados, os dados precisam permanecer estáveis durante certos intervalos em torno do evento de clock.
 
-1       0   ↑      1
+Chamamos esses intervalos de **tempo de preparação (*setup*)** e **tempo de retenção (*hold*)**. Desrespeitá-los pode produzir funcionamento imprevisível.
 
+**[INSERIR FIGURA 20.4 — Diagrama temporal com setup e hold]**
 
-1       1   ↑      Toggle
+## 20.5 — Onde usamos essa memória?
 
-[INSERIR FIGURA 19.3 AQUI]
+Flip-flops aparecem em contadores, registradores e circuitos sequenciais. Eles ajudam equipamentos digitais a acompanhar eventos e guardar estados.
 
-       Figura 17.3: Flip-Flop JK em Toggle. Diagrama de
-        tempo mostrando inversão a cada clock.
+## Para encerrar
 
-O Flip-Flop D (Data): O Mais Usado
+Agora você já sabe que a eletrônica digital não precisa apenas decidir: ela também pode lembrar.
 
-Amostra o valor da entrada D na borda do clock e copia
-para a saída Q. Perfeito para transferir dados!
-
-[INSERIR FIGURA 19.4 AQUI]
-
-       Figura 17.4: Flip-Flop D. Diagrama de tempo
-        mostrando captura de dados.
-
-Aplicações Práticas
-
-
-   1. Registradores de Deslocamento: Cadeias de flip-
-       flops para comunicação serial
-
-   2. Contadores: Flip-flops em cascata contam eventos!
-
-   3. Debouncing de Botões: Elimina tremores mecânicos
-
-[INSERIR FIGURA 19.5 AQUI]
-
-      Figura 17.5: Contador com Flip-Flops. Diagrama de
-       contador de 4 bits.
-
-Setup e Hold Time: Os Tempos Críticos
-
-      Setup Time: Tempo que D deve estar estável ANTES
-       do clock
-
-      Hold Time: Tempo que D deve permanecer estável
-       DEPOIS do clock
-
-Violar esses tempos causa comportamento imprevisível!
-
-[INSERIR FIGURA 19.6 AQUI]
-
-      Figura 17.6: Setup e Hold Time. Diagrama temporal
-       mostrando os tempos críticos.
+No próximo capítulo, vamos conectar esses circuitos ao mundo real por meio de sensores e atuadores.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-
-*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
