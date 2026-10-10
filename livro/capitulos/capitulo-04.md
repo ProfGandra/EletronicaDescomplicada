@@ -1,8 +1,7 @@
 # Capítulo 4 — A natureza da resistência e o resistor
 
-*Capítulo 3 na nova sequência — capítulo 3 no manuscrito original.*
 
-No capítulo anterior, aprendemos a importância de trabalhar com segurança. Agora vamos voltar à pergunta que interessa à nossa bancada: como controlar a corrente de um circuito? O que impede que uma fonte danifique um componente delicado? É aqui que entramos no terreno da resistência e do seu principal representante físico: o resistor.
+Nos capítulos anteriores, aprendemos a trabalhar com segurança e conhecemos as fontes de alimentação em corrente contínua. Agora vamos à pergunta que interessa à nossa bancada: como controlar a corrente de um circuito? O que impede que uma fonte danifique um componente delicado? É aqui que entramos no terreno da resistência e do seu principal representante físico: o resistor.
 
 ## A resistência como fenômeno físico
 
@@ -10,7 +9,7 @@ Antes de ser um componente com valor comercial, a resistência é uma propriedad
 
 Sua unidade é o **ohm (Ω)**.
 
-**[INSERIR FIGURA 3.1 — Resistência em um condutor]**
+**[INSERIR FIGURA 4.1 — Resistência em um condutor]**
 
 *Legenda sugerida:* Representação didática das interações dos elétrons de condução com a estrutura de um material metálico.
 
@@ -24,7 +23,7 @@ Ele funciona como um “pedágio” no caminho da corrente — guardadas as limi
 
 Na bancada, você encontrará resistores de filme de carbono, filme metálico e outros tipos, com diferentes potências e tolerâncias.
 
-**[INSERIR FIGURA 3.2 — Resistor real e símbolo elétrico]**
+**[INSERIR FIGURA 4.2 — Resistor real e símbolo elétrico]**
 
 *Legenda sugerida:* Resistor axial e seus símbolos esquemáticos usuais (retangular e zigue-zague).
 
@@ -51,7 +50,7 @@ A faixa **dourada** normalmente indica tolerância de **±5%** e a **prateada**,
 
 **Exemplo:** marrom, preto, vermelho e dourado = 10 × 100 = **1.000 Ω**, ou **1 kΩ**, com tolerância de **±5%**. Na prática, isso significa que o valor pode estar entre **950 Ω e 1.050 Ω**.
 
-**[INSERIR FIGURA 3.3 — Código de cores dos resistores]**
+**[INSERIR FIGURA 4.3 — Código de cores dos resistores]**
 
 *Legenda sugerida:* Identificação das faixas de um resistor de quatro bandas, com exemplo de 1 kΩ ±5%.
 
@@ -64,19 +63,3 @@ Depois, com o componente **fora de um circuito energizado**, confira o valor usa
 Não se esqueça de outro detalhe: **resistor também tem limite de potência**. Não basta acertar o valor em ohms; é preciso escolher um componente capaz de dissipar o calor produzido no circuito. Vamos calcular isso nos próximos capítulos.
 
 Agora que conhecemos tensão, corrente e resistência, estamos prontos para unir essas ideias em uma ferramenta matemática fundamental: a **Lei de Ohm**.
-
----
-
-### Registro editorial
-
-- Mantida a linguagem de conversa com o estudante e a analogia do “pedágio”.
-- Refinada a explicação microscópica da resistência.
-- Corrigida a afirmação de que o resistor simplesmente “segura excesso de tensão”.
-- Incluídas tabela de cores, exemplo numérico e verificação com multímetro.
-- **Referências de inserção das três imagens preservadas no próprio capítulo.**
-- A correspondência exata das imagens com o DOCX ainda requer conferência visual.
-
-
----
-
-*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
