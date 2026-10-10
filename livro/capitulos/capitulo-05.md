@@ -1,6 +1,5 @@
 # Capítulo 5 — A lei que reina absoluta: dominando a Lei de Ohm
 
-*Correspondente ao capítulo 5 do manuscrito original.*
 
 E aí, curtiu o papo sobre pressão, fluxo e resistência? Se você aprender apenas uma relação matemática neste começo de jornada, que seja esta: a famosa, poderosa e indispensável **Lei de Ohm**.
 
@@ -16,7 +15,7 @@ Para um **condutor ôhmico**, mantidas aproximadamente constantes suas condiçõ
 
 A Lei de Ohm não significa que qualquer componente eletrônico tenha resistência constante. LEDs, diodos e transistores, por exemplo, têm comportamento não linear. Por enquanto, vamos aplicá-la principalmente aos resistores.
 
-**[INSERIR FIGURA 4.1 — Georg Simon Ohm e a relação V = R × I]**
+**[INSERIR FIGURA 5.1 — Georg Simon Ohm e a relação V = R × I]**
 
 *Legenda:* Georg Simon Ohm e a relação entre tensão, corrente e resistência. *Referência original: figura “Georg Ohm e sua Descoberta”.*
 
@@ -30,7 +29,7 @@ Quer descobrir a tensão? Multiplique resistência por corrente. Quer descobrir 
 
 **R = V / I**
 
-**[INSERIR FIGURA 4.2 — Triângulo da Lei de Ohm]**
+**[INSERIR FIGURA 5.2 — Triângulo da Lei de Ohm]**
 
 *Legenda:* Relações entre tensão, corrente e resistência. *Referência original: “O Triângulo Mágico da Lei de Ohm”.*
 
@@ -58,7 +57,7 @@ E se você escolher **330 Ω**? A corrente calculada seria aproximadamente **20,
 
 Lembre-se: a tensão da bateria, a queda de tensão do LED e a tolerância do resistor podem variar. O cálculo é um **dimensionamento inicial**, não uma promessa de corrente exata.
 
-**[INSERIR FIGURA 4.3 — LED com resistor em série e cálculo passo a passo]**
+**[INSERIR FIGURA 5.3 — LED com resistor em série e cálculo passo a passo]**
 
 *Legenda:* Exemplo de dimensionamento do resistor para um LED alimentado por 9 V. *Referência original: “Cálculo do Resistor para o LED”.*
 
@@ -73,14 +72,3 @@ Viu? Você já está calculando como alguém que entende o circuito, não apenas
 Um abraço do seu professor,
 
 **DIEGO GUIMARÃES GANDRA**
-
----
-
-### Registro editorial
-
-Revisadas a aplicabilidade da Lei de Ohm, as unidades e a escolha do resistor comercial. Mantidos os três pontos de inserção de imagens, com numeração ajustada à nova ordem.
-
-
----
-
-*Edição em revisão: conferir esquemas, tabelas e referências de imagens com o arquivo Word integral antes da prova gráfica.*
