@@ -1,105 +1,60 @@
-# Capítulo 21 — SENSORES E ATUADORES – INTERFACE COM O MUNDO REAL
+# Capítulo 21 — Sensores e atuadores: a eletrônica encontra o mundo real
 
+Olá, tudo bem com você?
 
-Sensores são os "sentidos" da eletrônica. Atuadores são os
-"músculos". Juntos, criam sistemas inteligentes!
+Um circuito pode calcular, medir e tomar decisões. Mas como ele percebe que escureceu? Ou como faz alguma coisa acontecer depois de tomar uma decisão?
 
-[INSERIR FIGURA 20.1 AQUI]
+É aí que entram **sensores e atuadores**.
 
-      Figura 18.1: Dos Sentidos à Ação. Diagrama: sensor
-       → processamento → atuador.
+Costumo comparar os sensores aos sentidos e os atuadores aos músculos de um sistema eletrônico. A analogia é simples, mas ajuda a visualizar o conjunto.
 
-Sensores Analógicos vs Digitais
+## 21.1 — Quem percebe e quem age?
 
-Analógicos: Valor contínuo (0-5V)
+O **sensor** transforma uma grandeza física em um sinal que pode ser interpretado pelo circuito. Já o **atuador** transforma um comando em uma ação, como movimento, luz ou som.
 
-      Potenciômetro, LDR, LM35 (temperatura)
+Entre eles, podemos ter um circuito de processamento.
 
-      Precisam de ADC (Conversor Analógico-Digital)
+**[INSERIR FIGURA 21.1 — Sensor, processamento e atuador em diagrama de blocos]**
 
-Digitais: Valor discreto (0 ou 1)
+## 21.2 — Sinais analógicos e digitais
 
-      Botão, sensor magnético, sensor PIR de movimento
+Um sensor **analógico** pode produzir uma tensão que varia conforme a grandeza medida. Um sensor **digital** fornece estados discretos ou informações codificadas digitalmente.
 
-[INSERIR FIGURA 20.2 AQUI]
+O **LDR**, por exemplo, varia sua resistência com a iluminação. Podemos usá-lo em um divisor de tensão, como aprendemos no Capítulo 10.
 
-      Figura 18.2: Tipos de Sensores. Coleção dos sensores
-       mais comuns.
+O **LM35** fornece, em sua faixa de operação especificada, uma tensão proporcional à temperatura, com escala típica de **10 mV por grau Celsius**.
 
-Sensor LM35 (Temperatura)
+**[INSERIR FIGURA 21.2 — LDR em divisor de tensão e sensor LM35]**
 
-      10mV por grau Celsius
+## 21.3 — Exemplos de atuadores
 
-      0°C = 0V, 100°C = 1,0V
+- **LED:** fornece indicação luminosa.
+- **Buzzer:** produz um aviso sonoro.
+- **Motor DC:** produz movimento de rotação.
+- **Servomotor:** permite controlar posição em aplicações apropriadas.
+- **Solenoide:** produz movimento linear.
+- **Relé:** comuta contatos elétricos.
 
+Motores, relés e outros atuadores podem exigir correntes maiores que as suportadas por uma saída de microcontrolador. Nesses casos, precisamos de um circuito de acionamento adequado.
 
-      Preciso e fácil de usar!
+**[INSERIR FIGURA 21.3 — Exemplos de sensores e atuadores]**
 
-[INSERIR FIGURA 20.3 AQUI]
+## 21.4 — Imagine um controlador de temperatura
 
-      Figura 18.3: Sensor LM35. Conexão com Arduino e
-       gráfico linear.
+Podemos construir um sistema que leia um sensor de temperatura, compare o valor com um limite e acione um ventilador.
 
-Sensor LDR (Luz)
+O processo seria: **medir, comparar e agir**.
 
-Resistor que varia com a luz:
+Na prática, precisamos ainda pensar em calibração, alimentação, proteção da carga e no que acontece se o sensor apresentar defeito. Não basta escrever uma condição no programa e considerar o projeto terminado.
 
-      Escuro: Alta resistência (até 1MΩ)
+**[INSERIR FIGURA 21.4 — Diagrama de blocos de controle de temperatura com ventilador]**
 
-      Claro: Baixa resistência (~10kΩ)
+## Para encerrar
 
-Use em divisor de tensão com resistor fixo!
+Sensores e atuadores transformam conceitos eletrônicos em aplicações concretas. É assim que um circuito deixa de apenas acender um LED e começa a interagir com o ambiente.
 
-[INSERIR FIGURA 20.4 AQUI]
-
-      Figura 18.4: Circuito com LDR. Divisor resistivo e
-       curva característica.
-
-Atuadores Comuns
-
-      LEDs: Indicação e iluminação
-
-      Relés: Controle de alta potência
-
-      Motores DC: Movimento contínuo
-
-      Servomotores: Posicionamento preciso
-
-      Solenoides: Movimento linear
-
-[INSERIR FIGURA 20.5 AQUI]
-
-
-         Figura 18.5: Família de Atuadores. Coleção com
-          aplicações típicas.
-
-Sistema Completo: Controlador de Temperatura
-
-Código básico para ligar ventilador quando está quente:
-
-cpp
-
-void loop() {
-
-    int temp = analogRead(A0) * 0.488; // Converte para °C
-
-    if (temp > 30) digitalWrite(9, HIGH);
-
-    else digitalWrite(9, LOW);
-
-    delay(1000);
-
-}
-
-[INSERIR FIGURA 20.6 AQUI]
-
-         Figura 18.6: Controlador de
-          Temperatura. Diagrama completo do sistema.
+No próximo capítulo, conheceremos uma plataforma que facilita a leitura de sensores e o controle de atuadores: o **Arduino**.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-
-*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
