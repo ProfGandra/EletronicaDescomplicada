@@ -1,78 +1,67 @@
-# Capítulo 18 — O CÉREBRO DOS CIRCUITOS – CIRCUITOS INTEGRADOS
+# Capítulo 18 — Circuitos integrados: muitos componentes em um só lugar
 
+Olá, tudo bem com você?
 
-Circuitos integrados (CIs) são caixas mágicas que
-contêm milhares de componentes dentro de um chip do
-tamanho de uma unha!
+Já imaginou montar um circuito com centenas de transistores, um por um, na protoboard? Além de trabalhoso, ocuparia um espaço enorme.
 
-[INSERIR FIGURA 17.1 AQUI]
+Os **circuitos integrados**, ou **CIs**, reúnem vários elementos eletrônicos em uma pequena pastilha semicondutora. Alguns possuem poucos componentes internos; outros, bilhões de transistores.
 
-      Figura 15.1: A Evolução dos Circuitos
-       Integrados. Rádio antigo vs smartphone moderno.
+## 18.1 — O que existe dentro de um CI?
 
-Anatomia de um CI
+A pastilha, geralmente feita de silício, contém estruturas microscópicas que realizam funções eletrônicas. O encapsulamento protege essa pastilha e oferece terminais para conectá-la ao circuito.
 
-Dentro do encapsulamento plástico existe uma pastilha
-de silício (chip) com circuitos microscópicos!
+**[INSERIR FIGURA 18.1 — Encapsulamento de CI e pastilha semicondutora]**
 
-[INSERIR FIGURA 17.2 AQUI]
+## 18.2 — Conhecendo o temporizador 555
 
-      Figura 15.2: Anatomia de um Circuito
-       Integrado. Diagrama em camadas do CI.
+Um dos circuitos integrados mais conhecidos é o **555**, utilizado em temporização e geração de pulsos.
 
-O CI Mais Famoso: NE555 (Timer)
+Ele pode trabalhar em configurações como:
 
-Pode funcionar de três maneiras:
+- **Monoestável:** gera um pulso após um disparo.
+- **Astável:** produz oscilações periódicas, úteis em um pisca-pisca.
+- **Biestável:** mantém um estado até receber um comando de mudança.
 
-   1. Monoestável: Gera um pulso
+**[INSERIR FIGURA 18.2 — NE555 com terminais identificados]**
 
-   2. Astável: Gera onda quadrada (pisca-pisca!)
+Na configuração astável clássica, uma aproximação para a frequência é:
 
-   3. Biestável: Interruptor com memória
+\[
+f\approx\frac{1,44}{(R_1+2R_2)C}
+\]
 
-[INSERIR FIGURA 17.3 AQUI]
+Se utilizarmos \(R_1=1\ k\Omega\), \(R_2=100\ k\Omega\) e \(C=10\ \mu F\), a frequência ficará próxima de **0,72 Hz**. Isso significa um ciclo a cada **1,4 segundo**, aproximadamente.
 
+O valor real depende das tolerâncias dos componentes e do circuito empregado.
 
-      Figura 15.3: O Incrível NE555. Pinagem completa
-       do CI 555.
+**[INSERIR FIGURA 18.3 — Pisca-pisca com NE555 em configuração astável]**
 
-Circuito Pisca-Pisca com 555
+## 18.3 — E os amplificadores operacionais?
 
-f = 1,44 / ((R1 + 2×R2) × C1)
+Outro grupo importante é o dos **amplificadores operacionais**, usados para tratar e comparar sinais.
 
-Componentes para ~1Hz: R1=1kΩ, R2=100kΩ, C1=10μF
+Em uma configuração não inversora com realimentação adequada, o ganho ideal é:
 
-[INSERIR FIGURA 17.4 AQUI]
+\[
+A_v=1+\frac{R_2}{R_1}
+\]
 
-      Figura 15.4: Pisca-Pisca com 555. Diagrama
-       esquemático completo.
+O **LM741** é um exemplo clássico para estudo, mas não é a melhor escolha para muitas montagens modernas com alimentação simples de 5 V. O circuito e a alimentação precisam ser compatíveis com o modelo escolhido.
 
-Amplificador Operacional LM741
+**[INSERIR FIGURA 18.4 — Amplificador operacional em configuração não inversora]**
 
-Ganho = 1 + (R2 / R1)
+## 18.4 — DIP ou SMD?
 
-[INSERIR FIGURA 17.5 AQUI]
+CIs no encapsulamento **DIP** costumam ser práticos para a protoboard. Já os componentes **SMD** são preparados para montagem em superfície e aparecem em equipamentos compactos.
 
-      Figura 15.5: Amplificador com LM741. Circuito
-       não-inversor.
+**[INSERIR FIGURA 18.5 — Comparação de encapsulamentos DIP e SMD]**
 
-DIP vs SMD
+## Para encerrar
 
-      DIP: Perfeito para protoboard (iniciantes)
+O CI não é uma caixa mágica. É uma maneira engenhosa de reunir funções eletrônicas em pouco espaço.
 
-      SMD: Minúsculo, para produção profissional
-
-[INSERIR FIGURA 17.6 AQUI]
-
-      Figura 15.6: DIP vs SMD. Comparação de tamanhos.
+No próximo capítulo, vamos conhecer circuitos integrados que trabalham com decisões baseadas em zeros e uns: as **portas lógicas**.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
-
-PARTE 3: SISTEMAS E APLICAÇÕES
-
----
-
-*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
