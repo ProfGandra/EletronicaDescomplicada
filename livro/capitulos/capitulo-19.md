@@ -1,90 +1,64 @@
-# Capítulo 19 — A LÓGICA DA ELETRÔNICA – PORTAS LÓGICAS
+# Capítulo 19 — Portas lógicas: decisões com zeros e uns
 
+Olá, tudo bem com você?
 
-As portas lógicas são os blocos fundamentais de toda a
-computação moderna. Do smartphone aos
-supercomputadores, tudo começa com esses circuitos
-simples!
+Pense em uma lâmpada que só acende quando duas condições são atendidas. Por exemplo: a porta está fechada **e** o botão foi pressionado.
 
-[INSERIR FIGURA 18.1 AQUI]
+Essa pequena decisão pode ser representada por uma **porta lógica**.
 
-      Figura 16.1: Do Analógico ao Digital. Sinal analógico
-       (contínuo) vs digital (0V e 5V).
+## 19.1 — O que significam 0 e 1?
 
-O que são Portas Lógicas?
+Em eletrônica digital, usamos dois estados lógicos, representados por **0** e **1**. Eles correspondem a faixas de tensão definidas pela família de circuitos utilizada.
 
-Circuitos que realizam operações lógicas básicas. Recebem
-entradas (0 ou 1) e produzem uma saída conforme
-uma tabela verdade.
+Atenção: **1 lógico não significa obrigatoriamente 5 V**. Existem dispositivos que operam com outras tensões, como 3,3 V. Os limites de entrada e saída precisam ser conferidos na folha de dados.
 
-As 7 Portas Lógicas Fundamentais
+**[INSERIR FIGURA 19.1 — Sinal digital com dois níveis lógicos]**
 
-1. Porta NOT (Inversora)
+## 19.2 — Conhecendo as principais portas
 
-      Saída é o inverso da entrada
+As portas mais comuns são:
 
-      Tabela: 0→1, 1→0
+- **NOT:** inverte o estado da entrada.
+- **AND (E):** saída 1 quando todas as entradas são 1.
+- **OR (OU):** saída 1 quando pelo menos uma entrada é 1.
+- **NAND:** inversão da saída AND.
+- **NOR:** inversão da saída OR.
+- **XOR (OU exclusivo):** para duas entradas, saída 1 quando elas são diferentes.
+- **XNOR:** para duas entradas, saída 1 quando elas são iguais.
 
-2. Porta AND (E)
+Veja um exemplo com duas entradas, A e B:
 
+| A | B | AND | OR | XOR |
+|---|---|---|---|---|
+| 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 1 |
+| 1 | 0 | 0 | 1 | 1 |
+| 1 | 1 | 1 | 1 | 0 |
 
-     Saída 1 apenas se TODAS entradas forem 1
+A tabela mostra todas as combinações possíveis de entrada. Por isso, chamamos esse recurso de **tabela-verdade**.
 
-3. Porta OR (OU)
+**[INSERIR FIGURA 19.2 — Símbolos das portas lógicas e tabela-verdade]**
 
-     Saída 1 se PELO MENOS UMA entrada for 1
+## 19.3 — Portas lógicas também existem em CIs
 
-4. Porta NAND (NO E)
+O **74HC00**, por exemplo, reúne quatro portas NAND de duas entradas. Para utilizá-lo, precisamos identificar corretamente os pinos de alimentação, entradas e saídas.
 
-     AND seguida de NOT (saída 0 apenas se todas forem
-      1)
+Não deixe entradas CMOS sem conexão definida: estados flutuantes podem produzir comportamento inesperado.
 
-5. Porta NOR (NOU)
+**[INSERIR FIGURA 19.3 — Pinagem do CI 74HC00]**
 
-     OR seguida de NOT (saída 1 apenas se todas forem 0)
+## 19.4 — Uma decisão do cotidiano
 
-6. Porta XOR (OU Exclusivo)
+Imagine um sistema que só libera o funcionamento quando a tampa de proteção está fechada e o botão de início é pressionado. A condição lógica pode ser representada por uma porta AND.
 
-     Saída 1 se entradas forem DIFERENTES
+Isso ajuda a entender a lógica, mas **não significa que uma única porta lógica substitua um sistema de segurança industrial**. Aqui estamos estudando o conceito, não projetando uma função de segurança.
 
-7. Porta XNOR (NOU Exclusivo)
+## Para encerrar
 
-     Saída 1 se entradas forem IGUAIS
+As portas lógicas realizam decisões combinando estados de entrada. Mas como fazer um circuito **lembrar** de alguma informação?
 
-[INSERIR FIGURA 18.2 AQUI]
-
-     Figura 16.2: As Sete Portas Completas. Grid com
-      símbolos, expressões e tabelas verdade.
-
-O CI 74HC00: Quatro Portas NAND
-
-Um dos CIs mais úteis, contém 4 portas NAND
-independentes.
-
-[INSERIR FIGURA 18.3 AQUI]
-
-
-      Figura 16.3: CI 74HC00. Pinagem completa do
-       encapsulamento DIP-14.
-
-Níveis Lógicos na Prática
-
-      0 Lógico: 0V a 0,8V
-
-      1 Lógico: 2,0V a 5V
-
-      Zona Proibida: 0,8V a 2,0V (comportamento
-       indefinido!)
-
-[INSERIR FIGURA 18.4 AQUI]
-
-      Figura 16.4: Níveis Lógicos. Gráfico mostrando as
-       faixas de tensão.
+É o que veremos no próximo capítulo, ao conhecer os flip-flops.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-
-*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
