@@ -1,82 +1,53 @@
-# Capítulo 16 — RELÉS E ELETROMAGNETISMO – CONTROLE DE ALTA POTÊNCIA
+# Capítulo 16 — Relés: quando o magnetismo aciona uma chave
 
+Olá, tudo bem com você?
 
-Os relés usam eletromagnetismo para controlar
-circuitos de alta potência com poucos miliampères!
+No capítulo anterior, vimos como um transistor pode controlar uma carga. Agora imagine uma chave que você consegue acionar eletricamente, sem precisar apertar um botão.
 
-[INSERIR FIGURA 15.1 AQUI]
+Essa é a ideia por trás do **relé eletromecânico**.
 
-     Figura 13.1: O Poder do
-      Eletromagnetismo. Sequência: bateria → campo
-      magnético → movimento.
+## 16.1 — Da corrente ao movimento
 
-O Princípio do Eletromagnetismo
+Quando a corrente passa por uma bobina, ela produz um campo magnético. Em um relé, esse campo movimenta uma peça metálica que altera a posição de contatos elétricos.
 
-Quando corrente flui por um fio, ela cria um campo
-magnético. Enrolando o fio em bobina e colocando
-núcleo de ferro, criamos um eletroímã!
+É como se tivéssemos uma pequena chave acionada por um eletroímã.
 
-Anatomia de um Relé
+**[INSERIR FIGURA 16.1 — Relé eletromecânico em corte, com bobina e contatos]**
 
-  1. Bobina: Cria o campo magnético
+## 16.2 — O que significam COM, NA e NF?
 
-  2. Contatos: Chaves mecânicas acionadas pelo
-      magnetismo
+Muitos relés possuem contatos identificados como:
 
-Vantagens: Isolamento elétrico total entre controle e
-carga!
+- **COM:** terminal comum.
+- **NA:** normalmente aberto; sem energizar a bobina, esse contato fica aberto em relação ao comum.
+- **NF:** normalmente fechado; sem energizar a bobina, esse contato fica fechado em relação ao comum.
 
-[INSERIR FIGURA 15.2 AQUI]
+Ao energizar a bobina, a posição dos contatos muda.
 
+**[INSERIR FIGURA 16.2 — Estados dos contatos NA e NF com a bobina desligada e ligada]**
 
-     Figura 13.2: Dentro de um Relé. Diagrama em corte
-      mostrando bobina, núcleo e contatos.
+## 16.3 — Um circuito controlando outro
 
-Tipos de Contatos: NA, NF e COM
+Uma vantagem do relé é a possibilidade de manter **separados eletricamente** o circuito da bobina e o circuito dos contatos, respeitando as especificações de isolamento do dispositivo.
 
-     COM (Comum): Terminal central
+Mas isso não significa que qualquer relé seja adequado para qualquer tensão ou corrente. É preciso verificar os limites da bobina, dos contatos e do circuito de acionamento.
 
-     NA (Normalmente Aberto): Fecha quando
-      energizado
+Um microcontrolador normalmente não deve alimentar uma bobina diretamente por uma saída digital. Podemos utilizar um estágio de acionamento com transistor e um diodo de proteção adequado à bobina DC.
 
-     NF (Normalmente Fechado): Abre quando
-      energizado
+**[INSERIR FIGURA 16.3 — Relé DC acionado por transistor com diodo de proteção]**
 
-[INSERIR FIGURA 15.3 AQUI]
+## 16.4 — Onde encontramos relés?
 
-     Figura 13.3: Tipos de Contatos. Diagrama
-      mostrando os três terminais.
+Relés aparecem em sistemas de automação, acionamento de motores, alarmes e equipamentos de controle.
 
-Circuito de Acionamento
+Para nossas experiências, vamos considerar **cargas didáticas de baixa tensão**. Trabalhos com circuitos conectados à rede elétrica exigem procedimentos, equipamentos e profissionais qualificados; não fazem parte das montagens propostas aqui.
 
-Use um transistor para acionar o relé a partir de um
-Arduino:
+## Para encerrar
 
-[INSERIR FIGURA 15.4 AQUI]
+O relé nos mostra como eletricidade e magnetismo podem produzir movimento e comandar contatos.
 
-     Figura 13.4: Acionamento com Transistor. Circuito
-      completo com diodo de proteção.
-
-Aplicações Práticas
-
-     Controle de cargas DC de baixa tensão; cargas ligadas à rede exigem profissional habilitado.
-
-     Motores elétricos
-
-     Sistemas de segurança
-
-
-     Automação residencial
-
-[INSERIR FIGURA 15.5 AQUI]
-
-     Figura 13.5: Controle de Lâmpada 110V. Diagrama
-      mostrando isolamento completo.
+No próximo capítulo, voltaremos à alimentação dos circuitos para entender como manter uma tensão mais estável.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-
-*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
