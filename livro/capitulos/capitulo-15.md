@@ -1,85 +1,72 @@
-# Capítulo 15 — O INTERRUPTOR CONTROLADO POR ELETRICIDADE – TRANSISTORES BJT
+# Capítulo 15 — Transistores BJT: uma corrente controlando outra
 
+Olá, tudo bem com você?
 
-O transistor é provavelmente o componente mais
-importante da eletrônica moderna. É graças a ele que
-temos computadores, celulares e toda a eletrônica
-inteligente!
+Imagine que um circuito de controle precisa acionar uma carga que consome mais corrente do que sua saída pode fornecer. Não seria interessante usar um componente intermediário para fazer esse trabalho?
 
-[INSERIR FIGURA 14.1 AQUI]
+É uma das aplicações dos **transistores bipolares de junção**, conhecidos como **BJT**.
 
-      Figura 12.1: A Revolução do Transistor. Válvula
-       gigante vs transistor pequeno.
+## 15.1 — Uma pequena ação, um efeito maior
 
-A Analogia Perfeita: A Torneira com Alavanca
+Podemos comparar o transistor a uma torneira cujo comando controla a passagem de água. A imagem ajuda, mas não descreve todos os detalhes do componente.
 
-Uma pequena corrente na base controla uma corrente
-muito maior entre o coletor e o emissor.
+Em um BJT, a corrente aplicada à **base** influencia a corrente entre **coletor** e **emissor**. O comportamento depende do circuito, da polarização e do modelo do transistor.
 
-[INSERIR FIGURA 14.2 AQUI]
+**[INSERIR FIGURA 15.1 — Analogia da torneira e símbolo de transistor NPN]**
 
-      Figura 12.2: Analogia da Torneira. Alavanca
-       pequena controlando grande fluxo.
+## 15.2 — Conhecendo os três terminais
 
-Os Três Terminais do BJT
+Os terminais de um BJT são:
 
-   1. Base (B): O "controle" - corrente pequena aqui
+- **Base (B):** terminal de controle.
+- **Coletor (C):** um dos terminais do caminho principal de corrente.
+- **Emissor (E):** o outro terminal desse caminho.
 
-   2. Coletor (C): Entrada da corrente principal
+Existem transistores **NPN** e **PNP**, com polaridades de acionamento diferentes. E a posição física dos terminais muda conforme o modelo: **não confie apenas na aparência do encapsulamento**.
 
-   3. Emissor (E): Saída da corrente principal
+**[INSERIR FIGURA 15.2 — Símbolos NPN e PNP e exemplo de identificação de terminais]**
 
-[INSERIR FIGURA 14.3 AQUI]
+## 15.3 — Usando o transistor como chave
 
+Em uma aplicação simples com transistor NPN:
 
-      Figura 12.3: Anatomia de um Transistor
-       BJT. Símbolo, encapsulamento e pinagem.
+- **Corte:** a corrente de base é insuficiente para manter a condução desejada; a carga fica desligada.
+- **Saturação:** o transistor é acionado para conduzir a corrente da carga, com uma pequena tensão entre coletor e emissor.
 
-Modos de Operação
+Entre esses estados, também existe uma região de operação utilizada em amplificadores.
 
-Corte (Chave Aberta): Sem corrente na base → transistor
-desligado
-Saturação (Chave Fechada): Corrente suficiente na base
-→ transistor ligado
+**[INSERIR FIGURA 15.3 — Transistor NPN acionando LED com resistor de base e resistor do LED]**
 
-[INSERIR FIGURA 14.4 AQUI]
+## 15.4 — E o resistor de base?
 
-      Figura 12.4: Modos de Operação. LED apagado vs
-       LED aceso.
+Não devemos conectar a base diretamente a uma saída de controle sem analisar o circuito.
 
-Calculando o Resistor de Base
+Uma aproximação para dimensionar o resistor de base em um acionamento NPN é:
 
-R_B = (V_fonte - 0,7V) / I_B
+\[
+R_B\approx\frac{V_{controle}-V_{BE}}{I_B}
+\]
 
-Onde I_B = I_C / β (β é o ganho, geralmente 100-300)
+Para transistores de silício comuns, \(V_{BE}\) pode ficar próximo de **0,7 V** em determinadas condições.
 
-Exemplo: Controlando Motor com Arduino
+Mas atenção: **não é adequado assumir que o ganho indicado em uma ficha técnica garantirá a saturação**. Para usar o BJT como chave, a corrente de base deve ser escolhida com margem e respeitar os limites do controlador e do transistor.
 
-Arduino (5V, 20mA) controlando motor 12V/500mA:
+## 15.5 — Cargas indutivas pedem proteção
 
-I_B = 0,5A / 100 = 0,005A (5mA)
-R_B = (5V - 0,7V) / 0,005A = 860Ω → usar 1kΩ
+Motores e bobinas armazenam energia em campos magnéticos. Ao interromper a corrente, podem produzir picos de tensão.
 
-[INSERIR FIGURA 14.5 AQUI]
+Por isso, em acionamentos de corrente contínua, é comum usar um **diodo de roda livre** conectado corretamente em paralelo com a carga indutiva, quando a topologia permitir.
 
-      Figura 12.5: Controlando Carga de Alta
-       Potência. Diagrama do circuito completo.
+**[INSERIR FIGURA 15.4 — Acionamento de carga indutiva DC com transistor e diodo de roda livre]**
 
-Diodo de Proteção: ESSENCIAL!
+Antes de montar um circuito com motor, confira corrente de partida, tensão da carga, dissipação do transistor e características do diodo. Um exemplo com LED de baixa corrente é mais apropriado para a primeira experiência.
 
+## Para encerrar
 
-Para cargas indutivas (motores, relés), use um diodo em
-paralelo com a carga para proteger o transistor!
+O transistor abre caminho para uma ideia muito importante: um circuito pode **controlar outro** sem precisar fornecer diretamente toda a corrente da carga.
 
-[INSERIR FIGURA 14.6 AQUI]
-
-     Figura 12.6: Proteção com Diodo. Diagrama
-      mostrando o diodo de livre circulação.
+No próximo capítulo, vamos conhecer um dispositivo que também faz isso, mas utiliza uma bobina e contatos mecânicos: o relé.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-
-*Edição em revisão: conferir os esquemas e as referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
