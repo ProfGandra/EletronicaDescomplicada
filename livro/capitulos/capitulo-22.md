@@ -1,160 +1,86 @@
-# Capítulo 22 — O CÉREBRO PROGRAMÁVEL – INTRODUÇÃO AO ARDUINO
+# Capítulo 22 — Arduino: quando o circuito ganha um programa
 
+Olá, tudo bem com você?
 
-Microcontroladores são computadores completos em um
-único chip. O Arduino é a plataforma que democratizou o
-acesso a esses dispositivos incríveis!
+Já pensou em mudar o comportamento de um circuito sem precisar refazer todas as ligações?
 
-[INSERIR FIGURA 21.1 AQUI]
+Com um **microcontrolador**, podemos definir parte desse comportamento por meio de um programa.
 
-      Figura 19.1: Do Circuito Fixo ao
-       Programável. Circuito complexo vs um único chip.
+O **Arduino** é uma plataforma que facilita o aprendizado com microcontroladores, combinando placas, ferramentas de programação e uma comunidade de projetos.
 
-O que tem dentro de um Microcontrolador?
+## 22.1 — O que existe dentro de um microcontrolador?
 
-      CPU: Executa instruções
+Um microcontrolador reúne processador, memória e periféricos em um único chip. Ele pode ler sinais de entrada, executar instruções e controlar saídas.
 
-      Memória RAM: Dados temporários
+**[INSERIR FIGURA 22.1 — Diagrama de blocos simplificado de microcontrolador]**
 
-      Memória Flash: Armazena o programa
+## 22.2 — Conhecendo o Arduino Uno
 
-      Periféricos: ADC, timers, comunicação serial
+Para nossos exemplos, vamos considerar o **Arduino Uno R3**, uma placa bastante conhecida no ensino de eletrônica.
 
-      Portas de I/O: Conexão com o mundo exterior
+Ela possui entradas analógicas, pinos digitais e saídas capazes de gerar sinais PWM em pinos específicos. As entradas analógicas do Uno R3 usam conversão de **10 bits**, resultando normalmente em valores de **0 a 1023**.
 
-[INSERIR FIGURA 21.2 AQUI]
+Nem toda placa Arduino tem os mesmos pinos, tensões ou recursos. Confira sempre o modelo utilizado.
 
-      Figura 19.2: Anatomia de um
-       Microcontrolador. Diagrama em blocos.
+**[INSERIR FIGURA 22.2 — Arduino Uno R3 com pinos identificados]**
 
-A Placa Arduino Uno
+## 22.3 — Nosso primeiro programa
 
-[INSERIR FIGURA 21.3 AQUI]
+O exemplo clássico é o **Blink**, que acende e apaga o LED integrado à placa.
 
-
-         Figura 19.3: A Placa Arduino Uno. Diagrama com
-          pinos identificados.
-
-Pinos do Arduino
-
-         Digitais (0-13): Entrada ou saída (0V ou 5V)
-
-         Analógicos (A0-A5): Leem 0-5V (resolução 10 bits →
-          0-1023)
-
-         PWM (~3,5,6,9,10,11): Saída "analógica" por pulsação
-          rápida
-
-         5V, 3.3V, GND: Alimentação
-
-Seu Primeiro Programa: Blink
-
-cpp
-
+```cpp
 void setup() {
-
-    pinMode(13, OUTPUT);         // Configura pino 13 como saída
-
+  pinMode(LED_BUILTIN, OUTPUT);
 }
-
-
 
 void loop() {
-
-    digitalWrite(13, HIGH); // Acende o LED
-
-    delay(1000);        // Espera 1 segundo
-
-    digitalWrite(13, LOW); // Apaga o LED
-
-    delay(1000);        // Espera 1 segundo
-
-
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
 }
+```
 
-[INSERIR FIGURA 21.4 AQUI]
+A função `setup()` executa a configuração inicial. A função `loop()` repete as instruções enquanto o programa está em funcionamento.
 
-         Figura 19.4: Código do Pisca-Pisca. Screenshot do
-          IDE com explicações.
+**[INSERIR FIGURA 22.3 — Código Blink e LED integrado do Arduino]**
 
-Conceitos Fundamentais de Programação
+## 22.4 — Lendo um potenciômetro
 
-Variáveis:
+Um potenciômetro pode funcionar como divisor de tensão. Ligado corretamente entre 5 V e GND, com o terminal central conectado a A0, ele fornece uma tensão variável para a entrada analógica.
 
-cpp
+Podemos transformar essa leitura em um comando de brilho para um LED externo, usando **um resistor limitador** e um pino PWM apropriado:
 
-int velocidade = 1000;
-
-Estruturas de Controle:
-
-cpp
-
-if (leitura > 500) {
-
-    digitalWrite(13, HIGH);
-
-} else {
-
-    digitalWrite(13, LOW);
-
-}
-
-Loops:
-
-cpp
-
-for (int i = 0; i < 10; i++) {
-
-    digitalWrite(13, HIGH);
-
-
-    delay(100);
-
-    digitalWrite(13, LOW);
-
-    delay(100);
-
-}
-
-[INSERIR FIGURA 21.5 AQUI]
-
-         Figura 19.5: Exemplos de Código. Blocos com
-          sintaxe colorida.
-
-Projeto: Controlador de LED com Potenciômetro
-
-cpp
+```cpp
+const int pinoLed = 9;
+const int pinoPot = A0;
 
 void setup() {
-
-    pinMode(9, OUTPUT);
-
+  pinMode(pinoLed, OUTPUT);
 }
-
-
 
 void loop() {
-
-    int leitura = analogRead(A0);
-
-    int brilho = map(leitura, 0, 1023, 0, 255);
-
-    analogWrite(9, brilho);
-
-    delay(10);
-
+  int leitura = analogRead(pinoPot);
+  int brilho = map(leitura, 0, 1023, 0, 255);
+  analogWrite(pinoLed, brilho);
+  delay(10);
 }
+```
 
+O PWM não cria uma tensão analógica contínua perfeita: ele alterna rapidamente os estados da saída, variando a proporção de tempo ligada.
 
-[INSERIR FIGURA 21.6 AQUI]
+**[INSERIR FIGURA 22.4 — Potenciômetro em A0 e LED com resistor no pino PWM 9]**
 
-      Figura 19.6: Circuito do Controlador de
-       Brilho. Diagrama esquemático.
+## 22.5 — Um cuidado importante
+
+Os pinos do microcontrolador possuem limites de corrente e tensão. **Nunca conecte diretamente motores ou cargas de maior corrente a um pino de saída**. Utilize um estágio de acionamento adequado.
+
+## Para encerrar
+
+O Arduino nos permite combinar sensores, decisões e atuadores de uma maneira bastante acessível.
+
+Antes de partir para o projeto final, vamos organizar a bancada e os materiais. Afinal, um bom projeto também depende de uma boa rotina de trabalho.
 
 Um abraço do seu professor,
 
-Diego G. Gandra
-
----
-
-*Edição em revisão: conferir os esquemas, códigos e referências de imagens com o arquivo Word integral antes da prova gráfica.*
+**DIEGO GANDRA**
